@@ -1,0 +1,2850 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#b5245f">
+<title>출산 준비물 체크리스트 2026 · 출산가방 리스트(병원·조리원·남편 가방), PDF·엑셀로</title>
+<meta name="description" content="출산 예정일만 넣으면 출산가방 리스트와 신생아 준비물을 자동으로 만들어 줍니다. 자연분만·제왕절개, 조리원·집 조리, 모유·분유, 쌍둥이·둘째에 맞춰 병원 가방·조리원 가방·남편 가방·집에 준비할 신생아 용품을 개수와 함께 나누고, 출산가방 싸는 날·산후도우미 신청·출생신고·부모급여 마감일을 날짜로 알려 줍니다. 개월·체중별 신생아 분유량 계산, 준비물 비용 합계, PDF·그림·엑셀 저장, 남편에게 링크로 보내기까지. 설치·가입 없이 무료.">
+<meta property="og:title" content="출산 준비물 체크리스트 2026 · 출산가방 리스트 자동으로">
+<meta property="og:description" content="예정일만 넣으면 병원·조리원·남편 가방과 신생아 용품을 개수까지. 주차별 준비 일정, 출생신고·지원금 마감일, 분유량 계산, PDF·엑셀 저장.">
+<meta property="og:type" content="website">
+<!-- 링크 미리보기 그림: 스크래퍼는 절대 주소만 읽으므로 배포 주소로 적는다. 그림은 make_thumbnail.py 가 만든 og-image.png(1200×630) -->
+<meta property="og:image" content="https://hwj-hub.github.io/birth_checklist/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="출산 준비물 체크리스트 — 예정일과 분만 방식을 고르면 병원 출산가방·조리원 가방·남편 가방·신생아 용품을 개수와 함께 나눠 보여 주고, 출산가방 싸는 날과 출생신고 마감일을 알려 주는 화면">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%91%B6%3C/text%3E%3C/svg%3E">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  color-scheme:light dark;
+  --bg:#f6f0f3; --card:#fff; --card2:#faf6f8; --fg:#221a1f; --muted:#665a61; --line:#eadde3;
+  --accent:#b5245f; --accent2:#7c3aed; --afg:#fff;
+  --ok:#0f766e; --okbg:#e6f3f7; --warn:#b45309; --warnbg:#fef4e6; --danger:#c81e1e; --dangerbg:#fdecec;
+  --info:#475569; --infobg:#eef1f6;
+  --shadow:0 1px 2px rgba(20,28,36,.05),0 8px 24px -14px rgba(20,28,36,.32);
+  --r:16px;
+}
+@media (prefers-color-scheme:dark){
+ :root{
+  --bg:#120d10; --card:#1d151a; --card2:#191216; --fg:#f4eaf0; --muted:#bfaab6; --line:#3a2b33;
+  --accent:#f58bb5; --accent2:#c4b5fd; --afg:#2a0b1a;
+  --ok:#34d399; --okbg:#0f2a22; --warn:#fbbf24; --warnbg:#2a2110; --danger:#f87171; --dangerbg:#2c1414;
+  --info:#c3ccd8; --infobg:#1f242e;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -16px rgba(0,0,0,.8);
+ }
+}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);line-height:1.55;word-break:keep-all;overflow-wrap:anywhere;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",Roboto,sans-serif;
+  -webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:1180px;margin:0 auto;padding:0 14px calc(70px + env(safe-area-inset-bottom))}
+.hide{display:none !important}
+.nw{white-space:nowrap}
+
+/* ══ 광고 슬롯 ══ 자리만 비워 두고 화면 폭에 맞는 크기를 AD 가 채운다.
+   크기를 미리 잡아 두어 광고가 늦게 떠도 화면이 밀리지 않는다(애드핏: 광고 공간은 고정되어야 함) */
+.ad-slot{display:flex;align-items:center;justify-content:center;margin:10px auto;max-width:100%}
+.ad-top{width:320px;height:50px;max-width:100%}
+.ad-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);
+  border-radius:8px;background:var(--card2);color:var(--muted);font-size:11px;letter-spacing:.08em;font-weight:600}
+/* ── 인앱 브라우저 안내 띠 ── 앱 안 WebView 는 파일을 내려받지 못한다 */
+.iabar{display:none;align-items:center;gap:10px;margin:10px 0 0;padding:11px 12px;border-radius:12px;
+  background:var(--warnbg);border:1px solid color-mix(in srgb,var(--warn) 34%,transparent);line-height:1.5}
+body.inapp .iabar{display:flex}
+.iabar .ia-t{flex:1 1 auto;min-width:0;font-size:12.5px;font-weight:700;color:var(--fg)}
+.iabar .ia-t small{display:block;font-size:11.5px;font-weight:600;color:var(--muted);margin-top:2px}
+.iabar .ia-go{flex:0 0 auto;font:inherit;font-size:12.5px;font-weight:800;color:#fff;border:0;border-radius:999px;
+  padding:9px 14px;min-height:38px;cursor:pointer;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+@media (prefers-color-scheme:dark){.iabar .ia-go{color:var(--afg)}}
+/* 닫기는 휴대폰에서 누르기 쉽게 36px(터치 대상 최소) */
+.iabar .ia-x{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;
+  color:var(--muted);font:inherit;font-size:12px;line-height:1;cursor:pointer}
+/* ── 앱 안에서 열었을 때 막는 창 ── 토스트(z-index 99)보다는 아래에 둔다 */
+.iamodal{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;padding:18px;
+  background:rgba(8,14,20,.72);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+body.ia-lock{overflow:hidden}
+body.ia-lock .iamodal{display:flex}
+body.ia-lock .wrap{pointer-events:none}
+.iasheet{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);
+  width:100%;max-width:420px;max-height:92vh;overflow:auto;padding:22px 18px 16px;text-align:center}
+.iasheet .iaic{font-size:34px;line-height:1;margin-bottom:10px}
+.iasheet h2{font-size:17.5px;font-weight:800;letter-spacing:-.02em;margin:0 0 10px;line-height:1.45}
+.iap{font-size:13.5px;font-weight:600;color:var(--muted);line-height:1.7;margin:0 0 14px}
+.iap b{color:var(--fg);font-weight:800}
+.iasteps{text-align:left;margin:0 0 16px;padding:12px 14px 12px 32px;border-radius:12px;background:var(--card2);
+  font-size:13px;font-weight:600;color:var(--muted);line-height:1.7}
+.iasteps li+li{margin-top:5px}
+.iasteps b{color:var(--fg);font-weight:800}
+.iabtn{display:block;width:100%;font:inherit;font-size:15px;font-weight:800;color:#fff;border:0;border-radius:12px;
+  padding:14px;min-height:52px;cursor:pointer;background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:var(--shadow)}
+@media (prefers-color-scheme:dark){.iabtn{color:var(--afg)}}
+.iafine{margin:12px 0 0;font-size:12px;font-weight:600;color:var(--muted);line-height:1.6}
+.iafine button{font:inherit;font-size:12px;font-weight:700;color:var(--muted);background:none;border:0;padding:6px 8px;
+  text-decoration:underline;cursor:pointer;min-height:36px}
+.dwarn{margin:10px 0 0;padding:10px 12px;border-radius:10px;background:var(--warnbg);font-size:12.5px;font-weight:700;line-height:1.6}
+/* 문장 속 단추라 줄 높이는 그대로 두고(음수 여백) 누르는 면만 넓힌다 */
+.dwarn button{font:inherit;font-size:12.5px;font-weight:800;color:var(--accent);background:none;border:0;padding:9px 2px;margin:-9px 0;
+  text-decoration:underline;cursor:pointer}
+.ad-lab{display:block;text-align:center;font-size:9.5px;font-weight:700;letter-spacing:.14em;color:var(--muted);opacity:.7;margin:12px 0 -4px}
+body.no-ad .ad-slot,.ad-none{display:none !important}
+/* PC 옆 칸 — 미리보기 카드 바로 위 320×50 (좁은 화면에서는 숨긴다) */
+@media (max-width:979px){#ad-side{display:none}}
+@media (min-width:980px){#ad-side{margin:14px auto 0}}
+
+/* ── 하단 오버형 ── 콘텐츠를 가리지 않도록 본문 아래 여백을 같이 늘린다(애드핏: 콘텐츠를 덮는 배치 금지).
+   입력 중(아래 바가 떠 있을 때)에는 띄우지 않는다 — 핵심 행동 중 광고 노출 금지 조항 */
+#anchor{position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;align-items:center;justify-content:center;
+  background:var(--card);border-top:1px solid var(--line);box-shadow:0 -8px 22px -14px rgba(0,0,0,.55);
+  padding:8px 4px calc(8px + env(safe-area-inset-bottom));transform:translateY(120%);
+  /* 내려가 있어도 「광고」 라벨(top:-11px)과 닫기(top:-38px)는 바 위쪽에 붙어 있어 화면에 걸쳐 보인다 → 통째로 감춘다.
+     미끄러져 내려간 뒤(.22s) 감추고, 올라올 때는 바로 보이게 한다.
+     ins 는 바가 올라온 뒤에 preload 로 만들므로 애드핏 보임 검사와는 무관하다 */
+  visibility:hidden;pointer-events:none;transition:transform .22s,visibility 0s linear .22s}
+#anchor.on{transform:none;visibility:visible;pointer-events:auto;transition:transform .22s,visibility 0s}
+#anchor .ad-slot{margin:0}
+#anchor .amk{position:absolute;left:10px;top:-11px;font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--muted);
+  background:var(--card);border:1px solid var(--line);border-radius:5px;padding:0 5px;line-height:15px}
+/* 닫기는 광고 영역 밖에 둔다 — 광고 안에 닫기 버튼을 넣는 것은 금지(오클릭 방지) */
+#anchor .axl{position:absolute;right:6px;top:-38px;width:36px;height:36px;border-radius:50%;cursor:pointer;
+  border:1px solid var(--line);background:var(--card);color:var(--muted);font-size:13px;line-height:1;box-shadow:var(--shadow)}
+#anchor .axl::before{content:'';position:absolute;inset:-6px}
+body.anch .wrap{padding-bottom:calc(124px + env(safe-area-inset-bottom))}
+body.anch #toast{bottom:calc(118px + env(safe-area-inset-bottom))}
+@media (min-width:980px){#anchor{display:none}}
+
+/* ── 저장 완료 카드 ── 화면을 덮지 않고 본문 흐름 안에 펼친다(애드핏: 콘텐츠를 덮거나 가리는 영역에 광고 배치 금지) */
+#doneCard{border-color:color-mix(in srgb,var(--ok) 40%,var(--line))}
+#doneCard .ad-lab{margin-top:16px}
+.dmsg{margin:0 0 10px;font-size:14px;font-weight:700;line-height:1.6}
+.dsteps{margin:0;padding:0 0 0 20px;font-size:13px;font-weight:600;line-height:1.75;color:var(--muted)}
+.dsteps b{color:var(--fg);font-weight:800}
+
+header{text-align:center;padding:14px 0 2px}
+.logo{display:inline-flex;align-items:center;gap:9px;font-size:22px;font-weight:800;letter-spacing:-.02em}
+.logo .ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:17px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:var(--shadow)}
+.tag{font-size:14.5px;font-weight:600;color:var(--muted);margin:8px 0 0;text-wrap:balance}
+.tag b{color:var(--fg)}
+.badges{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:10px}
+.badge{font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--okbg);color:var(--ok);border:1px solid transparent}
+.badge.gray{background:var(--card2);color:var(--muted);border-color:var(--line)}
+
+.toolbar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+
+/* ── 두 칸 배치 · 넓은 화면에서 미리보기를 옆에 붙인다 ── */
+.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:0 16px}
+@media (min-width:980px){
+  .layout{grid-template-columns:minmax(0,1fr) 430px;align-items:start}
+  /* 옆 칸 맨 위에 광고가 들어가므로 미리보기 높이를 그만큼 줄여 「PDF로 저장」이 화면 안에 남게 한다.
+     옆 칸은 화면 높이 안에서 따로 스크롤한다 — sticky 만 두면 옆 칸이 화면보다 길 때
+     맨 위에서 저장했을 때 펼쳐지는 완료 카드(300×250)가 화면 아래로 빠진다 */
+  .side{position:sticky;top:8px;max-height:100vh;overflow:auto;padding-bottom:10px;scrollbar-width:thin}
+  .side .pv-pages{max-height:calc(100vh - 480px);min-height:320px;overflow:auto}
+}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-top:14px}
+.card h2{font-size:12px;font-weight:800;color:var(--muted);margin:0 0 12px;letter-spacing:.07em;
+  display:flex;align-items:center;justify-content:space-between;gap:8px}
+.card h2 .n{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;margin-right:6px;
+  background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);letter-spacing:0;font-size:11.5px}
+.card h2 .opt{font-size:10.5px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px;letter-spacing:.02em}
+
+/* ── 폼 ── */
+.row{margin-top:14px}
+.lab{display:flex;align-items:baseline;justify-content:space-between;gap:8px;font-size:13.5px;font-weight:800;margin-bottom:7px}
+.lab .hint{font-weight:500;color:var(--muted);font-size:12px;text-align:right}
+.lab>span:first-child{flex:0 0 auto}
+input[type=text],input[type=tel],input[type=date],select,textarea{font:inherit;font-size:16px;color:var(--fg);background:var(--card2);
+  border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-height:46px;width:100%;min-width:0}
+input[type=date]{-webkit-appearance:none;appearance:none;display:block}
+input::placeholder,textarea::placeholder{color:color-mix(in srgb,var(--muted) 70%,transparent)}
+textarea{resize:vertical;line-height:1.6}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+.grid2{display:flex;gap:10px;flex-wrap:wrap}
+.grid2>div{flex:1 1 180px;min-width:0}
+.grid2>div.wide{flex:2 1 240px}
+.seg{display:flex;gap:5px;flex-wrap:wrap}
+.seg button,.rgrid button,.tgrid button{flex:1 1 0;border:1px solid var(--line);background:var(--card2);color:var(--muted);font:inherit;
+  font-size:13.5px;font-weight:800;padding:9px 8px;border-radius:10px;cursor:pointer;min-height:46px;transition:.15s;min-width:72px}
+.seg button:hover,.rgrid button:hover,.tgrid button:hover{border-color:var(--accent)}
+.seg button.on,.rgrid button.on,.tgrid button.on{border-color:var(--accent);color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.seg button .s,.rgrid button .s,.tgrid button .s{display:block;font-size:11px;font-weight:600;color:var(--muted);margin-top:1px;line-height:1.4}
+.seg button.on .s,.rgrid button.on .s,.tgrid button.on .s{color:var(--accent)}
+.rgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.rgrid button{min-width:0;padding:8px 6px}
+@media (min-width:600px){.rgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* 문서 종류 — 휴대폰 2칸, 넓으면 4칸 */
+.tgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.tgrid button{min-width:0;padding:11px 10px;text-align:left;min-height:64px}
+.tgrid button b{display:block;font-size:14.5px;font-weight:800;color:var(--fg)}
+.tgrid button.on b{color:var(--accent)}
+@media (min-width:600px){.tgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.rinfo{margin-top:10px;border-radius:11px;padding:9px 11px 9px 12px;font-size:12.5px;font-weight:700;line-height:1.65;border-left:3px solid}
+.rinfo:empty{display:none}
+.rinfo.ok{background:var(--okbg);color:var(--ok)}
+.rinfo.warn{background:var(--warnbg);color:var(--warn)}
+.rinfo.info{background:var(--infobg);color:var(--info)}
+.chk{display:flex;align-items:flex-start;gap:9px;font-size:14px;font-weight:700;cursor:pointer;padding:8px 0;margin-top:4px}
+.chk input{width:20px;height:20px;accent-color:var(--accent);flex:0 0 auto;margin:2px 0 0}
+.chk .d{display:block;font-size:12.5px;font-weight:600;color:var(--muted);line-height:1.6;margin-top:1px}
+.unit{display:flex;gap:8px;align-items:center}
+.unit input{flex:1 1 auto}
+.unit span{flex:0 0 auto;font-size:14px;font-weight:800;color:var(--muted)}
+.unit.short input{flex:0 1 90px;text-align:center}
+.sub{border-left:3px solid color-mix(in srgb,var(--accent) 30%,transparent);padding-left:12px;margin-left:2px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.chips:empty{display:none}
+.chips button{border:1px solid var(--line);background:var(--card);color:var(--muted);font:inherit;font-size:12.5px;font-weight:700;
+  padding:6px 11px;border-radius:999px;cursor:pointer;min-height:38px;text-align:left}
+.chips button:hover{border-color:var(--accent);color:var(--accent)}
+.chips button.on{border-color:var(--accent);color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.party{border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:12px;background:var(--card2)}
+.party.first{margin-top:0}
+.party .grid2{margin-top:8px}
+.party .grid2:first-of-type{margin-top:0}
+.party input,.party textarea{background:var(--card)}
+.ph{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:800;margin-bottom:9px}
+.ph em{font-style:normal;font-size:11.5px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px;background:var(--card)}
+.fine{font-size:12px;font-weight:600;color:var(--muted);line-height:1.65;margin:9px 0 0}
+.fine b{color:var(--fg)}
+.cnote{font-size:12px;font-weight:700;color:var(--accent);margin:7px 0 0;line-height:1.6}
+.cnote:empty{display:none}
+
+.mini{border:1px solid var(--line);background:var(--card);color:var(--fg);font:inherit;font-size:13px;font-weight:700;
+  padding:9px 14px;border-radius:999px;cursor:pointer;min-height:42px;transition:.15s}
+.mini:hover{border-color:var(--accent)}
+.btn{flex:1 1 130px;border:1px solid var(--line);background:var(--card2);color:var(--fg);font:inherit;font-size:14px;font-weight:800;
+  padding:11px 12px;border-radius:12px;cursor:pointer;min-height:48px;transition:.15s;display:inline-flex;align-items:center;justify-content:center;gap:6px;text-align:center}
+.btn:hover:not(:disabled){border-color:var(--accent)}
+.btn:disabled{opacity:.5;cursor:progress}
+.btn.pri{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-color:transparent;box-shadow:var(--shadow)}
+@media (prefers-color-scheme:dark){.btn.pri{color:var(--afg)}}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.actions .btn.pri{flex-basis:100%}
+
+/* ── 결과 카드 ── */
+.pv h2 .pvinfo{letter-spacing:.02em;font-weight:700}
+.pv-pages{display:flex;flex-direction:column;gap:12px;background:color-mix(in srgb,var(--muted) 14%,var(--card2));border-radius:12px;padding:12px;
+  border:1px solid var(--line)}
+.pv-pages canvas{display:block;width:100%;height:auto;background:#fff;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.18),0 6px 18px -10px rgba(0,0,0,.35);cursor:zoom-in}
+
+/* ── 점검 ── */
+.checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.checks li{position:relative;border-radius:11px;padding:9px 11px 9px 34px;font-size:12.5px;font-weight:600;line-height:1.65}
+.checks li b{font-weight:800}
+.checks li::before{position:absolute;left:10px;top:9px;width:17px;height:17px;border-radius:50%;display:grid;place-items:center;
+  font-size:10.5px;font-weight:900;line-height:1}
+.checks li.ok{background:var(--okbg);color:var(--ok)}
+.checks li.ok::before{content:"✓";background:var(--ok);color:var(--okbg)}
+.checks li.info{background:var(--infobg);color:var(--info)}
+.checks li.info::before{content:"i";background:var(--info);color:var(--infobg)}
+.checks li.warn{background:var(--warnbg);color:var(--warn)}
+.checks li.warn::before{content:"!";background:var(--warn);color:var(--warnbg)}
+.checks li.bad{background:var(--dangerbg);color:var(--danger)}
+.checks li.bad::before{content:"✕";background:var(--danger);color:var(--dangerbg)}
+
+/* ── 안내 ── */
+.steps{list-style:none;margin:0;padding:0;counter-reset:st}
+.steps li{position:relative;padding-left:32px;margin-bottom:12px;font-size:14px;font-weight:600;line-height:1.7;counter-increment:st}
+.steps li:last-child{margin-bottom:0}
+.steps li::before{content:counter(st);position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;
+  font-size:12px;font-weight:800;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.steps li b{font-weight:800}
+.steps li .d{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.tbw{overflow-x:auto;margin:0 -2px;-webkit-overflow-scrolling:touch}
+table.kt{width:100%;min-width:560px;border-collapse:collapse;font-size:13px;line-height:1.6}
+table.kt th,table.kt td{border:1px solid var(--line);padding:9px 10px;vertical-align:top;text-align:left}
+table.kt th{background:var(--card2);font-weight:800;white-space:nowrap}
+table.kt td b{font-weight:800}
+table.kt td.k{font-weight:800;white-space:nowrap}
+.tnote{font-size:12px;font-weight:600;color:var(--muted);line-height:1.7;margin:10px 0 0}
+details{border-top:1px solid var(--line);padding:12px 0}
+details:first-of-type{border-top:0}
+summary{cursor:pointer;font-weight:700;font-size:14px;list-style:none;padding:10px 0;margin:-10px 0}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"＋ ";color:var(--accent);font-weight:800}
+details[open] summary::before{content:"－ "}
+details p{margin:8px 0 0;font-size:13.5px;color:var(--muted);line-height:1.8}
+details p b{color:var(--fg)}
+
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:22px;line-height:1.8}
+footer b{color:var(--fg)}
+footer a{color:inherit}
+
+/* ══ 주의 문구 ══ */
+.nbx{border:1px solid var(--warn);border-radius:14px;background:var(--warnbg);padding:14px 15px;margin-top:14px}
+.nbx-h{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:800;color:var(--warn);margin:0 0 10px}
+.nbx-h .ic{flex:0 0 auto;width:19px;height:19px;border-radius:6px;background:var(--warn);color:var(--warnbg);
+  font-size:12px;font-weight:800;display:grid;place-items:center;line-height:1}
+.nbx ul{list-style:none;margin:0;padding:0}
+.nbx li{position:relative;padding-left:12px;margin-bottom:7px;font-size:12px;font-weight:600;line-height:1.68;color:var(--warn)}
+.nbx li:last-child{margin-bottom:0}
+.nbx li::before{content:"·";position:absolute;left:1px;top:-1px;font-weight:800}
+.nbx li b{font-weight:800}
+.nbx .nbx-f{margin:11px 0 0;padding-top:10px;border-top:1px solid color-mix(in srgb,var(--warn) 32%,transparent);
+  font-size:12px;font-weight:700;line-height:1.72;color:var(--warn)}
+.nbx .nbx-f b{font-weight:800}
+
+/* ── 모바일 하단 바 ── */
+#mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;transform:translateY(115%);transition:transform .22s;
+  background:var(--card);border-top:1px solid var(--line);box-shadow:0 -8px 22px -14px rgba(0,0,0,.55);
+  padding:9px 14px calc(9px + env(safe-area-inset-bottom))}
+#mbar.on{transform:none}
+#mbar .in{max-width:700px;margin:0 auto;display:flex;align-items:center;gap:10px}
+#mbar .k{flex:1 1 auto;min-width:0;font-size:11px;font-weight:800;color:var(--muted);letter-spacing:.03em}
+#mbar .k b{display:block;font-size:13.5px;font-weight:800;color:var(--fg);letter-spacing:-.01em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#mbar .go{flex:0 0 auto;font:inherit;font-size:13px;font-weight:800;color:#fff;padding:10px 15px;border-radius:999px;border:0;cursor:pointer;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));min-height:42px}
+@media (prefers-color-scheme:dark){#mbar .go{color:var(--afg)}}
+@media (min-width:980px){#mbar{display:none}}
+
+#toast{position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom));transform:translate(-50%,20px);background:#14201c;color:#fff;font-size:13.5px;font-weight:700;line-height:1.5;
+  padding:10px 16px;border-radius:14px;width:max-content;opacity:0;pointer-events:none;transition:.25s;z-index:99;max-width:92vw;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-color-scheme:dark){#toast{background:#e8f1ee;color:#0b1f19}}
+
+@media (max-width:430px){
+  .lab{flex-direction:column;align-items:stretch;gap:2px}
+  .lab .hint{text-align:left}
+  .card{padding:14px}
+  .seg button{font-size:13px;min-width:0}
+  .rgrid button{font-size:13px}
+  .tag{font-size:14px}
+  .rsbox{padding-left:0}
+  .tgrid button b{font-size:14px}
+}
+
+/* ══════════ 출산 준비물 체크리스트 전용 ══════════ */
+/* 휴대폰 — 입력 카드 다음에 요약(저장) 카드, 그다음 체크리스트가 오게 두 칸을 한 줄로 풀어 순서를 다시 매긴다 */
+@media (max-width:979px){
+  .layout{display:flex;flex-direction:column}
+  .layout>main,.layout>aside{display:contents}
+  #cDue{order:1} #cHow{order:2} #pvCard{order:3} #doneCard{order:4} #cList{order:5} #cTodo{order:6} #cMilk{order:7}
+}
+.seg4 button,.seg5 button{min-width:0}
+@media (max-width:430px){.seg5{flex-wrap:wrap}.seg5 button{flex:1 1 30%}}
+/* 받은 링크 띠 */
+.rcvbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 0;padding:12px 14px;border-radius:14px;
+  background:color-mix(in srgb,var(--accent) 9%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+.rcvbar.hide{display:none}
+.rc-t{flex:1 1 240px;min-width:0;font-size:13.5px;line-height:1.5}
+.rc-t small{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-top:2px}
+.rc-b{display:flex;gap:6px;flex:0 0 auto}
+.rc-b .btn{min-height:42px}
+/* 요약 카드 */
+.rsub{margin:-4px 0 10px;font-size:12.5px;font-weight:700;color:var(--muted)}
+.prog{display:flex;align-items:center;gap:12px;margin:0 0 10px;padding:12px 14px;border-radius:14px;background:var(--card2);border:1px solid var(--line)}
+.pn{flex:0 0 auto;display:flex;align-items:baseline;gap:4px;white-space:nowrap}
+.pn b{font-size:28px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.pn span{font-size:15px;font-weight:800;color:var(--muted)}
+.pn small{font-size:12px;font-weight:700;color:var(--muted);margin-left:2px}
+.pbar{flex:1 1 auto;height:10px;border-radius:999px;background:color-mix(in srgb,var(--accent) 14%,var(--card));overflow:hidden}
+.pbar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .25s}
+#facts{margin-bottom:4px}
+/* 체크리스트 */
+.ltools{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.ltools .fseg{flex:1 1 170px}
+.ltools .mini{min-height:40px}
+.ltools .mini[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.addbar{display:flex;gap:6px;margin-top:10px}
+.addbar input{flex:1 1 auto;min-width:0}
+.addbar select{flex:0 0 auto;width:auto;max-width:34%}
+.addbar .btn{flex:0 0 auto;padding-left:14px;padding-right:14px}
+.legend{margin:8px 0 2px;font-size:11.5px;font-weight:600;color:var(--muted);line-height:1.8}
+.legend:empty{display:none}
+#cats{margin-top:8px}
+@media (min-width:760px){#cats{column-count:2;column-gap:12px}}
+.cat{break-inside:avoid;border:1px solid var(--line);border-radius:14px;margin:0 0 10px;overflow:hidden;background:var(--card)}
+.cat-h{display:flex;align-items:center;gap:8px;width:100%;border:0;background:var(--card2);color:var(--fg);font:inherit;cursor:pointer;
+  padding:10px 12px;text-align:left;min-height:46px}
+.cat-h .ci{font-size:17px;line-height:1}
+.cat-h .cn{flex:1 1 auto;font-size:14px;font-weight:800}
+.cat-h .cc{font-size:12px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+.cat-h .cc.full{color:var(--ok)}
+.cat-h::after{content:'';width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin:-4px 2px 0 4px;transition:transform .15s}
+.cat.fold .cat-h::after{transform:rotate(-45deg);margin-top:0}
+.cat.fold .items{display:none}
+.items{list-style:none;margin:0;padding:2px 0}
+.it{display:flex;align-items:center;gap:6px;padding:0 8px 0 4px;border-top:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+.it:first-child{border-top:0}
+.it label{flex:1 1 auto;display:flex;align-items:flex-start;gap:10px;min-width:0;padding:9px 4px 9px 8px;cursor:pointer;min-height:44px}
+.it input[type=checkbox]{flex:0 0 auto;width:22px;height:22px;margin:0;accent-color:var(--accent);cursor:pointer}
+.it .tx{flex:1 1 auto;min-width:0;line-height:1.45}
+.it .nm{font-size:14.5px;font-weight:700}
+.it .q{font-size:12.5px;font-weight:800;color:var(--accent);margin-left:5px;white-space:nowrap}
+.it .q small{font-size:11px;font-weight:600;color:var(--muted);margin-left:2px}
+.it .nt{display:block;font-size:11.5px;font-weight:600;color:var(--muted);margin-top:1px}
+.tg{display:inline-block;font-size:10.5px;font-weight:800;border-radius:6px;padding:0 5px;margin-left:5px;line-height:1.6;vertical-align:1px;white-space:nowrap;border:1px solid}
+.tg.opt{color:var(--muted);border-color:var(--line);font-weight:700}
+.tg.my{color:#a855f7;border-color:color-mix(in srgb,#a855f7 40%,transparent)}
+.it.on .nm{color:var(--muted);text-decoration:line-through;text-decoration-thickness:1.5px}
+.it.on .q,.it.on .nt{opacity:.6}
+#cats.left .it.on{display:none}
+#cats.left .cat.done{display:none}
+.ed{display:none;align-items:center;gap:3px;flex:0 0 auto}
+#cList.editing .ed{display:flex}
+.ed button{width:34px;height:34px;border-radius:9px;border:1px solid var(--line);background:var(--card2);color:var(--fg);font:inherit;font-size:16px;font-weight:800;cursor:pointer;padding:0;line-height:1}
+.ed button.del{color:var(--danger)}
+.ed .qv{min-width:24px;text-align:center;font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}
+.empty{padding:16px;text-align:center;font-size:13px;font-weight:700;color:var(--muted)}
+.lfoot{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;margin-top:4px}
+.mini.danger{color:var(--danger)}
+.mini.armed{background:var(--dangerbg);border-color:var(--danger)}
+/* 출발 전 할 일 */
+.todo{list-style:none;margin:0;padding:0}
+.todo li{display:flex;gap:10px;align-items:flex-start;padding:10px 4px;border-top:1px solid var(--line)}
+.todo li:first-child{border-top:0}
+.todo input{flex:0 0 auto;width:22px;height:22px;margin:2px 0 0;accent-color:var(--accent);cursor:pointer}
+.todo label{display:flex;gap:10px;flex:1 1 auto;min-width:0;cursor:pointer}
+.todo .dt{flex:0 0 76px;font-size:12px;font-weight:800;color:var(--accent);line-height:1.4;font-variant-numeric:tabular-nums}
+.todo .dt small{display:block;font-size:11px;color:var(--muted);font-weight:700}
+.todo .dt.late{color:var(--danger)}
+.todo .tt{flex:1 1 auto;min-width:0;font-size:14px;font-weight:800;line-height:1.45}
+.todo .tt small{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-top:2px;line-height:1.55}
+.todo li.on .tt{color:var(--muted);text-decoration:line-through}
+.todo li.on .tt small{text-decoration:none}
+/* 가방(구역) */
+.sec{margin:0 0 14px}
+.sec-h{display:flex;align-items:center;gap:8px;padding:9px 12px;margin:0 0 8px;border-radius:12px;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 15%,var(--card)),color-mix(in srgb,var(--accent2) 9%,var(--card)));
+  border:1px solid color-mix(in srgb,var(--accent) 25%,transparent)}
+.sec-h .si{font-size:18px;line-height:1}
+.sec-h .sn{flex:1 1 auto;min-width:0;font-size:15px;font-weight:800;color:var(--fg)}
+.sec-h .sn small{display:block;font-size:11.5px;font-weight:600;color:var(--muted)}
+.sec-h .sc{font-size:12.5px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap}
+.sec.done .sec-h .sc{color:var(--ok)}
+#cats.left .sec.done{display:none}
+@media (min-width:760px){#cats{column-count:auto}.secb{column-count:2;column-gap:12px}}
+/* 꼬리표 */
+.tg.prov{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 45%,transparent)}
+.tg.nat{color:var(--accent2);border-color:color-mix(in srgb,var(--accent2) 40%,transparent)}
+.tg.cs{color:#7c3aed;border-color:color-mix(in srgb,#7c3aed 40%,transparent)}
+.tg.old{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 45%,transparent)}
+@media (prefers-color-scheme:dark){.tg.cs{color:#c4b5fd;border-color:color-mix(in srgb,#c4b5fd 40%,transparent)}}
+.it .pr{display:inline-block;font-size:11.5px;font-weight:800;color:var(--accent2);margin-left:6px;white-space:nowrap}
+/* 고치기 — 휴대폰에서도 이름이 좁아지지 않게 둘째 줄로 내린다 */
+.it{flex-wrap:wrap}
+#cList.editing .ed{flex:1 1 100%;justify-content:flex-end;padding:0 2px 9px 40px;gap:4px}
+.ed .pin{gap:4px;flex:0 0 auto;margin-right:4px}
+.ed .pin input{width:96px;flex:0 0 96px;height:34px;min-height:0;padding:4px 8px;font-size:13px;text-align:right}
+.ed .pin span{font-size:12px}
+/* 할 일 */
+.todo .dt{flex-basis:80px}
+/* 비용 */
+.cost{margin:0 0 10px;font-size:12.5px;font-weight:700;color:var(--muted);line-height:1.6}
+.cost b{color:var(--fg)}
+.actions .btn.wide{flex-basis:100%}
+/* 지원 표 */
+.kt .bsub{display:block;font-size:11.5px;font-weight:600;color:var(--muted);margin-top:2px;line-height:1.5}
+/* 분유량 */
+.mkout{margin-top:10px}
+.mkn{font-size:24px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--accent)}
+.mkn small{display:block;font-size:12.5px;color:var(--muted);font-weight:700;letter-spacing:0;margin-top:1px}
+.mkper{margin-top:6px;font-size:14.5px;font-weight:700}
+.mkper b{color:var(--accent)}
+.mkper span{font-size:12.5px;color:var(--muted)}
+.mknote{margin-top:8px}
+.mkrules{margin-top:10px}
+#milkQuick{align-self:end}
+@media (max-width:430px){
+  .it .nm{font-size:14px}
+  .todo .dt{flex-basis:70px}
+  .addbar{flex-wrap:wrap}
+  .addbar input{flex-basis:100%}
+  .addbar select{flex:1 1 auto;max-width:none}
+  #cList.editing .ed{padding-left:8px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ╔══════════════════════════════════════════════════════════════════════╗
+     ║  광고 자리 ① 맨 위 · 320×50 (모바일·PC 공통)                        ║
+     ║  단위 ID 는 스크립트 아래쪽 AD.units 한 곳에서 바꿉니다.               ║
+     ║  한 화면 3곳 — 모바일 ① 맨 위 ② 저장 완료 카드 ③ 하단 오버형           ║
+     ║              PC   ① 맨 위 ② 옆 칸 요약 카드 위 ③ 저장 완료 카드        ║
+     ╚══════════════════════════════════════════════════════════════════════╝ -->
+<div class="ad-slot ad-top" id="ad-top"></div>
+
+<!-- 네이버·카카오 앱 안에서 열렸을 때만 보이는 띠 (body.inapp) -->
+<div class="iabar" id="iabar">
+  <div class="ia-t"><span id="iaMsg">앱 안에서는 PDF·그림·엑셀 저장이 안 될 수 있어요.</span>
+    <small id="iaSub">체크는 그대로 됩니다.</small></div>
+  <button class="ia-go" id="iaGo" type="button">크롬에서 열기</button>
+  <button class="ia-x" id="iaX" type="button" aria-label="안내 닫기">✕</button>
+</div>
+
+<!-- 받은 링크로 열었을 때 — 이 기기에 저장된 목록이 있으면 덮어쓸지 묻는다 -->
+<div class="rcvbar hide" id="rcvBar" role="region" aria-label="받은 목록">
+  <div class="rc-t"><b>받은 출산 준비물 목록이 있어요.</b><small id="rcvSub">불러오면 이 기기에서 체크한 내용이 받은 목록으로 바뀝니다.</small></div>
+  <div class="rc-b"><button class="btn pri" id="rcvYes" type="button">불러오기</button><button class="btn" id="rcvNo" type="button">내 목록 그대로</button></div>
+</div>
+
+<header>
+  <div class="logo"><span class="ico">👶</span><span>출산 준비물 체크리스트</span></div>
+  <p class="tag">예정일만 넣으면 <b>출산가방·조리원 가방·신생아 용품</b>을 개수까지 · <span class="nw">주차별 준비 일정</span> · <span class="nw">출생신고·지원금 마감일</span> · <span class="nw">분유량 계산</span></p>
+  <div class="badges">
+    <span class="badge">📅 2026년 11월 기준</span>
+    <span class="badge gray">병원·조리원·남편 가방</span>
+    <span class="badge gray">PDF·그림·엑셀 저장</span>
+    <span class="badge gray">무료 · 설치·가입 없음</span>
+  </div>
+</header>
+
+<div class="toolbar">
+  <button class="mini" type="button" data-ex="first">🤱 예시: 첫째 · 조리원 · 모유</button>
+  <button class="mini" type="button" data-ex="twins">👶👶 예시: 쌍둥이 · 제왕절개</button>
+  <button class="mini" type="button" data-ex="second">🏠 예시: 둘째 · 집 조리 · 분유</button>
+</div>
+
+<div class="layout">
+<main id="form">
+
+  <section class="card" id="cDue">
+    <h2><span><span class="n">1</span>출산 예정일</span><span class="opt" id="dueInfo"></span></h2>
+    <div class="grid2">
+      <div><label for="inpDue">예정일</label><input type="date" id="inpDue"></div>
+      <div><label for="inpBorn">태어난 날 <small>태어나면 넣기</small></label><input type="date" id="inpBorn"></div>
+    </div>
+    <p class="cnote" id="gaNote"></p>
+  </section>
+
+  <section class="card" id="cHow">
+    <h2><span><span class="n">2</span>어떻게 낳고 돌보나요</span><span class="opt" id="howInfo"></span></h2>
+    <div class="row"><div class="lab"><span>분만 방식</span><span class="hint">입원 날수와 산모 용품이 바뀝니다</span></div>
+      <div class="seg" data-seg="birth">
+        <button type="button" data-v="nat" class="on">자연분만<span class="s">2박 3일 안팎</span></button>
+        <button type="button" data-v="cs">제왕절개<span class="s">4박 5일 안팎</span></button>
+        <button type="button" data-v="unk">아직 몰라요<span class="s">둘 다 넣기</span></button>
+      </div></div>
+    <div class="row"><div class="lab"><span>산후조리</span><span class="hint">조리원이면 조리원 가방이 붙습니다</span></div>
+      <div class="seg" data-seg="care">
+        <button type="button" data-v="center" class="on">조리원<span class="s">퇴원 뒤 2주쯤</span></button>
+        <button type="button" data-v="home">집에서<span class="s">산후도우미·가족</span></button>
+      </div></div>
+    <div class="row"><div class="lab"><span>수유</span><span class="hint">젖병 개수·수유 용품이 바뀝니다</span></div>
+      <div class="seg seg4" data-seg="feed">
+        <button type="button" data-v="breast" class="on">모유</button>
+        <button type="button" data-v="mix">혼합</button>
+        <button type="button" data-v="formula">분유</button>
+        <button type="button" data-v="unk">아직 몰라요</button>
+      </div></div>
+    <div class="row"><div class="lab"><span>아기 옷 계절</span><span class="hint" id="seasonHint">예정일 달로 고릅니다</span></div>
+      <div class="seg seg4" data-seg="season">
+        <button type="button" data-v="auto" class="on">자동<span class="s" id="seasonAuto">-</span></button>
+        <button type="button" data-v="sum">여름</button>
+        <button type="button" data-v="mid">봄·가을</button>
+        <button type="button" data-v="win">겨울</button>
+      </div></div>
+    <label class="chk"><input type="checkbox" id="optTwins"><span>쌍둥이예요<span class="d">아기 옷·기저귀·카시트처럼 아기마다 드는 물건을 두 배로 셉니다.</span></span></label>
+    <label class="chk"><input type="checkbox" id="optSecond"><span>둘째 이상이에요<span class="d">아기 침대·욕조·유모차처럼 물려 쓸 수 있는 것에 「있으면 빼기」를 붙이고, 첫만남이용권을 300만 원으로 봅니다.</span></span></label>
+  </section>
+
+  <!-- ══ 준비물 체크리스트 ══ -->
+  <section class="card" id="cList">
+    <h2><span>출산 준비물 체크리스트</span><span class="opt" id="listInfo"></span></h2>
+    <div class="ltools">
+      <div class="seg fseg" data-seg="flt">
+        <button type="button" data-v="all" class="on">전체</button>
+        <button type="button" data-v="left">남은 것만</button>
+      </div>
+      <button class="mini" type="button" id="btnEdit" aria-pressed="false">✏️ 개수·금액·지우기</button>
+      <button class="mini" type="button" id="btnFold">모두 접기</button>
+    </div>
+    <div class="addbar">
+      <input type="text" id="addName" placeholder="더 챙길 것 (예: 수유 의자)" maxlength="40" autocomplete="off" enterkeyhint="done" aria-label="더 챙길 것 이름">
+      <select id="addCat" aria-label="넣을 분류"></select>
+      <button type="button" class="btn pri" id="addBtn">더하기</button>
+    </div>
+    <p class="legend" id="legend"></p>
+    <div id="cats"></div>
+    <div class="lfoot">
+      <button class="mini" type="button" id="btnRestore">지운 항목 되살리기</button>
+      <button class="mini danger" type="button" id="btnReset">체크 모두 지우기</button>
+    </div>
+  </section>
+
+  <section class="card" id="cTodo">
+    <h2><span>할 일 — 주차별 준비 · 출산 후</span><span class="opt" id="todoInfo"></span></h2>
+    <ul class="todo" id="todoList"></ul>
+    <p class="fine" id="todoNote">출산 뒤 날짜는 예정일로 어림한 것입니다. 아기가 태어나면 위에 태어난 날을 넣으세요. 날짜가 그날 기준으로 다시 잡힙니다.</p>
+  </section>
+
+  <section class="card" id="cMilk">
+    <h2><span>🍼 신생아 분유량 어림 계산</span><span class="opt">개월·체중으로</span></h2>
+    <div class="row"><div class="lab"><span>아기 나이</span><span class="hint" id="milkAgeHint">태어난 날을 넣으면 저절로 고릅니다</span></div>
+      <div class="seg seg5" data-seg="milkAge" id="milkAges"></div></div>
+    <div class="grid2">
+      <div><label for="milkKg">아기 체중</label><div class="unit short"><input type="text" inputmode="decimal" id="milkKg" value="3.5" autocomplete="off"><span>kg</span></div></div>
+      <div class="chips" id="milkQuick">
+        <button type="button" data-kg="3">3kg</button><button type="button" data-kg="4">4kg</button><button type="button" data-kg="5">5kg</button><button type="button" data-kg="6">6kg</button><button type="button" data-kg="7">7kg</button>
+      </div>
+    </div>
+    <div class="mkout" id="milkOut"></div>
+    <ul class="checks mkrules">
+      <li class="info"><b>아기마다 다릅니다.</b> 시간보다 배고파하는 신호(입을 오물거림·손 빨기·고개 돌려 찾기)를 보고 먹이고, 고개를 돌리거나 입을 다물면 그만 먹입니다.</li>
+      <li class="info"><b>하루 960mL 를 넘지 않게</b> 봅니다. 늘 남기거나, 매번 모자라 보채면 양을 정하지 말고 소아청소년과와 상의하세요.</li>
+      <li class="info">혼합 수유라면 젖을 먹는 만큼 분유를 줄입니다. 분유는 통에 적힌 비율대로 타세요.</li>
+      <li class="info">잘 먹고 있는지는 <b>체중이 꾸준히 느는지</b>로 봅니다. 영유아 건강검진·예방접종 때 몸무게를 재 보세요.</li>
+    </ul>
+  </section>
+
+</main>
+
+<aside class="side" id="side">
+  <!-- 광고 자리 · PC 요약 카드 위 320×50 (모바일에서는 숨깁니다) -->
+  <div class="ad-slot" id="ad-side"></div>
+  <section class="card pv" id="pvCard">
+    <h2><span id="resTitle">예정일</span><span class="pvinfo" id="resDday"></span></h2>
+    <p class="rsub" id="resSub"></p>
+    <div class="prog">
+      <div class="pn"><b id="progNum">0</b><span id="progAll">/ 0</span><small id="progSub">챙김</small></div>
+      <div class="pbar" aria-hidden="true"><i id="progBar"></i></div>
+    </div>
+    <p class="cost" id="costLine"></p>
+    <ul class="checks" id="facts"></ul>
+    <div class="row"><div class="lab"><span>저장할 내용</span></div>
+      <div class="seg" data-seg="scope">
+        <button type="button" data-v="all" class="on">전체 목록</button>
+        <button type="button" data-v="left">안 챙긴 것만</button>
+      </div></div>
+    <div class="actions">
+      <button class="btn pri" id="btnPdf" type="button">📄 PDF로 저장 (A4 인쇄용)</button>
+      <button class="btn" id="btnImg" type="button">🖼️ 그림 저장</button>
+      <button class="btn" id="btnXlsx" type="button">📊 엑셀 저장</button>
+      <button class="btn" id="btnCopy" type="button">📋 글로 복사</button>
+      <button class="btn wide" id="btnShare" type="button">🔗 링크로 보내기 · 남편과 같이 보기</button>
+    </div>
+    <p class="fine">체크한 내용은 이 기기 브라우저에만 남습니다. 「링크로 보내기」를 누르면 지금 목록과 체크가 담긴 주소가 만들어져, 받은 사람이 열면 같은 목록이 뜹니다.</p>
+  </section>
+
+  <!-- 저장 완료 카드 · 광고 자리 — 저장을 누른 다음(핵심 행동이 끝난 뒤)에 펼쳐집니다.
+       창으로 화면을 덮지 않고 본문 흐름 안에 두며, 닫기는 광고 영역 밖 머리글에 둡니다. -->
+  <section class="card hide" id="doneCard">
+    <h2><span>저장했습니다</span><button class="mini" id="doneHide" type="button">닫기</button></h2>
+    <p class="dmsg" id="doneMsg"></p>
+    <ol class="dsteps" id="doneSteps"></ol>
+    <p class="dwarn hide" id="doneInapp">저장된 파일이 안 보이나요? 앱 안 브라우저는 내려받기가 막혀 있습니다.
+      <button type="button" id="doneGo">다른 브라우저로 열기</button></p>
+    <div id="doneAd"><span class="ad-lab">광고</span><div class="ad-slot" id="ad-done"></div></div>
+  </section>
+</aside>
+</div>
+
+<section class="card">
+  <h2><span>출산하면 받는 지원 — 2026년</span></h2>
+  <div class="tbw">
+    <table class="kt" id="benTable"></table>
+  </div>
+  <p class="tnote">출생신고를 할 때 「행복출산 원스톱 서비스」로 첫만남이용권·부모급여·아동수당 등을 한 번에 신청할 수 있습니다. 부모급여·아동수당은 태어난 날을 포함해 60일 안에 신청해야 태어난 달 것부터 받습니다. 2026년 11월에 보건복지부·지자체 공식 안내로 확인한 내용이며, 정부가 지원금 통합·인상을 추진하고 있어 바뀔 수 있으니 신청 전에 복지로(bokjiro.go.kr)나 주민센터에서 한 번 더 확인하세요.</p>
+</section>
+
+<section class="card">
+  <h2><span>주차별 출산 준비 일정</span></h2>
+  <div class="tbw">
+    <table class="kt">
+      <thead><tr><th>때</th><th>할 일</th></tr></thead>
+      <tbody>
+        <tr><td class="k">16주 무렵</td><td>산후조리원 알아보고 예약 · 국민행복카드로 임신·출산 진료비 쓰기</td></tr>
+        <tr><td class="k">24주 무렵</td><td>출산휴가·육아휴직 일정을 회사와 맞추기</td></tr>
+        <tr><td class="k">28주 무렵</td><td>큰 물건부터 사기 — 카시트·유모차·아기 침대</td></tr>
+        <tr><td class="k">31주 무렵</td><td>병원·조리원에서 주는 물건 물어보고 목록에서 빼기</td></tr>
+        <tr><td class="k">예정일 50일 전~</td><td>배우자 출산휴가를 쓸 수 있는 때(20일, 3번까지 나눠)</td></tr>
+        <tr><td class="k">예정일 40일 전~</td><td>산모·신생아 건강관리(산후도우미) 신청 시작</td></tr>
+        <tr><td class="k">34~35주</td><td>아기 옷·속싸개·손수건 빨아 두기 · <b>출산가방 싸기</b></td></tr>
+        <tr><td class="k">36주</td><td>카시트 달기 · 병원 가는 길·연락처 정리 · 가방은 현관 가까이</td></tr>
+        <tr><td class="k">출산 후 1개월 안</td><td><b>출생신고</b> · 첫만남이용권·부모급여·아동수당 신청 · BCG·B형간염 2차 접종</td></tr>
+        <tr><td class="k">출산 후 60일 안</td><td>부모급여·아동수당 신청 마감(태어난 달부터 받으려면) · 산후도우미 신청 마감</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tnote">쌍둥이나 조산 위험이 있다는 안내를 받았다면 가방을 더 일찍 싸 두세요. 병원마다 입원 안내가 다르니 다니는 병원의 설명을 먼저 따르세요.</p>
+</section>
+
+<section class="card">
+  <h2><span>자주 묻는 질문</span></h2>
+  <details>
+    <summary>출산가방은 언제 싸야 하나요?</summary>
+    <p><b>임신 36주 전</b>에 싸 두는 것이 좋습니다. 진통은 예정일보다 일찍 올 수 있고, 쌍둥이는 더 일찍 입원하는 경우가 많습니다. 예정일을 넣으면 36주가 되는 날을 요약 카드 맨 위에 띄우고, 남은 날짜를 세어 줍니다. 다 싼 가방은 현관 가까이 두고, 남편(보호자)도 어디에 무엇이 있는지 알게 해 두세요.</p>
+  </details>
+  <details>
+    <summary>출산가방 필수 준비물은 무엇인가요?</summary>
+    <p>빠지면 곤란한 것은 <b>산모 수첩·신분증·국민행복카드, 휴대폰 충전기, 산모 패드·일회용 산모 팬티, 수유 브라, 수면 양말, 퇴원할 때 입을 옷</b>, 그리고 아기가 퇴원할 때 쓸 <b>배냇저고리·속싸개·겉싸개·카시트</b>입니다. 산모 패드·기저귀·세면도구·환자복은 병원에서 주는 곳이 많아 목록에 「주는 곳 많음」으로 표시했습니다. 다니는 병원에 미리 물어보고 겹치는 것은 빼세요.</p>
+  </details>
+  <details>
+    <summary>제왕절개 출산 준비물은 무엇이 다른가요?</summary>
+    <p>입원이 4박 5일 안팎으로 길어 속옷·보호자 옷을 조금 더 챙기고, <b>산모 복대</b>와 <b>압박 스타킹</b>이 들어갑니다(쓰는 시기와 방법은 병원 안내를 따르세요). 자연분만이면 대신 <b>회음부 방석</b>이 있으면 앉을 때 덜 아픕니다. 분만 방식을 「아직 몰라요」로 두면 둘 다 넣고 꼬리표로 나눠 줍니다.</p>
+  </details>
+  <details>
+    <summary>남편(보호자) 가방에는 무엇을 챙기나요?</summary>
+    <p>병실에서 함께 지내는 경우가 많아 <b>갈아입을 옷·세면도구·슬리퍼·충전기와 보조배터리·간식</b>을 챙기고, 진통이 오면 누구에게 먼저 알릴지 <b>연락 목록과 병원 전화번호</b>를 적어 두면 좋습니다. 둘째라면 큰아이를 맡길 곳 연락처도 넣었습니다. 「링크로 보내기」로 남편에게 같은 목록을 보내 나눠 챙겨 보세요.</p>
+  </details>
+  <details>
+    <summary>조리원 가방은 따로 싸야 하나요?</summary>
+    <p>조리원은 보통 퇴원하고 바로 들어가 2주쯤 머뭅니다. 병원 가방에 넣은 세면도구·텀블러·손목 보호대·슬리퍼는 그대로 옮기고, <b>수유복·속옷·수면 양말 여벌, 수유 브라·수유 패드</b>를 더하면 됩니다. 수유복·산모 패드·유축기·수유 쿠션은 조리원에서 주는 곳이 많으니 예약할 때 물어보세요.</p>
+  </details>
+  <details>
+    <summary>신생아 옷은 몇 벌이나 사야 하나요?</summary>
+    <p>아기는 금방 자라서 처음부터 많이 살 필요가 없습니다. 이 목록은 <b>배냇저고리 3벌(여름 4벌), 내복 4벌, 속싸개 3장, 가제 손수건 20장</b> 안팎으로 잡았고, 쌍둥이면 두 배로 셉니다. 처음 입히기 전에 아기 옷 세제로 한 번 빨아 두세요. 「✏️ 개수·금액·지우기」에서 개수를 바꿀 수 있습니다.</p>
+  </details>
+  <details>
+    <summary>신생아 분유량은 얼마나 되나요?</summary>
+    <p>미국소아과학회는 하루에 <b>체중 1kg당 약 150~165mL</b>(하루 960mL 넘지 않게)를 어림으로 듭니다. 대한소아청소년과학회 안내로는 처음엔 3~4시간 간격으로 한 번에 60~90mL 안팎을 먹고, 생후 6개월까지 차츰 늘어 한 번에 180~240mL를 하루 4~5번 먹습니다. 위의 「신생아 분유량 어림 계산」에 나이와 체중을 넣어 보세요. 아기마다 다르니 배고픈 신호와 체중이 느는지를 함께 보세요.</p>
+  </details>
+  <details>
+    <summary>첫만남이용권으로 출산 준비물을 살 수 있나요?</summary>
+    <p>네. 첫만남이용권은 국민행복카드 포인트로 받아 <b>출생일부터 2년 동안</b> 씁니다(첫째 200만 원, 둘째 이상 300만 원). 유흥·사행 업종 등 일부를 빼면 출산 준비물·기저귀·산후조리원 등에 쓸 수 있습니다. 다만 아기가 태어나 출생신고를 한 뒤에 받으므로, 출산 전에 사는 물건은 먼저 내 돈으로 사야 합니다.</p>
+  </details>
+  <details>
+    <summary>체크한 것은 어디에 저장되나요? 남편과 같이 볼 수 있나요?</summary>
+    <p>이 기기 브라우저에만 저장되고 서버로 보내지 않습니다. 남편과 같이 보려면 <b>「🔗 링크로 보내기」</b>를 누르세요. 지금 목록과 체크가 주소 안에 담겨, 받은 사람이 열면 같은 목록이 뜹니다(체크를 바꾸면 다시 보내야 합니다). 인쇄해서 쓰려면 PDF, 엑셀로 금액까지 관리하려면 엑셀로 저장하세요.</p>
+  </details>
+</section>
+
+<!-- ══ 주의 문구 ══ -->
+<div class="nbx">
+  <div class="nbx-h"><span class="ic">!</span><span>쓰기 전에 확인하세요</span></div>
+  <ul>
+    <li><b>참고용 목록입니다.</b> 병원·조리원마다 주는 물건과 안내가 다르니 다니는 곳에 먼저 물어보고, 직접 더하고 빼서 쓰세요.</li>
+    <li><b>건강에 관한 판단은 의료진과 상의하세요.</b> 분만 방식·입원 기간·복대와 압박 스타킹 쓰는 법, 아기 수유량은 산모와 아기 상태에 따라 다릅니다. 분유량 계산은 어림값이며 진단이 아닙니다.</li>
+    <li><b>지원 제도는 바뀔 수 있습니다.</b> 금액·신청 기한은 2026년 11월 확인 기준이며, 지역마다 추가 지원이나 다른 기준이 있을 수 있습니다. 신청 전에 복지로·정부24·주민센터·보건소에서 확인하세요.</li>
+    <li>진통·출혈·양수가 새는 느낌·태동이 줄어드는 등 이상이 있으면 목록보다 <b>병원에 먼저 연락</b>하세요.</li>
+  </ul>
+  <p class="nbx-f">이 체크리스트는 <b>있는 그대로 제공되며</b>, 목록과 계산을 근거로 한 판단이나 손해에 대해 <b>제작자와 운영자는 법적 책임을 지지 않습니다.</b> 상품·업체를 추천하지 않으며 물건은 일반 이름으로만 적었습니다.</p>
+</div>
+
+<footer>
+  <b>출산 준비물 체크리스트</b> · 출산가방 리스트 · 조리원 가방 · 신생아 준비물 · 주차별 준비 일정 · 신생아 분유량 계산<br>
+  함께 보면 좋은 도구: <a href="https://hwj-hub.github.io/maternity_leave_pay/" target="_blank" rel="noopener">출산휴가 급여 계산기</a> · <a href="https://hwj-hub.github.io/household_budget/" target="_blank" rel="noopener">가계부 만들기</a> · <a href="https://hwj-hub.github.io/photo_to_video/" target="_blank" rel="noopener">사진으로 동영상 만들기</a><br>
+  근거: 보건복지부(첫만남이용권·부모급여·아동수당 2026), 지자체 보건소 산모·신생아 건강관리 지원사업 안내, 가족관계의 등록 등에 관한 법률 제44조(출생신고), 근로기준법·남녀고용평등법(출산전후휴가·배우자 출산휴가), 대한소아청소년과학회 젖병 수유 안내, 미국소아과학회(AAP) 분유 수유량 안내(2026년 11월 확인)<br>
+  입력한 내용은 어디에도 전송되지 않으며, 페이지를 연 뒤에는 인터넷 없이도 동작합니다 · 외부 라이브러리 없음
+</footer>
+</div>
+
+<!-- 앱 안(네이버·카카오톡 등) 안내 창 — 체크리스트는 앱 안에서도 되므로 띄우지 않는다(모듈이 참조만 한다) -->
+<div class="iamodal" id="iaModal" role="dialog" aria-modal="true" aria-labelledby="iaTitle">
+  <div class="iasheet">
+    <div class="iaic">📱</div>
+    <h2 id="iaTitle">앱 안에서는 파일이 저장되지 않을 수 있습니다</h2>
+    <p class="iap" id="iaDesc"></p>
+    <ol class="iasteps" id="iaSteps"></ol>
+    <button class="iabtn" id="iaGo2" type="button">크롬에서 열기</button>
+    <p class="iafine"><button type="button" id="iaStay">그냥 볼게요</button></p>
+  </div>
+</div>
+
+<!-- 광고 자리 ③ 하단 오버형 · 320×50 — 아래쪽 안내 글을 읽는 구간에서만 올라오고, 체크리스트·입력 중에는 내려가 있습니다. -->
+<div id="anchor"><span class="amk">광고</span><div class="ad-slot" id="ad-anchor"></div>
+  <button class="axl" id="anchorX" type="button" aria-label="광고 닫기">✕</button></div>
+
+<div id="mbar"><div class="in"><div class="k">챙긴 것<b id="mbarTxt">-</b></div><button class="go" id="mbarGo" type="button">저장하기 ↑</button></div></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+"use strict";
+/* ════════════════════════════════════════════════════════════
+   출산 준비물 체크리스트 — 라이브러리 없이 순수 JS
+   예정일·분만 방식·조리원·수유·쌍둥이·둘째 → 병원·조리원 가방·신생아 용품(개수) · 주차별 할 일 · 분유량 어림
+   저장: PDF(글자 윤곽선 Type3) · PNG · xlsx(✔ 고르기·조건부 서식·COUNTIF·SUMIF) · 글 · 링크(# 뒤에 담기)
+   근거: 보건복지부·지자체 출산 지원 안내, 가족관계등록법 제44조, 대한소아청소년과학회·AAP 수유 안내(2026.11 확인)
+   ════════════════════════════════════════════════════════════ */
+const $ = id => document.getElementById(id);
+const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+const esc = s => String(s).replace(/[&<>"']/g, c => ESC[c]);
+let toastT = 0;
+function toast(msg, ms) {
+  const t = $('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), ms || 2600);
+}
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+/* 배경 탭에서도 느려지지 않는 양보(타이머는 배경 탭에서 1초로 늘어난다) */
+const _ych = new MessageChannel(); const _yq = [];
+_ych.port1.onmessage = () => { const f = _yq.shift(); if (f) f(); };
+const yieldUI = () => new Promise(r => { _yq.push(r); _ych.port2.postMessage(0); });
+
+/* ── 날짜 (문자열 YYYY-MM-DD 로만 다룬다 — 시간대 오차를 피하려고) ── */
+function parseD(s) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || '');
+  if (!m) return null;
+  const y = +m[1], mo = +m[2], d = +m[3];
+  if (mo < 1 || mo > 12 || d < 1 || d > 31 || y < 1900 || y > 2200) return null;
+  return { y, m: mo, d };
+}
+const iso = (y, m, d) => y + '-' + String(m).padStart(2, '0') + '-' + String(d).padStart(2, '0');
+function todayISO() { const t = new Date(); return iso(t.getFullYear(), t.getMonth() + 1, t.getDate()); }
+const WEEK = ['일', '월', '화', '수', '목', '금', '토'];
+function kDate(s) {
+  const p = parseD(s); if (!p) return '';
+  return `${p.y}. ${p.m}. ${p.d}.(${WEEK[new Date(p.y, p.m - 1, p.d).getDay()]})`;
+}
+/* 시각 'HH:MM' ↔ 분 */
+const hm2min = s => { const m = /^(\d{1,2}):(\d{2})$/.exec(s || ''); return m ? +m[1] * 60 + +m[2] : NaN; };
+/* 하루(24시)를 넘기면 앞에 「+1일」을 붙인다 */
+const min2hm = v => {
+  v = Math.round(v);
+  const d = Math.floor(v / 1440), r = ((v % 1440) + 1440) % 1440;
+  return (d > 0 ? '+' + d + '일 ' : '') + String(Math.floor(r / 60)).padStart(2, '0') + ':' + String(r % 60).padStart(2, '0');
+};
+
+/* ════════════════════════════════════════════════════════════
+   글꼴 · 글자 폭 · 윤곽선
+   — 같은 시리즈의 견적서 도구에서 가져온 방식. 기기 글꼴로 글자를 그려 윤곽선을 따고,
+     미리보기·이미지·PDF 가 모두 같은 글리프를 쓰게 한다(PDF 에서 확대해도 깨지지 않고 글자 복사·검색이 된다)
+   ════════════════════════════════════════════════════════════ */
+const FACES = {
+  sans: '"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","Noto Sans KR","Noto Sans CJK KR","Nanum Gothic","NanumGothic",sans-serif'
+};
+const fkey = bold => bold ? 'sans-b' : 'sans';
+function fcss(key, px) {
+  const bold = key.slice(-2) === '-b';
+  return (bold ? 'bold ' : '') + px + 'px ' + FACES.sans;
+}
+let _mctx = null;
+function mctx() {
+  if (!_mctx) { const c = document.createElement('canvas'); c.width = 8; c.height = 8; _mctx = c.getContext('2d'); }
+  return _mctx;
+}
+/* 글자 폭 (em) — 1/1000 em 로 반올림해 PDF 의 Widths 와 똑같이 맞춘다 */
+const _adv = new Map();
+function adv(key, ch) {
+  const k = key + '|' + ch;
+  let v = _adv.get(k);
+  if (v === undefined) {
+    const c = mctx(); c.font = fcss(key, 200);
+    v = Math.round(c.measureText(ch).width / 200 * 1000) / 1000;
+    _adv.set(k, v);
+  }
+  return v;
+}
+/* 글줄 폭(pt) */
+function textW(s, z, bold) {
+  const key = fkey(bold);
+  let w = 0;
+  for (const ch of String(s)) w += adv(key, ch);
+  return w * z;
+}
+/* 폭 안에 들어가게 — 글자를 minZ 까지 줄이고, 그래도 넘치면 끝을 … 로 자른다 */
+function fitText(s, maxW, z, bold, minZ) {
+  s = String(s == null ? '' : s);
+  if (maxW <= 0) return { s: '', z };
+  let w = textW(s, z, bold);
+  if (w <= maxW) return { s, z };
+  const z2 = Math.max(minZ || z * 0.72, z * maxW / w);
+  w = textW(s, z2, bold);
+  if (w <= maxW) return { s, z: z2 };
+  const chars = Array.from(s);
+  while (chars.length > 1 && textW(chars.join('') + '…', z2, bold) > maxW) chars.pop();
+  return { s: chars.join('') + '…', z: z2 };
+}
+
+/* 알파 격자 → 닫힌 윤곽선들 (픽셀 좌표). 안쪽을 오른쪽에 두고 도는 방향으로 일관되게 만든다 */
+function marchAlpha(A, W, H, T) {
+  const HN = W * H;
+  const next = new Int32Array(2 * HN).fill(-1);
+  const px = new Float32Array(2 * HN), py = new Float32Array(2 * HN);
+  const cr = [0, 0, 0, 0], ct = [0, 0, 0, 0];
+  for (let y = 0; y < H - 1; y++) {
+    const r0 = y * W, r1 = r0 + W;
+    for (let x = 0; x < W - 1; x++) {
+      const tl = A[r0 + x], tr = A[r0 + x + 1], br = A[r1 + x + 1], bl = A[r1 + x];
+      const it = tl > T, ir = tr > T, ib = br > T, il = bl > T;
+      if (it === ir && ir === ib && ib === il) continue;
+      let n = 0;
+      if (it !== ir) { const e = r0 + x; px[e] = x + 0.5 + (T - tl) / (tr - tl); py[e] = y + 0.5; cr[n] = e; ct[n++] = it ? 1 : 0; }
+      if (ir !== ib) { const e = HN + r0 + x + 1; px[e] = x + 1.5; py[e] = y + 0.5 + (T - tr) / (br - tr); cr[n] = e; ct[n++] = ir ? 1 : 0; }
+      if (ib !== il) { const e = r1 + x; px[e] = x + 0.5 + (T - bl) / (br - bl); py[e] = y + 1.5; cr[n] = e; ct[n++] = ib ? 1 : 0; }
+      if (il !== it) { const e = HN + r0 + x; px[e] = x + 0.5; py[e] = y + 0.5 + (T - tl) / (bl - tl); cr[n] = e; ct[n++] = il ? 1 : 0; }
+      if (n === 2) {
+        if (ct[0]) next[cr[0]] = cr[1]; else next[cr[1]] = cr[0];
+      } else if (n === 4) {
+        const connected = (tl + tr + br + bl) / 4 > T;
+        for (let k = 0; k < 4; k++) if (ct[k]) next[cr[k]] = cr[connected ? (k + 1) % 4 : (k + 3) % 4];
+      }
+    }
+  }
+  const loops = [];
+  for (let e0 = 0; e0 < 2 * HN; e0++) {
+    if (next[e0] < 0) continue;
+    const pts = [];
+    let e = e0, guard = 0;
+    while (e >= 0 && guard++ < 1e6) {
+      const nx = next[e];
+      if (nx < 0) break;
+      pts.push(px[e], py[e]);
+      next[e] = -1;
+      e = nx;
+      if (e === e0) break;
+    }
+    if (pts.length >= 6) loops.push(pts);
+  }
+  return loops;
+}
+/* 더글러스-포이커 (닫힌 다각형) */
+function simplifyLoop(p, eps) {
+  const n = p.length / 2;
+  if (n <= 4) return p;
+  let far = 0, fd = -1;
+  for (let i = 1; i < n; i++) { const d = (p[2 * i] - p[0]) ** 2 + (p[2 * i + 1] - p[1]) ** 2; if (d > fd) { fd = d; far = i; } }
+  const keep = new Uint8Array(n); keep[0] = 1; keep[far] = 1;
+  const e2 = eps * eps;
+  const stack = [[0, far], [far, n]];
+  while (stack.length) {
+    const [a, b] = stack.pop();
+    if (b - a < 2) continue;
+    const ax = p[2 * a], ay = p[2 * a + 1], bi = b % n, bx = p[2 * bi], by = p[2 * bi + 1];
+    const dx = bx - ax, dy = by - ay, L2 = dx * dx + dy * dy;
+    let best = -1, bd = -1;
+    for (let i = a + 1; i < b; i++) {
+      const qx = p[2 * i] - ax, qy = p[2 * i + 1] - ay;
+      let d;
+      if (L2 < 1e-12) d = qx * qx + qy * qy;
+      else { const c = qx * dy - qy * dx; d = c * c / L2; }
+      if (d > bd) { bd = d; best = i; }
+    }
+    if (bd > e2) { keep[best] = 1; stack.push([a, best], [best, b]); }
+  }
+  const out = [];
+  for (let i = 0; i < n; i++) if (keep[i]) out.push(p[2 * i], p[2 * i + 1]);
+  return out;
+}
+const TRACE_EM = 256;
+const _trace = new Map();
+let _tcanvas = null;
+/* 글자 하나 → { adv, bbox:[x0,y0,x1,y1], path } — 좌표는 1/1000 em, y 는 위쪽이 + */
+function traceGlyph(key, ch) {
+  const ck = key + '|' + ch;
+  let g = _trace.get(ck);
+  if (g) return g;
+  g = { adv: Math.round(adv(key, ch) * 1000), bbox: [0, 0, 0, 0], path: '' };
+  if (!/\s/.test(ch)) {
+    const E = TRACE_EM, pad = 4;
+    if (!_tcanvas) _tcanvas = document.createElement('canvas');
+    const c0 = mctx(); c0.font = fcss(key, E);
+    const m = c0.measureText(ch);
+    const left = Math.ceil(Math.max(0, m.actualBoundingBoxLeft || 0)) + pad;
+    const right = Math.ceil(Math.max(m.width, m.actualBoundingBoxRight || m.width)) + pad;
+    const asc = Math.ceil(Math.max(m.actualBoundingBoxAscent || E, 1)) + pad;
+    const desc = Math.ceil(Math.max(m.actualBoundingBoxDescent || E * 0.3, 0)) + pad;
+    const W = Math.min(2048, left + right + 2), H = Math.min(2048, asc + desc + 2);
+    const c = _tcanvas; c.width = W; c.height = H;
+    const ctx = c.getContext('2d', { willReadFrequently: true });
+    ctx.clearRect(0, 0, W, H);
+    ctx.font = fcss(key, E);
+    ctx.textBaseline = 'alphabetic';
+    ctx.fillStyle = '#000';
+    ctx.fillText(ch, left, asc);
+    const d = ctx.getImageData(0, 0, W, H).data;
+    const A = new Uint8Array(W * H);
+    for (let i = 0, j = 3; i < A.length; i++, j += 4) A[i] = d[j];
+    const loops = marchAlpha(A, W, H, 127.5);
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    const parts = [];
+    const S = 1000 / E;
+    for (const lp of loops) {
+      const q = simplifyLoop(lp, 0.35);
+      if (q.length < 6) continue;
+      let area = 0;
+      for (let i = 0, n = q.length / 2; i < n; i++) { const j = (i + 1) % n; area += q[2 * i] * q[2 * j + 1] - q[2 * j] * q[2 * i + 1]; }
+      if (Math.abs(area) < 1.2) continue;
+      let s = '';
+      for (let i = 0; i < q.length; i += 2) {
+        const X = Math.round((q[i] - left) * S), Y = Math.round((asc - q[i + 1]) * S);
+        if (X < x0) x0 = X; if (X > x1) x1 = X; if (Y < y0) y0 = Y; if (Y > y1) y1 = Y;
+        s += X + ' ' + Y + (i ? ' l\n' : ' m\n');
+      }
+      parts.push(s + 'h\n');
+    }
+    if (parts.length) { g.path = parts.join('') + 'f\n'; g.bbox = [x0, y0, x1, y1]; }
+  }
+  _trace.set(ck, g);
+  return g;
+}
+
+/* ════════════════════════════════════════════════════════════
+   그리기 — 쪽마다 「그리기 목록(ops)」을 만들어 두고 캔버스(미리보기·이미지·인쇄)와 PDF 가 같은 목록을 그린다.
+   좌표는 pt(1/72 인치), 위쪽이 0. 색은 '#RRGGBB'
+     t 글자 {x, y(기준선), s, z(크기), b(굵게), c}
+     l 선   {x1, y1, x2, y2, w, c, d(점선 [칠, 빔])}
+     r 상자 {x, y, w, h, f(채움), s(테두리), lw, rr(모서리 둥글기)}
+     c 원   {x, y, r, f, s, lw}
+   ════════════════════════════════════════════════════════════ */
+const _p2d = new Map();
+function glyphPath(key, ch) {
+  const k = key + '|' + ch;
+  let p = _p2d.get(k);
+  if (p === undefined) {
+    const g = traceGlyph(key, ch);
+    p = null;
+    if (g.path) {
+      p = new Path2D();
+      for (const ln of g.path.split(/\n/)) {
+        const a = ln.split(' ');
+        if (a.length === 3) { if (a[2] === 'm') p.moveTo(+a[0], -a[1]); else p.lineTo(+a[0], -a[1]); }
+        else if (ln === 'h') p.closePath();
+      }
+    }
+    _p2d.set(k, p);
+  }
+  return p;
+}
+const hexRGB = h => [parseInt(h.slice(1, 3), 16) / 255, parseInt(h.slice(3, 5), 16) / 255, parseInt(h.slice(5, 7), 16) / 255];
+function roundRectPath(ctx, x, y, w, h, r) {
+  r = Math.max(0, Math.min(r, w / 2, h / 2));
+  ctx.beginPath();
+  ctx.moveTo(x + r, y); ctx.lineTo(x + w - r, y); ctx.arcTo(x + w, y, x + w, y + r, r);
+  ctx.lineTo(x + w, y + h - r); ctx.arcTo(x + w, y + h, x + w - r, y + h, r);
+  ctx.lineTo(x + r, y + h); ctx.arcTo(x, y + h, x, y + h - r, r);
+  ctx.lineTo(x, y + r); ctx.arcTo(x, y, x + r, y, r); ctx.closePath();
+}
+function paintPage(ctx, page, sc, vector) {
+  ctx.save();
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, page.W * sc, page.H * sc);
+  ctx.textBaseline = 'alphabetic';
+  ctx.lineCap = 'butt'; ctx.lineJoin = 'miter';
+  let font = '';
+  for (const op of page.ops) {
+    if (op.o === 't') {
+      const key = fkey(op.b), f = fcss(key, op.z * sc);
+      if (f !== font) { ctx.font = f; font = f; }
+      ctx.fillStyle = op.c || '#000000';
+      let x = op.x;
+      const gs = op.z * sc / 1000;
+      for (const ch of op.s) {
+        if (!/\s/.test(ch)) {
+          if (!vector) ctx.fillText(ch, x * sc, op.y * sc);
+          else { const p = glyphPath(key, ch); if (p) { ctx.save(); ctx.translate(x * sc, op.y * sc); ctx.scale(gs, gs); ctx.fill(p); ctx.restore(); } }
+        }
+        x += adv(key, ch) * op.z;
+      }
+    } else if (op.o === 'l') {
+      ctx.strokeStyle = op.c || '#000000'; ctx.lineWidth = Math.max(0.6, op.w * sc);
+      ctx.setLineDash(op.d ? op.d.map(v => v * sc) : []);
+      ctx.beginPath(); ctx.moveTo(op.x1 * sc, op.y1 * sc); ctx.lineTo(op.x2 * sc, op.y2 * sc); ctx.stroke();
+      if (op.d) ctx.setLineDash([]);
+    } else if (op.o === 'r') {
+      const rr = (op.rr || 0) * sc;
+      if (op.f) { ctx.fillStyle = op.f; if (rr) { roundRectPath(ctx, op.x * sc, op.y * sc, op.w * sc, op.h * sc, rr); ctx.fill(); } else ctx.fillRect(op.x * sc, op.y * sc, op.w * sc, op.h * sc); }
+      if (op.s) {
+        ctx.strokeStyle = op.s; ctx.lineWidth = Math.max(0.6, op.lw * sc);
+        if (rr) { roundRectPath(ctx, op.x * sc, op.y * sc, op.w * sc, op.h * sc, rr); ctx.stroke(); } else ctx.strokeRect(op.x * sc, op.y * sc, op.w * sc, op.h * sc);
+      }
+    } else if (op.o === 'c') {
+      ctx.beginPath(); ctx.arc(op.x * sc, op.y * sc, op.r * sc, 0, Math.PI * 2);
+      if (op.f) { ctx.fillStyle = op.f; ctx.fill(); }
+      if (op.s) { ctx.strokeStyle = op.s; ctx.lineWidth = Math.max(0.6, op.lw * sc); ctx.stroke(); }
+    }
+  }
+  ctx.restore();
+}
+function pageCanvas(page, sc, vector) {
+  const cv = document.createElement('canvas');
+  cv.width = Math.round(page.W * sc); cv.height = Math.round(page.H * sc);
+  paintPage(cv.getContext('2d'), page, sc, vector);
+  return cv;
+}
+const canvasBlob = (cv, type, q) => new Promise((res, rej) => cv.toBlob(b => b ? res(b) : rej(new Error('toBlob')), type || 'image/png', q));
+
+/* ════════════════════════════════════════════════════════════
+   PDF — 직접 쓴다 (글자는 Type3 윤곽선 + ToUnicode 라 복사·검색이 된다)
+   ════════════════════════════════════════════════════════════ */
+const te = new TextEncoder();
+const latin1 = s => { const u = new Uint8Array(s.length); for (let i = 0; i < s.length; i++) u[i] = s.charCodeAt(i) & 255; return u; };
+const pf = n => { const v = Math.round(n * 1000) / 1000; return Object.is(v, -0) ? '0' : String(v); };
+async function deflate(u8) {
+  if (typeof CompressionStream === 'undefined') return null;
+  try {
+    const st = new Blob([u8]).stream().pipeThrough(new CompressionStream('deflate'));
+    return new Uint8Array(await new Response(st).arrayBuffer());
+  } catch (e) { return null; }
+}
+async function pdfStream(dict, u8) {
+  const z = u8.length > 60 ? await deflate(u8) : null;
+  return z && z.length < u8.length ? { dict: dict + ' /Filter /FlateDecode', data: z } : { dict, data: u8 };
+}
+const utf16hex = s => { let h = 'FEFF'; for (let i = 0; i < s.length; i++) h += s.charCodeAt(i).toString(16).toUpperCase().padStart(4, '0'); return h; };
+class PdfW {
+  constructor() { this.objs = [null]; }
+  alloc() { this.objs.push(null); return this.objs.length - 1; }
+  set(n, body) { this.objs[n] = body; }
+  blob(root, info) {
+    const parts = [], offs = [];
+    let off = 0;
+    const push = u => { parts.push(u); off += u.length; };
+    push(latin1('%PDF-1.7\n%' + String.fromCharCode(226, 227, 207, 211) + '\n'));
+    for (let i = 1; i < this.objs.length; i++) {
+      offs[i] = off;
+      const o = this.objs[i];
+      if (o && o.data) {
+        push(latin1(`${i} 0 obj\n<< ${o.dict} /Length ${o.data.length} >>\nstream\n`)); push(o.data); push(latin1('\nendstream\nendobj\n'));
+      } else push(latin1(`${i} 0 obj\n${o == null ? 'null' : o}\nendobj\n`));
+    }
+    const xref = off;
+    let x = `xref\n0 ${this.objs.length}\n0000000000 65535 f \n`;
+    for (let i = 1; i < this.objs.length; i++) x += String(offs[i]).padStart(10, '0') + ' 00000 n \n';
+    let id = ''; for (let i = 0; i < 16; i++) id += Math.floor(Math.random() * 256).toString(16).padStart(2, '0');
+    x += `trailer\n<< /Size ${this.objs.length} /Root ${root} 0 R /Info ${info} 0 R /ID [<${id}> <${id}>] >>\nstartxref\n${xref}\n%%EOF\n`;
+    push(latin1(x));
+    return new Blob(parts, { type: 'application/pdf' });
+  }
+}
+/* 새 글자용 Type3 글꼴 묶음 — 한 벌에 코드 223개(33~255, 32 는 띄어쓰기), 넘치면 다음 벌 */
+class Type3Set {
+  constructor() { this.byKey = new Map(); this.seq = 0; }
+  encode(key, text) {
+    let list = this.byKey.get(key);
+    if (!list) { list = []; this.byKey.set(key, list); }
+    const out = [];
+    let cur = null;
+    for (const ch of Array.from(text)) {
+      let chunk = null, code = 0;
+      if (ch === ' ') { chunk = (cur && cur.chunk) || list[list.length - 1] || this.newChunk(key, list); code = 32; }
+      else {
+        for (const c of list) { const v = c.codes.get(ch); if (v !== undefined) { chunk = c; code = v; break; } }
+        if (!chunk) {
+          chunk = list[list.length - 1];
+          if (!chunk || chunk.next > 255) chunk = this.newChunk(key, list);
+          code = chunk.next++;
+          chunk.codes.set(ch, code);
+        }
+      }
+      if (!cur || cur.chunk !== chunk) { cur = { chunk, codes: [], chars: [] }; out.push(cur); }
+      cur.codes.push(code); cur.chars.push(ch);
+    }
+    return out;
+  }
+  newChunk(key, list) { const c = { key, id: ++this.seq, codes: new Map([[' ', 32]]), next: 33, ref: 0 }; list.push(c); return c; }
+  count() { let n = 0; for (const list of this.byKey.values()) for (const c of list) n += c.codes.size; return n; }
+  async build(W, progress) {
+    const total = this.count(); let done = 0;
+    for (const [key, list] of this.byKey) {
+      for (const c of list) {
+        const fontRef = W.alloc();
+        c.ref = fontRef;
+        const procs = [], diffs = [], uni = [];
+        const widths = new Array(224).fill(0);
+        let bx0 = 0, by0 = 0, bx1 = 0, by1 = 0;
+        const entries = Array.from(c.codes.entries()).sort((a, b) => a[1] - b[1]);
+        for (const [ch, code] of entries) {
+          const g = traceGlyph(key, ch);
+          const body = `${g.adv} 0 ${g.bbox.join(' ')} d1\n${g.path}`;
+          const n = W.alloc();
+          W.set(n, await pdfStream('', te.encode(body)));
+          procs.push(`/g${code} ${n} 0 R`);
+          diffs.push(`${code} /g${code}`);
+          widths[code - 32] = g.adv;
+          bx0 = Math.min(bx0, g.bbox[0]); by0 = Math.min(by0, g.bbox[1]); bx1 = Math.max(bx1, g.bbox[2]); by1 = Math.max(by1, g.bbox[3]);
+          uni.push([code, ch]);
+          if (++done % 24 === 0) { if (progress) progress(done / total); await yieldUI(); }
+        }
+        const tu = W.alloc();
+        W.set(tu, await pdfStream('', te.encode(toUnicodeCMap(uni))));
+        W.set(fontRef, `<< /Type /Font /Subtype /Type3 /FontBBox [${bx0} ${by0} ${bx1} ${by1}] /FontMatrix [0.001 0 0 0.001 0 0] ` +
+          `/CharProcs << ${procs.join(' ')} >> /Encoding << /Type /Encoding /Differences [${diffs.join(' ')}] >> ` +
+          `/FirstChar 32 /LastChar 255 /Widths [${widths.join(' ')}] /Resources << /ProcSet [/PDF] >> /ToUnicode ${tu} 0 R >>`);
+      }
+    }
+  }
+}
+function toUnicodeCMap(pairs) {
+  const hx = (v, n) => v.toString(16).toUpperCase().padStart(n, '0');
+  let s = '/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo << /Registry (Adobe) /Ordering (UCS) /Supplement 0 >> def\n' +
+    '/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<00> <FF>\nendcodespacerange\n';
+  for (let i = 0; i < pairs.length; i += 100) {
+    const blk = pairs.slice(i, i + 100);
+    s += blk.length + ' beginbfchar\n';
+    for (const [code, ch] of blk) {
+      let u = '';
+      for (let k = 0; k < ch.length; k++) u += hx(ch.charCodeAt(k), 4);
+      s += '<' + hx(code, 2) + '> <' + u + '>\n';
+    }
+    s += 'endbfchar\n';
+  }
+  return s + 'endcmap\nCMapName currentdict /CMap defineresource pop\nend\nend\n';
+}
+const fillC = c => hexRGB(c || '#000000').map(pf).join(' ') + ' rg';
+const strokeC = c => hexRGB(c || '#000000').map(pf).join(' ') + ' RG';
+/* 둥근 상자·원은 베지어 곡선으로 (k = 원을 네 토막 낸 3차 곡선의 손잡이 비율) */
+const KAPPA = 0.5523;
+function pdfRoundRect(x, y, w, h, r) {
+  r = Math.max(0, Math.min(r, w / 2, h / 2));
+  if (!r) return `${pf(x)} ${pf(y)} ${pf(w)} ${pf(h)} re`;
+  const k = r * KAPPA, X2 = x + w, Y2 = y + h;
+  return [`${pf(x + r)} ${pf(y)} m`, `${pf(X2 - r)} ${pf(y)} l`, `${pf(X2 - r + k)} ${pf(y)} ${pf(X2)} ${pf(y + r - k)} ${pf(X2)} ${pf(y + r)} c`,
+    `${pf(X2)} ${pf(Y2 - r)} l`, `${pf(X2)} ${pf(Y2 - r + k)} ${pf(X2 - r + k)} ${pf(Y2)} ${pf(X2 - r)} ${pf(Y2)} c`,
+    `${pf(x + r)} ${pf(Y2)} l`, `${pf(x + r - k)} ${pf(Y2)} ${pf(x)} ${pf(Y2 - r + k)} ${pf(x)} ${pf(Y2 - r)} c`,
+    `${pf(x)} ${pf(y + r)} l`, `${pf(x)} ${pf(y + r - k)} ${pf(x + r - k)} ${pf(y)} ${pf(x + r)} ${pf(y)} c`, 'h'].join(' ');
+}
+function pdfCircle(cx, cy, r) {
+  const k = r * KAPPA;
+  return [`${pf(cx + r)} ${pf(cy)} m`, `${pf(cx + r)} ${pf(cy + k)} ${pf(cx + k)} ${pf(cy + r)} ${pf(cx)} ${pf(cy + r)} c`,
+    `${pf(cx - k)} ${pf(cy + r)} ${pf(cx - r)} ${pf(cy + k)} ${pf(cx - r)} ${pf(cy)} c`,
+    `${pf(cx - r)} ${pf(cy - k)} ${pf(cx - k)} ${pf(cy - r)} ${pf(cx)} ${pf(cy - r)} c`,
+    `${pf(cx + k)} ${pf(cy - r)} ${pf(cx + r)} ${pf(cy - k)} ${pf(cx + r)} ${pf(cy)} c`, 'h'].join(' ');
+}
+async function makePDF(pages, title, progress) {
+  const W = new PdfW();
+  const cat = W.alloc(), pagesN = W.alloc(), info = W.alloc();
+  const t3 = new Type3Set();
+  const contents = [];
+  for (const pg of pages) {
+    const out = ['0 J 0 j'];
+    const fonts = new Set();
+    const PH = pg.H;
+    let lastFill = '';
+    const fill = g => { if (g !== lastFill) { out.push(fillC(g)); lastFill = g; } };
+    for (const op of pg.ops) {
+      if (op.o === 't') {
+        const key = fkey(op.b);
+        fill(op.c || '#000000');
+        let x = op.x;
+        const y = PH - op.y;
+        for (const sg of t3.encode(key, op.s)) {
+          fonts.add(sg.chunk);
+          let hex = '';
+          for (const cd of sg.codes) hex += cd.toString(16).padStart(2, '0');
+          out.push(`BT /T${sg.chunk.id} ${pf(op.z)} Tf ${pf(x)} ${pf(y)} Td <${hex}> Tj ET`);
+          for (const ch of sg.chars) x += adv(key, ch) * op.z;
+        }
+      } else if (op.o === 'l') {
+        out.push(`${op.d ? '[' + op.d.map(pf).join(' ') + '] 0 d ' : ''}${pf(op.w)} w ${strokeC(op.c)} ${pf(op.x1)} ${pf(PH - op.y1)} m ${pf(op.x2)} ${pf(PH - op.y2)} l S${op.d ? ' [] 0 d' : ''}`);
+      } else if (op.o === 'r') {
+        const path = pdfRoundRect(op.x, PH - op.y - op.h, op.w, op.h, op.rr || 0);
+        if (op.f) { fill(op.f); out.push(path + ' f'); }
+        if (op.s) out.push(`${pf(op.lw)} w ${strokeC(op.s)} ${path} S`);
+      } else if (op.o === 'c') {
+        const path = pdfCircle(op.x, PH - op.y, op.r);
+        if (op.f) { fill(op.f); out.push(path + ' f'); }
+        if (op.s) out.push(`${pf(op.lw)} w ${strokeC(op.s)} ${path} S`);
+      }
+    }
+    contents.push({ s: out.join('\n') + '\n', fonts, W: pg.W, H: PH });
+  }
+  await t3.build(W, progress);
+  const kids = [];
+  for (const ct of contents) {
+    const cn = W.alloc();
+    W.set(cn, await pdfStream('', latin1(ct.s)));
+    const fr = Array.from(ct.fonts).map(c => `/T${c.id} ${c.ref} 0 R`).join(' ');
+    const pn = W.alloc();
+    W.set(pn, `<< /Type /Page /Parent ${pagesN} 0 R /MediaBox [0 0 ${pf(ct.W)} ${pf(ct.H)}] ` +
+      `/Resources << /ProcSet [/PDF /Text] /Font << ${fr} >> >> /Contents ${cn} 0 R >>`);
+    kids.push(pn);
+  }
+  W.set(pagesN, `<< /Type /Pages /Kids [${kids.map(k => k + ' 0 R').join(' ')}] /Count ${kids.length} >>`);
+  W.set(cat, `<< /Type /Catalog /Pages ${pagesN} 0 R /ViewerPreferences << /DisplayDocTitle true >> >>`);
+  const t = new Date(), p2 = v => String(v).padStart(2, '0');
+  const ds = `${t.getFullYear()}${p2(t.getMonth() + 1)}${p2(t.getDate())}${p2(t.getHours())}${p2(t.getMinutes())}${p2(t.getSeconds())}`;
+  W.set(info, `<< /Title <${utf16hex(title)}> /Creator <${utf16hex('출산 준비물 체크리스트')}> /Producer (birth_checklist) /CreationDate (D:${ds}) >>`);
+  return W.blob(cat, info);
+}
+
+/* ── zip — xlsx 꾸러미용. xml 은 브라우저 내장 CompressionStream 으로 압축 ── */
+const te8 = new TextEncoder();
+const CRC_T = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+function crc32(u) { let c = 0xFFFFFFFF; for (let i = 0; i < u.length; i++) c = CRC_T[(c ^ u[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+async function deflateRaw(u) {
+  if (typeof CompressionStream === 'undefined') return null;
+  try {
+    const cs = new CompressionStream('deflate-raw');
+    const buf = await new Response(new Blob([u]).stream().pipeThrough(cs)).arrayBuffer();
+    return new Uint8Array(buf);
+  } catch (e) { return null; }
+}
+async function zipFiles(files, mime) {
+  const d = new Date();
+  const dt = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate(), tm = (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1);
+  const parts = [], central = [];
+  let off = 0;
+  for (const f of files) {
+    const nmb = te8.encode(f.name), crc = crc32(f.data), sz = f.data.length;
+    let data = f.data, method = 0;
+    if (!f.store && sz > 128) { const z = await deflateRaw(f.data); if (z && z.length < sz) { data = z; method = 8; } }
+    const h = new DataView(new ArrayBuffer(30));
+    h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true); h.setUint16(8, method, true);
+    h.setUint16(10, tm, true); h.setUint16(12, dt, true); h.setUint32(14, crc, true); h.setUint32(18, data.length, true); h.setUint32(22, sz, true);
+    h.setUint16(26, nmb.length, true); h.setUint16(28, 0, true);
+    parts.push(new Uint8Array(h.buffer), nmb, data);
+    const c = new DataView(new ArrayBuffer(46));
+    c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true); c.setUint16(10, method, true);
+    c.setUint16(12, tm, true); c.setUint16(14, dt, true); c.setUint32(16, crc, true); c.setUint32(20, data.length, true); c.setUint32(24, sz, true);
+    c.setUint16(28, nmb.length, true); c.setUint32(42, off, true);
+    central.push(new Uint8Array(c.buffer), nmb);
+    off += 30 + nmb.length + data.length;
+  }
+  const cdSize = central.reduce((a, u) => a + u.length, 0);
+  const e = new DataView(new ArrayBuffer(22));
+  e.setUint32(0, 0x06054b50, true); e.setUint16(8, files.length, true); e.setUint16(10, files.length, true);
+  e.setUint32(12, cdSize, true); e.setUint32(16, off, true);
+  return new Blob(parts.concat(central, [new Uint8Array(e.buffer)]), { type: mime || 'application/zip' });
+}
+
+/* ════════════════════════════════════════════════════════════
+   날짜 — 하루 번호(1970-01-01 = 0)로 다뤄 시간대 영향을 없앤다
+   ════════════════════════════════════════════════════════════ */
+const DAY = 86400000;
+function dnum(s) {
+  const p = parseD(s);
+  if (!p) return null;
+  const t = Date.UTC(p.y, p.m - 1, p.d);
+  return new Date(t).getUTCMonth() === p.m - 1 ? Math.round(t / DAY) : null;
+}
+const dObj = n => new Date(n * DAY);
+const dstr = n => { const d = dObj(n); return iso(d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate()); };
+const kd = n => { const d = dObj(n); return (d.getUTCMonth() + 1) + '.' + d.getUTCDate() + '(' + WEEK[d.getUTCDay()] + ')'; };
+const kdl = n => { const d = dObj(n); return d.getUTCFullYear() + '.' + String(d.getUTCMonth() + 1).padStart(2, '0') + '.' + String(d.getUTCDate()).padStart(2, '0') + '(' + WEEK[d.getUTCDay()] + ')'; };
+const kdy = n => { const d = dObj(n); return d.getUTCFullYear() + '년 ' + (d.getUTCMonth() + 1) + '월 ' + d.getUTCDate() + '일'; };
+const monthOf = n => dObj(n).getUTCMonth() + 1;
+function todayN() { const t = new Date(); return Math.round(Date.UTC(t.getFullYear(), t.getMonth(), t.getDate()) / DAY); }
+const ddayTxt = k => k > 0 ? 'D-' + k : k === 0 ? 'D-DAY' : 'D+' + (-k);
+/* 임신 주수 — 예정일이 40주 0일. 예정일까지 남은 날로 거꾸로 센다 */
+function gaOf(due, day) {
+  const g = 280 - (due - day);
+  return { g, w: Math.floor(g / 7), d: ((g % 7) + 7) % 7 };
+}
+const gaTxt = a => a.w + '주 ' + a.d + '일';
+/* 그 주수가 되는 날 */
+const weekDay = (due, w) => due - (280 - w * 7);
+
+/* ════════════════════════════════════════════════════════════
+   목록 틀 — 가방(구역) → 분류 → 물건
+   · 업체·제품 이름은 쓰지 않는다(물건의 일반 이름만)
+   ════════════════════════════════════════════════════════════ */
+const SECTIONS = [
+  ['hosp', '🏥', '병원 출산가방', '36주 전에 싸서 현관 가까이 두기'],
+  ['care', '🛏️', '조리원 가방', '조리원에서 주는 것을 먼저 물어보고 빼기'],
+  ['home', '🏠', '집에 미리 준비할 신생아 용품', '아기가 집에 오기 전까지'],
+  ['my', '⭐', '내가 더한 것', '']
+];
+const SEC_NAME = Object.fromEntries(SECTIONS.map(s => [s[0], s[2]]));
+const CATS = [
+  ['hdoc', 'hosp', '📄', '서류·기본'], ['hmom', 'hosp', '🤱', '산모 용품'], ['hbaby', 'hosp', '👶', '아기 퇴원 준비'], ['hdad', 'hosp', '🧔', '보호자(남편) 가방'],
+  ['cmom', 'care', '👚', '산모 옷·수유'], ['clife', 'care', '🧴', '생활·쉬는 시간'],
+  ['feed', 'home', '🍼', '수유'], ['bath', 'home', '🛁', '목욕·기저귀'], ['wear', 'home', '👕', '아기 옷·싸개'],
+  ['sleep', 'home', '🛌', '잠자리'], ['out', 'home', '🚗', '외출'], ['health', 'home', '🌡️', '건강·생활'],
+  ['my', 'my', '⭐', '내가 더한 것']
+];
+const CAT_NAME = Object.fromEntries(CATS.map(c => [c[0], c[3]]));
+const CAT_SEC = Object.fromEntries(CATS.map(c => [c[0], c[1]]));
+
+/* 표시 — 물건 이름 옆 작은 꼬리표 */
+const TAGS = {
+  prov: ['주는 곳 많음', '병원·조리원에서 주는 곳이 많아요. 미리 물어보고 겹치면 빼세요'],
+  nat: ['자연분만', '자연분만일 때 챙기면 좋은 것'],
+  cs: ['제왕절개', '제왕절개일 때 챙기면 좋은 것'],
+  old: ['있으면 빼기', '큰아이 때 쓰던 것이 있으면 물려 쓰세요'],
+  opt: ['필요하면', '없어도 되지만 있으면 편한 것'],
+  my: ['내가 더함', '직접 더한 것']
+};
+
+const SEASON = { sum: '여름', mid: '봄·가을', win: '겨울' };
+const autoSeason = m => m === 12 || m <= 2 ? 'win' : m >= 6 && m <= 8 ? 'sum' : 'mid';
+
+const BIRTH = { nat: '자연분만', cs: '제왕절개', unk: '분만 방식 미정' };
+const CARE = { center: '조리원', home: '집에서 조리' };
+const FEED = { breast: '모유', formula: '분유', mix: '혼합 수유', unk: '수유 미정' };
+
+/* ════════════════════════════════════════════════════════════
+   출산 지원 — 2026년 11월 확인
+   · 첫만남이용권: 첫째 200만 원 · 둘째 이상 300만 원, 국민행복카드 포인트, 출생일부터 2년(2024.1.1 이후 출생아)
+   · 부모급여: 0세 월 100만 원 · 1세 월 50만 원 / 아동수당: 2026년 9세 미만 월 10만 원(비수도권·인구감소지역 5천~2만 원 더)
+     — 둘 다 태어난 날 포함 60일 안에 신청하면 태어난 달 것부터 받는다
+   · 산모·신생아 건강관리(산후도우미): 출산 예정일 40일 전부터 출산일로부터 60일까지 신청(보건소·복지로)
+   · 출생신고: 태어난 날부터 1개월 안에(가족관계의 등록 등에 관한 법률 제44조)
+   · 출산전후휴가 90일(다태아 120일) 중 출산 뒤 45일(다태아 60일) 이상 · 배우자 출산휴가 20일(예정일 50일 전 ~ 출산 후 120일, 3번까지 나눠)
+   ════════════════════════════════════════════════════════════ */
+const BENEFITS = [
+  ['첫만남이용권', '첫째 200만 원 · 둘째 이상 300만 원', '국민행복카드 포인트로 받아 출생일부터 2년 안에 씁니다. 출산 준비물·산후조리원에도 쓸 수 있어요.', '출생신고 때 함께'],
+  ['부모급여', '0세 월 100만 원 · 1세 월 50만 원', '어린이집에 다니면 보육료를 빼고 나머지를 받습니다.', '태어난 날 포함 60일 안'],
+  ['아동수당', '월 10만 원 (지역에 따라 최대 13만 원)', '2026년부터 9세 미만까지 받습니다. 비수도권·인구감소지역은 5천~2만 원을 더 받아요.', '태어난 날 포함 60일 안'],
+  ['산모·신생아 건강관리(산후도우미)', '건강관리사 방문 비용 일부', '소득 기준(기준중위소득 150% 이하 등)은 지역마다 다를 수 있어 주소지 보건소에 확인하세요.', '예정일 40일 전 ~ 출산 후 60일'],
+  ['임신·출산 진료비', '한 아이 100만 원 (쌍둥이 200만 원)', '국민행복카드로 산부인과 진료비·약값에 씁니다. 남은 돈이 있는지 확인해 두세요.', '임신 확인 뒤'],
+  ['출산전후휴가', '90일 (쌍둥이 120일)', '출산 뒤에 45일(쌍둥이 60일) 이상이 남게 나눠 씁니다.', '회사에 미리 알리기'],
+  ['배우자 출산휴가', '20일', '예정일 50일 전부터 출산 후 120일 안에, 3번까지 나눠 쓸 수 있어요.', '회사에 미리 알리기']
+];
+
+/* ════════════════════════════════════════════════════════════
+   분유량 어림 — 대한소아청소년과학회 「젖병 수유의 기본 원칙」·미국소아과학회(AAP) 안내
+   · 하루 총량: 체중 1kg 당 약 150~165mL (AAP: 1파운드당 2.5온스 ≒ 1kg당 165mL), 하루 960mL 를 넘지 않게
+   · 1회 양·간격: 첫 주 30~60mL → 첫 달 동안 90~120mL(3~4시간) → 6개월 180~240mL 하루 4~5회
+   ════════════════════════════════════════════════════════════ */
+const MILK = [
+  { k: 'w0', n: '첫 주', lo: 30, hi: 60, f: [8, 10], gap: '2~3시간', wt: false, note: '처음 며칠은 조금씩 늘어요. 체중으로 계산하지 않고 한 번에 먹는 양으로 봅니다.' },
+  { k: 'w1', n: '1주~1개월', lo: 60, hi: 120, f: [7, 8], gap: '3시간 안팎', wt: true, note: '첫 달 동안 한 번에 60~90mL 에서 90~120mL 로 늘어납니다.' },
+  { k: 'm1', n: '1~2개월', lo: 100, hi: 150, f: [6, 7], gap: '3~4시간', wt: true, note: '한 달이 지나면 간격이 길어지고 한 번에 120mL 안팎을 먹어요.' },
+  { k: 'm2', n: '2~4개월', lo: 120, hi: 180, f: [5, 6], gap: '4시간 안팎', wt: true, note: '밤중 수유가 차츰 줄어드는 시기입니다.' },
+  { k: 'm4', n: '4~6개월', lo: 180, hi: 240, f: [4, 5], gap: '4~5시간', wt: true, note: '한 번에 180~240mL 를 하루 4~5번 먹습니다. 이유식은 소아청소년과와 상의해 시작하세요.' }
+];
+const MILK_MAX = 960;
+
+/* ════════════════════════════════════════════════════════════
+   목록 만들기 — 예정일·분만 방식·조리원·수유·쌍둥이·둘째·계절에서 준비물과 「할 일」을 뽑는다
+   · 물건 id 는 바꾸지 않는다 — 설정을 바꿔도 체크·고친 개수·적은 값·지운 것이 id 로 따라온다
+   · m: 아기 수만큼 곱하는 항목(한 아기 q 개), tag: 꼬리표(TAGS), opt: 「필요하면」
+   ════════════════════════════════════════════════════════════ */
+function planOf(S) {
+  const t0 = todayN();
+  let due = dnum(S.due);
+  if (due == null) due = t0 + 90;
+  const born = dnum(S.born);
+  const base = born != null ? born : due;        /* 출산 뒤 할 일의 기준일 */
+  const month = monthOf(due);
+  const auto = autoSeason(month);
+  const season = S.season === 'auto' ? auto : S.season;
+  const birth = S.birth, feed = S.feed;
+  return {
+    due, born, base, today: t0, month, auto, season,
+    ga: gaOf(due, t0), birth, care: S.care, feed,
+    nat: birth !== 'cs', cs: birth !== 'nat', unk: birth === 'unk',
+    breast: feed !== 'formula', formula: feed !== 'breast', twins: !!S.twins, second: !!S.second,
+    nb: S.twins ? 2 : 1,
+    hot: season === 'sum', cold: season === 'win',
+    /* 입원 날수 어림 — 자연분만 2박 3일, 제왕절개 4박 5일 안팎 */
+    stay: birth === 'nat' ? 3 : 5
+  };
+}
+function planTitle(P) { return '예정일 ' + kdl(P.due); }
+function planWho(P) {
+  const a = [BIRTH[P.birth], CARE[P.care], FEED[P.feed]];
+  if (P.twins) a.push('쌍둥이');
+  if (P.second) a.push('둘째 이상');
+  return a.join(' · ');
+}
+
+function buildItems(P) {
+  const L = [];
+  const add = (c, id, n, o) => L.push(Object.assign({ c, id, n, q: 0, u: '', m: 1, note: '', tag: '', opt: 0 }, o || {}));
+  const nb = P.nb, cold = P.cold, hot = P.hot;
+  /* 분만 방식에 매인 물건 — 정해졌으면 그 방식 것만, 아직 모르면 둘 다 넣고 꼬리표로 가른다 */
+  const natTag = P.unk ? 'nat' : '', csTag = P.unk ? 'cs' : '';
+  /* 둘째면 큰 물건은 「있으면 빼기」 */
+  const big = P.second ? { tag: 'old' } : {};
+
+  /* ── 병원 · 서류·기본 ── */
+  add('hdoc', 'momnote', '산모 수첩', { note: '진료 기록·검사 결과가 들어 있어요' });
+  add('hdoc', 'idcard', '산모 신분증', { note: '입원 수속에 필요' });
+  add('hdoc', 'happycard', '국민행복카드', { note: '임신·출산 진료비 바우처로 병원비를 냅니다' });
+  add('hdoc', 'phone', '휴대폰·충전기(긴 케이블)', { note: '침대에서 쓰려면 2m 넘는 케이블이 편해요' });
+  add('hdoc', 'pbank', '보조배터리', { opt: 1 });
+  add('hdoc', 'cardcash', '카드·현금 조금', { note: '병원 편의점·주차비' });
+  add('hdoc', 'glasses', '안경·렌즈 통', { opt: 1, note: '분만·수술 때는 렌즈를 빼요' });
+  add('hdoc', 'pen', '볼펜·작은 수첩', { opt: 1, note: '서류 쓰기·수유 시간 적기' });
+
+  /* ── 병원 · 산모 용품 ── */
+  add('hmom', 'mpad', '산모 패드', { q: 1, u: '팩', tag: 'prov', note: '출산 뒤 피(오로)가 나와 하루에 여러 장 써요' });
+  add('hmom', 'mpanty', '일회용 산모 팬티', { q: P.stay + 2, u: '장', note: '넉넉하게 · 퇴원 뒤에도 써요' });
+  add('hmom', 'nbra', '수유 브라', { q: 2, u: '개', opt: P.breast ? 0 : 1, note: P.breast ? '앞이 열리는 것 · 한 치수 넉넉히' : '분유 수유여도 가슴이 불어 편해요' });
+  if (P.breast) {
+    add('hmom', 'npad', '수유 패드', { q: 1, u: '팩', note: '젖이 새서 옷이 젖지 않게' });
+    add('hmom', 'ncream', '유두 보호 크림', { note: '처음 젖을 물릴 때 많이 아파요' });
+  }
+  add('hmom', 'momwear', '갈아입을 속옷·편한 실내복', { q: 2, u: '벌', tag: 'prov', note: '환자복을 주는 병원이 많아요' });
+  add('hmom', 'socks', '수면 양말', { q: 3, u: '켤레', note: hot ? '여름에도 얇은 양말로 발을 따뜻하게' : '발이 차지 않게' });
+  add('hmom', 'cardigan', '얇은 카디건·긴팔 겉옷', { q: 1, u: '벌', note: '병실·수유실 냉방 대비 · 수유할 때 걸치기' });
+  add('hmom', 'slipper', '슬리퍼(뒤가 막힌 것)', { note: '미끄럽지 않은 것' });
+  add('hmom', 'toilet', '세면도구(칫솔·치약·세안제)', { note: '첫날은 물티슈 세안으로 대신하는 경우도 많아요' });
+  add('hmom', 'skin', '기초 화장품·립밤', { note: '병실이 건조해요' });
+  add('hmom', 'comb', '빗·머리끈·헤어밴드');
+  add('hmom', 'towel', '수건', { q: 3, u: '장', tag: 'prov' });
+  add('hmom', 'tumbler', '빨대 컵·텀블러', { note: '누운 채로 물 마시기 좋게' });
+  add('hmom', 'wipe', '물티슈·휴지');
+  add('hmom', 'wrist', '손목 보호대', { note: '아기를 안고 젖 먹이느라 손목이 아파요' });
+  if (P.nat) add('hmom', 'donut', '회음부 방석(가운데 뚫린 방석)', { tag: natTag, note: '앉을 때 덜 아파요' });
+  if (P.cs) {
+    add('hmom', 'belly', '산모 복대', { tag: csTag, note: '수술 부위를 받쳐 줘요 · 쓰는 때는 의료진 안내대로' });
+    add('hmom', 'stocking', '압박 스타킹', { tag: csTag || 'prov', note: '수술 뒤 신으라고 안내하는 병원이 많아요 · 병원에서 파는 곳도' });
+  } else add('hmom', 'belly', '산모 복대', { opt: 1, note: '배가 출렁여 불편하면' });
+  add('hmom', 'earplug', '귀마개·안대', { opt: 1, note: '다인실이면 있으면 좋아요' });
+  add('hmom', 'snack', '간식', { opt: 1, note: '먹어도 되는 때는 의료진 안내를 따르기' });
+  add('hmom', 'goinghome', '퇴원할 때 입을 옷', { q: 1, u: '벌', note: '넉넉한 원피스·고무줄 바지 · 배가 아직 나와 있어요' + (cold ? ' · 두꺼운 외투·모자' : '') });
+
+  /* ── 병원 · 아기 퇴원 준비 ── */
+  add('hbaby', 'bwear', '퇴원할 때 입힐 배냇저고리·내의', { q: 1, u: '벌', m: nb, note: '입원 중에는 병원 옷을 입혀요' });
+  add('hbaby', 'swaddle', '속싸개', { q: 1, u: '장', m: nb, note: '아기를 감싸는 얇은 천' });
+  add('hbaby', 'outwrap', cold ? '겉싸개(두꺼운 것)' : '겉싸개', { q: 1, u: '장', m: nb, opt: hot ? 1 : 0, note: hot ? '여름엔 속싸개만으로도 돼요' : '찬바람을 막아 줘요' });
+  add('hbaby', 'mitts', '모자·손싸개·발싸개', { q: 1, u: '벌', m: nb, opt: cold ? 0 : 1 });
+  add('hbaby', 'carseat', '카시트(신생아용)', Object.assign({ q: 1, u: '개', m: nb, note: '퇴원하는 날부터 · 6세 미만은 카시트가 법으로 의무 · 미리 차에 달아 두기' }, big));
+  add('hbaby', 'bdiaper', '신생아 기저귀 몇 장·물티슈', { tag: 'prov', note: '입원 중엔 병원 것을 쓰는 곳이 많아요' });
+  add('hbaby', 'gauzeH', '가제 손수건', { q: 5, u: '장', m: nb });
+
+  /* ── 병원 · 보호자(남편) 가방 ── */
+  add('hdad', 'dclothes', '갈아입을 옷·속옷', { q: P.stay - 1, u: '벌', note: '보호자는 병실에서 함께 지내는 경우가 많아요' });
+  add('hdad', 'dwash', '세면도구·수건');
+  add('hdad', 'dcharger', '휴대폰 충전기·보조배터리', { note: '연락하고 사진 찍느라 배터리가 빨리 닳아요' });
+  add('hdad', 'dblanket', '얇은 이불·담요', { opt: 1, note: '보호자 침대가 좁고 추울 수 있어요' });
+  add('hdad', 'dslipper', '슬리퍼');
+  add('hdad', 'dsnack', '간식·물');
+  add('hdad', 'dcam', '카메라', { opt: 1, note: '첫 사진·영상' });
+  add('hdad', 'dlist', '연락할 사람 목록·병원 전화번호', { note: '진통이 오면 누구에게 먼저 알릴지' });
+  if (P.second) add('hdad', 'dkid', '큰아이 돌봐 줄 사람 연락처', { note: '병원에 가는 동안 맡길 곳' });
+
+  /* ── 조리원 가방 ── */
+  if (P.care === 'center') {
+    add('cmom', 'cwear', '수유복·편한 실내복', { q: 3, u: '벌', tag: 'prov', note: '조리원 옷을 주는 곳이 많아요' });
+    add('cmom', 'cinner', '속옷', { q: 7, u: '벌' });
+    add('cmom', 'csocks', '수면 양말', { q: 5, u: '켤레' });
+    add('cmom', 'cmpad', '산모 패드', { tag: 'prov', note: '2주 동안 꾸준히 써요' });
+    if (P.breast) {
+      add('cmom', 'cbra', '수유 브라 여벌', { q: 2, u: '개' });
+      add('cmom', 'cnpad', '수유 패드', { tag: 'prov' });
+      add('cmom', 'cpump', '유축기', { tag: 'prov', note: '조리원에 있는 곳이 많아요 · 깔때기는 개인 것을 쓰기도' });
+      add('cmom', 'cmilkbag', '모유 저장 팩', { opt: 1 });
+      add('cmom', 'cpillow', '수유 쿠션', { tag: 'prov', opt: 1 });
+    }
+    add('cmom', 'cbelly', '산모 복대', { opt: 1 });
+    add('cmom', 'cleave', '퇴소할 때 입을 옷·아기 겉싸개', { note: '병원에서 쓰던 것을 그대로' });
+    add('clife', 'cbath', '샴푸·바디워시·세안제', { tag: 'prov' });
+    add('clife', 'cskin', '기초 화장품·핸드크림', { note: '손을 자주 씻어 건조해요' });
+    add('clife', 'ccarry', '병원 가방의 텀블러·손목 보호대·슬리퍼', { note: '병원에서 쓰던 것을 그대로 옮기기' });
+    add('clife', 'ctablet', '태블릿·이어폰', { opt: 1, note: '수유하며 쉬는 시간' });
+    add('clife', 'cmulti', '멀티탭', { opt: 1, note: '충전할 것이 많아요' });
+    add('clife', 'cnote', '육아 수첩·메모장', { opt: 1, note: '교육 시간에 들은 것 적기' });
+    add('clife', 'ctea', '차·간식', { opt: 1 });
+  }
+
+  /* ── 집 · 수유 ── */
+  const bottles = P.feed === 'formula' ? 6 : P.feed === 'mix' ? 4 : P.feed === 'breast' ? 2 : 3;
+  add('feed', 'bottle', '젖병', { q: bottles, u: '개', m: nb, opt: P.feed === 'breast' ? 1 : 0, note: P.feed === 'breast' ? '유축한 젖을 먹일 때' : '처음엔 작은 용량(120~160mL)부터' });
+  add('feed', 'nipple', '젖병 젖꼭지(신생아 단계)', { note: '젖병마다 하나 + 여분' });
+  add('feed', 'brush', '젖병 솔·젖병 세정제');
+  add('feed', 'steril', '젖병 소독기 또는 열탕 소독용 냄비', { opt: P.formula ? 0 : 1 });
+  add('feed', 'dryrack', '젖병 건조대', { opt: 1 });
+  if (P.formula) {
+    add('feed', 'formula', '분유', { q: 1, u: '통', note: '처음엔 한 통만 · 병원·조리원에서 먹던 것을 물어보기' });
+    add('feed', 'kettle', '분유 물 끓여 식히는 포트', { opt: P.feed === 'formula' ? 0 : 1, note: '밤중 수유가 빨라져요' });
+    add('feed', 'portion', '분유 소분 통', { opt: 1, note: '외출할 때' });
+  }
+  if (P.breast) {
+    add('feed', 'pumpH', '유축기', { opt: 1, note: '빌려 쓰는 곳도 있어요' });
+    add('feed', 'milkbag', '모유 저장 팩', { opt: 1 });
+    add('feed', 'npillow', '수유 쿠션', { opt: P.feed === 'breast' ? 0 : 1, note: '팔과 허리가 덜 아파요' });
+    add('feed', 'npadH', '수유 패드 여분', { opt: 1 });
+  }
+  add('feed', 'burp', '트림용 가제 손수건', { q: 10, u: '장', m: nb, note: '어깨에 걸치고 트림시키기' });
+
+  /* ── 집 · 목욕·기저귀 ── */
+  add('bath', 'diaper', '신생아 기저귀', { q: 2, u: '팩', m: nb, note: '금방 커서 한두 팩만 먼저 · 하루 10장 넘게 써요' });
+  add('bath', 'bwipes', '아기 물티슈', { q: 4, u: '팩', m: nb });
+  add('bath', 'gauze', '가제 손수건', { q: 20, u: '장', m: nb, note: '침·목욕·트림에 계속 써요 · 미리 빨아 두기' });
+  add('bath', 'tub', '아기 욕조', Object.assign({}, big));
+  add('bath', 'btowel', '아기 목욕 수건', { q: 3, u: '장', m: nb });
+  add('bath', 'bwash', '아기 바디워시·샴푸');
+  add('bath', 'lotion', '아기 로션·보습제', { note: cold ? '겨울엔 실내가 건조해요' : '' });
+  add('bath', 'nail', '아기 손톱 가위', { note: '손톱이 빨리 자라 얼굴을 긁어요' });
+  add('bath', 'cotton', '아기 면봉');
+  add('bath', 'changepad', '기저귀 갈이 패드·방수 요');
+  add('bath', 'detergent', '아기 옷 세제', { note: '처음 입히기 전에 한 번 빨기' });
+  add('bath', 'diaperbin', '기저귀 휴지통', { opt: 1 });
+  add('bath', 'baththerm', '목욕물 온도계', { opt: 1 });
+
+  /* ── 집 · 아기 옷·싸개 (계절) ── */
+  add('wear', 'baenet', '배냇저고리', { q: hot ? 4 : 3, u: '벌', m: nb, note: '처음 한두 달 · 금방 작아져요' });
+  add('wear', 'innerB', cold ? '아기 내복(긴팔)' : '아기 내복', { q: 4, u: '벌', m: nb, note: '신생아 치수 · 위아래 한 벌' });
+  add('wear', 'swaddleH', '속싸개 여벌', { q: 2, u: '장', m: nb });
+  add('wear', 'sleepsack', '입히는 속싸개(스와들)', { opt: 1, m: nb });
+  add('wear', 'mittsH', '손싸개·발싸개', { q: 2, u: '켤레', m: nb, opt: cold ? 0 : 1 });
+  add('wear', 'bodysuit', '바디슈트', { q: 2, u: '벌', m: nb, opt: 1 });
+  if (cold) add('wear', 'winterout', '두꺼운 외출복·아기 모자', { q: 1, u: '벌', m: nb, note: '예방접종·검진 갈 때' });
+  if (hot) add('wear', 'thin', '얇은 면 내의', { q: 2, u: '벌', m: nb, note: '땀띠가 나지 않게' });
+  add('wear', 'bib', '턱받이', { opt: 1 });
+
+  /* ── 집 · 잠자리 ── */
+  add('sleep', 'crib', '아기 침대 또는 아기 바닥 매트', Object.assign({ note: '단단하고 평평한 곳에 바로 눕혀 재우기' }, big));
+  add('sleep', 'bedding', '아기 이불·방수 시트', { m: nb, note: '푹신한 베개·쿠션·인형은 잠자리에 두지 않기' });
+  if (cold) add('sleep', 'sleepvest', '수면 조끼', { q: 1, u: '벌', m: nb, opt: 1, note: '이불을 걷어차도 따뜻하게' });
+  add('sleep', 'nightlight', '수유등(어두운 조명)', { opt: 1, note: '밤중 수유·기저귀 갈 때' });
+  add('sleep', 'mobile', '모빌', { opt: 1 });
+
+  /* ── 집 · 외출 ── */
+  add('out', 'stroller', '유모차', Object.assign({ note: '신생아는 눕힐 수 있는 것' }, big));
+  add('out', 'carrier', '아기띠', Object.assign({ opt: 1, note: '신생아는 목을 받쳐 주는 것' }, big));
+  add('out', 'diaperbag', '기저귀 가방');
+  add('out', 'blanket', hot ? '얇은 외출용 담요' : '외출용 담요', { opt: 1 });
+
+  /* ── 집 · 건강·생활 ── */
+  add('health', 'thermo', '체온계(귀·이마)', { note: '열이 나는지 바로 재기' });
+  add('health', 'nasal', '콧물 흡입기', { opt: 1 });
+  add('health', 'humid', cold ? '가습기·온습도계' : '온습도계', { opt: cold ? 0 : 1, note: '아기 방 온도·습도 보기' });
+  add('health', 'sanit', '손 소독제', { note: '아기를 안기 전에' });
+  add('health', 'pedmemo', '가까운 소아청소년과·야간 진료 메모', { note: '갑자기 열이 날 때' });
+  if (P.second) add('health', 'bigkid', '큰아이 선물·같이 볼 그림책', { opt: 1, note: '동생을 맞을 마음 준비' });
+  return L;
+}
+
+/* 할 일 — d: 날짜(하루 번호), w: 주수 표시(출산 전), a: 출산 뒤 며칠(출산 뒤) */
+function buildTodos(P) {
+  const L = [];
+  const pre = (id, w, t, d, dd) => L.push({ id, d: dd != null ? dd : weekDay(P.due, w), w, t, x: d });
+  const post = (id, a, t, d) => L.push({ id, d: P.base + a, a, t, x: d });
+  if (P.care === 'center') pre('tCenter', 16, '산후조리원 알아보고 예약', '인기 있는 곳은 일찍 마감돼요. 머무는 기간·요금·면회 규칙·주는 물건을 물어보세요.');
+  pre('tLeave', 24, '출산휴가·육아휴직 일정을 회사와 맞추기', '출산전후휴가 90일' + (P.twins ? '(쌍둥이 120일)' : '') + ' 가운데 ' + (P.twins ? '60일' : '45일') + ' 이상은 출산 뒤에 남겨야 해요.');
+  pre('tBuy', 28, '큰 물건부터 사기', '카시트·유모차·아기 침대처럼 고르는 데 오래 걸리는 것부터. 출산 준비물 목록을 이때 정리하세요.');
+  pre('tAsk', 31, '병원·조리원이 주는 물건 물어보기', '산모 패드·기저귀·수유 패드·세면도구를 주는 곳이 많아 겹치지 않게 사세요.');
+  pre('tHelper', 0, '산모·신생아 건강관리(산후도우미) 신청', '출산 예정일 40일 전부터 출산 후 60일까지 주소지 보건소나 복지로에서 신청합니다. 소득 기준은 지역마다 달라요.', P.due - 40);
+  pre('tDad', 0, '배우자 출산휴가 날짜 정하기', '20일 · 예정일 50일 전부터 출산 후 120일 안에 · 3번까지 나눠 쓸 수 있어요.', P.due - 50);
+  pre('tWash', 34, '아기 옷·속싸개·손수건 미리 빨아 두기', '아기 옷 세제로 한 번 빨아 바싹 말려 두세요.');
+  pre('tPack', 35, '출산가방 싸기', '진통이 일찍 올 수 있어요. 36주 전에 싸서 현관 가까이 두세요.');
+  pre('tCar', 36, '카시트 차에 달기', '퇴원하는 날 바로 써요. 뒷좌석에 뒤보기로 다는 것이 기본입니다.');
+  pre('tRoute', 36, '병원 가는 길·밤에 갈 방법 정해 두기', '진통·양수가 터졌을 때 연락할 병원 번호를 저장하고, 언제 오라고 했는지 다시 확인하세요.');
+  if (P.second) pre('tKid', 36, '큰아이 맡길 곳 정하기', '입원하는 동안 돌봐 줄 사람과 연락 방법.');
+  pre('tPed', 37, '집 가까운 소아청소년과 알아 두기', '예방접종·검진을 다닐 곳과 야간·주말 진료하는 곳.');
+  post('tCheck1', 14, '영유아 건강검진 1차', '생후 14~35일 사이에 받습니다.');
+  post('tBcg', 21, 'BCG(결핵) 예방접종', '생후 4주 안에 맞힙니다.');
+  post('tReg', 30, '출생신고', '태어난 날부터 1개월 안에 · 주민센터나 온라인으로. 이때 첫만남이용권·부모급여·아동수당도 한 번에 신청할 수 있어요.');
+  post('tHepB', 30, 'B형간염 2차 예방접종', '1차는 태어나서 병원에서 맞고, 2차는 생후 1개월에.');
+  post('tBenefit', 59, '부모급여·아동수당 신청 마감', '태어난 날 포함 60일 안에 신청해야 태어난 달 것부터 받아요.');
+  post('tHelper2', 59, '산후도우미 신청 마지막 날', '출산 후 60일까지입니다. 신청했다면 체크하세요.');
+  return L.sort((a, b) => a.d - b.d || (a.a != null) - (b.a != null));
+}
+
+/* 요약 카드에 띄울 확인 사항 — lv: ok · info · warn · bad */
+function buildFacts(P) {
+  const F = [];
+  const add = (lv, t) => F.push({ lv, t });
+  const t0 = P.today;
+  if (P.born != null) {
+    add('ok', '<b>아기가 태어났어요</b> — ' + kdl(P.born) + ' · 생후 ' + (t0 - P.born + 1) + '일째');
+  } else if (P.ga.g > 280 + 14) {
+    add('bad', '<b>예정일이 2주 넘게 지났어요</b> — 예정일을 다시 확인하거나 태어난 날을 넣어 주세요.');
+  } else {
+    const pack = weekDay(P.due, 36);
+    const left = pack - t0;
+    if (left > 0) add(left <= 21 ? 'warn' : 'info', '<b>출산가방은 36주 ' + kd(pack) + '까지</b> — ' + left + '일 남았어요.');
+    else add('warn', '<b>지금 36주가 지났어요</b> — 출산가방을 바로 싸 두세요.');
+  }
+  if (P.born == null) {
+    const h = P.due - 40;
+    add(h > t0 ? 'info' : 'warn', '<b>산후도우미 신청</b> — ' + (h > t0 ? kd(h) + '부터 (예정일 40일 전)' : '지금 신청할 수 있어요 (출산 후 60일까지)'));
+  } else {
+    const reg = P.born + 30;
+    add(reg >= t0 ? 'warn' : 'bad', '<b>출생신고 ' + kd(reg) + '까지</b> — 태어난 날부터 1개월 안 · 지원금도 같이 신청');
+  }
+  add('ok', '<b>첫만남이용권 ' + (P.second ? '300만 원' : '200만 원') + '</b> — ' + (P.second ? '둘째 이상' : '첫째') + (P.twins ? ' · 쌍둥이는 아이마다 따로' : '') + ' · 국민행복카드 포인트로 출산 준비물에도 써요');
+  add('info', '<b>' + P.month + '월 출산 · ' + SEASON[P.season] + ' 아기</b>' + (P.season !== P.auto ? ' (직접 고름)' : '') + (P.cold ? ' — 두꺼운 겉싸개·가습기' : P.hot ? ' — 얇은 면 옷·땀띠 조심' : ''));
+  if (P.twins) add('info', '<b>쌍둥이</b> — 아기 물건은 두 배로 셌어요. 병원 안내에 따라 일찍 입원할 수 있으니 가방을 더 서둘러 싸 두세요.');
+  if (P.unk) add('info', '<b>분만 방식 미정</b> — 자연분만·제왕절개 물건을 모두 넣고 꼬리표로 나눴어요.');
+  return F;
+}
+
+/* 분유량 어림 — band: MILK 의 k, kg: 체중 */
+function milkCalc(band, kg) {
+  const B = MILK.find(x => x.k === band) || MILK[1];
+  const r = { B };
+  if (B.wt && kg > 0) {
+    r.dayLo = Math.min(MILK_MAX, Math.round(kg * 150 / 10) * 10);
+    r.dayHi = Math.min(MILK_MAX, Math.round(kg * 165 / 10) * 10);
+    const mid = (r.dayLo + r.dayHi) / 2;
+    /* 하루 양을 그 시기 횟수로 나눠, 그 시기 1회 양 범위 안으로 */
+    r.per = B.f.map(f => clamp(Math.round(mid / f / 10) * 10, B.lo, B.hi));
+    r.capped = kg * 165 > MILK_MAX;
+  } else {
+    r.dayLo = B.lo * B.f[0]; r.dayHi = B.hi * B.f[1];
+    r.per = [B.lo, B.hi];
+  }
+  return r;
+}
+
+/* ════════════════════════════════════════════════════════════
+   엑셀(xlsx) — Office Open XML 을 직접 쓴다(같은 시리즈의 근무표 도구와 같은 틀)
+   · 챙김 칸에는 고르기 목록(데이터 유효성 ✔)을 걸고, ✔ 를 고르면 그 줄이 회색 가운데 줄로 바뀌는 조건부 서식을 넣는다
+   ════════════════════════════════════════════════════════════ */
+const COLN = n => { let s = ''; n = n + 1; while (n > 0) { const r = (n - 1) % 26; s = String.fromCharCode(65 + r) + s; n = Math.floor((n - 1) / 26); } return s; };
+const xesc = s => String(s).replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '').replace(/[&<>"]/g, c => ESC[c]);
+const XL_FONT = '맑은 고딕';
+const xlHex = c => 'FF' + c.replace('#', '').toUpperCase();
+class XStyles {
+  constructor() {
+    this.fonts = []; this.fills = ['<fill><patternFill patternType="none"/></fill>', '<fill><patternFill patternType="gray125"/></fill>'];
+    this.borders = ['<border><left/><right/><top/><bottom/><diagonal/></border>'];
+    this.xfs = []; this.fm = new Map(); this.flm = new Map(); this.bm = new Map(); this.xm = new Map();
+    this.numFmts = []; this.nm = new Map(); this.dxfs = []; this.dm = new Map();
+    this.font({});
+    this.xf({});
+  }
+  font(o) {
+    const k = [o.b ? 1 : 0, o.sz || 10, o.c || ''].join('|');
+    if (!this.fm.has(k)) {
+      this.fm.set(k, this.fonts.length);
+      this.fonts.push(`<font>${o.b ? '<b/>' : ''}<sz val="${o.sz || 10}"/>${o.c ? `<color rgb="${o.c}"/>` : ''}<name val="${XL_FONT}"/><family val="2"/></font>`);
+    }
+    return this.fm.get(k);
+  }
+  fill(c) {
+    if (!c) return 0;
+    if (!this.flm.has(c)) { this.flm.set(c, this.fills.length); this.fills.push(`<fill><patternFill patternType="solid"><fgColor rgb="${c}"/><bgColor indexed="64"/></patternFill></fill>`); }
+    return this.flm.get(c);
+  }
+  border(bd) {
+    if (!bd) return 0;
+    const side = (t, v) => v ? `<${t} style="${v[0]}"><color rgb="${v[1] || 'FF9AA4AE'}"/></${t}>` : `<${t}/>`;
+    const k = JSON.stringify([bd.l, bd.r, bd.t, bd.b]);
+    if (k === '[null,null,null,null]') return 0;
+    if (!this.bm.has(k)) { this.bm.set(k, this.borders.length); this.borders.push('<border>' + side('left', bd.l) + side('right', bd.r) + side('top', bd.t) + side('bottom', bd.b) + '<diagonal/></border>'); }
+    return this.bm.get(k);
+  }
+  fmt(code) {
+    if (!code) return 0;
+    if (!this.nm.has(code)) { const id = 176 + this.numFmts.length; this.nm.set(code, id); this.numFmts.push(`<numFmt numFmtId="${id}" formatCode="${xesc(code)}"/>`); }
+    return this.nm.get(code);
+  }
+  xf(st) {
+    const k = JSON.stringify(st);
+    if (this.xm.has(k)) return this.xm.get(k);
+    const fo = this.font(st), fi = this.fill(st.fill), bo = this.border(st.bd), nf = this.fmt(st.fmt);
+    const al = `<alignment${st.h ? ` horizontal="${st.h}"` : ''} vertical="${st.v || 'center'}"${st.wrap ? ' wrapText="1"' : ''}${st.shrink ? ' shrinkToFit="1"' : ''}/>`;
+    const id = this.xfs.length;
+    this.xfs.push(`<xf numFmtId="${nf}" fontId="${fo}" fillId="${fi}" borderId="${bo}" xfId="0" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1">${al}</xf>`);
+    this.xm.set(k, id);
+    return id;
+  }
+  /* 조건부 서식의 모양(글자색·채움) */
+  dxf(fg, bg, strike) {
+    const k = fg + '|' + bg + '|' + (strike ? 1 : 0);
+    if (!this.dm.has(k)) {
+      this.dm.set(k, this.dxfs.length);
+      /* strike: 챙긴 줄 — 굵게 대신 가운데 줄을 긋는다 */
+      this.dxfs.push(`<dxf><font>${strike ? '<strike/>' : '<b/>'}<color rgb="${fg}"/></font><fill><patternFill patternType="solid"><fgColor rgb="${bg}"/><bgColor rgb="${bg}"/></patternFill></fill></dxf>`);
+    }
+    return this.dm.get(k);
+  }
+  xml() {
+    return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+      (this.numFmts.length ? `<numFmts count="${this.numFmts.length}">${this.numFmts.join('')}</numFmts>` : '') +
+      `<fonts count="${this.fonts.length}">${this.fonts.join('')}</fonts>` +
+      `<fills count="${this.fills.length}">${this.fills.join('')}</fills>` +
+      `<borders count="${this.borders.length}">${this.borders.join('')}</borders>` +
+      '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>' +
+      `<cellXfs count="${this.xfs.length}">${this.xfs.join('')}</cellXfs>` +
+      '<cellStyles count="1"><cellStyle name="표준" xfId="0" builtinId="0"/></cellStyles>' +
+      `<dxfs count="${this.dxfs.length}">${this.dxfs.join('')}</dxfs></styleSheet>`;
+  }
+}
+class XSheet {
+  constructor(name) {
+    this.name = name; this.cells = new Map(); this.colW = []; this.rowH = []; this.merges = []; this.land = true;
+    this.fx = 0; this.fy = 0; this.maxR = 0; this.maxC = 0; this.cf = []; this.dv = []; this.paper = 'A4';
+  }
+  cell(r, c) {
+    const k = r * 4096 + c;
+    let x = this.cells.get(k);
+    if (!x) { x = { r, c, v: '', f: null, st: {} }; this.cells.set(k, x); if (r > this.maxR) this.maxR = r; if (c > this.maxC) this.maxC = c; }
+    return x;
+  }
+  put(r, c, v, st, f) {
+    const x = this.cell(r, c);
+    x.v = v == null ? '' : v; x.f = f || null;
+    if (st) x.st = Object.assign({}, x.st, st, { bd: Object.assign({}, x.st.bd, st.bd) });
+    return x;
+  }
+  merge(r1, c1, r2, c2) { this.merges.push(COLN(c1) + (r1 + 1) + ':' + COLN(c2) + (r2 + 1)); }
+  ref(r1, c1, r2, c2) { return COLN(c1) + (r1 + 1) + (r2 == null ? '' : ':' + COLN(c2) + (r2 + 1)); }
+  xml(ST) {
+    let cols = '<cols>';
+    for (let c = 0; c <= this.maxC; c++) cols += `<col min="${c + 1}" max="${c + 1}" width="${this.colW[c] || 8.5}" customWidth="1"/>`;
+    cols += '</cols>';
+    const byRow = new Map();
+    for (const x of this.cells.values()) { if (!byRow.has(x.r)) byRow.set(x.r, []); byRow.get(x.r).push(x); }
+    let sd = '<sheetData>';
+    const rowsN = Math.max(this.maxR, this.rowH.length - 1);
+    for (let r = 0; r <= rowsN; r++) {
+      const list = (byRow.get(r) || []).sort((a, b) => a.c - b.c);
+      const h = this.rowH[r];
+      if (!list.length && !h) continue;
+      sd += `<row r="${r + 1}"${h ? ` ht="${h}" customHeight="1"` : ''}>`;
+      for (const x of list) {
+        const ref = COLN(x.c) + (r + 1), s = ST.xf(x.st);
+        if (x.f) {
+          if (typeof x.v === 'number') sd += `<c r="${ref}" s="${s}"><f>${xesc(x.f)}</f><v>${x.v}</v></c>`;
+          else sd += `<c r="${ref}" s="${s}" t="str"><f>${xesc(x.f)}</f><v>${xesc(x.v)}</v></c>`;
+        } else if (typeof x.v === 'number') sd += `<c r="${ref}" s="${s}"><v>${isFinite(x.v) ? x.v : 0}</v></c>`;
+        else if (x.v === '') sd += `<c r="${ref}" s="${s}"/>`;
+        else sd += `<c r="${ref}" s="${s}" t="inlineStr"><is><t xml:space="preserve">${xesc(x.v)}</t></is></c>`;
+      }
+      sd += '</row>';
+    }
+    sd += '</sheetData>';
+    const mg = this.merges.length ? `<mergeCells count="${this.merges.length}">${this.merges.map(m => `<mergeCell ref="${m}"/>`).join('')}</mergeCells>` : '';
+    let pr = 0;
+    /* 규칙은 두 가지 — v: 칸 값이 같으면, expr: 수식이 참이면(줄 전체 색칠용, 첫 칸 기준 상대 주소) */
+    const cf = this.cf.map(c => `<conditionalFormatting sqref="${c.sq}">` + c.rules.map(u => u.expr
+      ? `<cfRule type="expression" dxfId="${ST.dxf(u.fg, u.bg, u.strike)}" priority="${++pr}"><formula>${xesc(u.expr)}</formula></cfRule>`
+      : `<cfRule type="cellIs" dxfId="${ST.dxf(u.fg, u.bg)}" priority="${++pr}" operator="equal"><formula>"${xesc(u.v.replace(/"/g, ''))}"</formula></cfRule>`).join('') + '</conditionalFormatting>').join('');
+    const dv = this.dv.length ? `<dataValidations count="${this.dv.length}">` + this.dv.map(d =>
+      `<dataValidation type="list" allowBlank="1" showInputMessage="1" showErrorMessage="0" sqref="${d.sq}"><formula1>"${xesc(d.list.join(','))}"</formula1></dataValidation>`).join('') + '</dataValidations>' : '';
+    let pane = '<selection activeCell="A1" sqref="A1"/>';
+    if (this.fx || this.fy) {
+      const tl = COLN(this.fx) + (this.fy + 1);
+      const ap = this.fx && this.fy ? 'bottomRight' : this.fy ? 'bottomLeft' : 'topRight';
+      pane = `<pane${this.fx ? ` xSplit="${this.fx}"` : ''}${this.fy ? ` ySplit="${this.fy}"` : ''} topLeftCell="${tl}" activePane="${ap}" state="frozen"/><selection pane="${ap}" activeCell="${tl}" sqref="${tl}"/>`;
+    }
+    return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+      '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">' +
+      '<sheetPr><pageSetUpPr fitToPage="1"/></sheetPr>' +
+      `<sheetViews><sheetView workbookViewId="0" showGridLines="0" zoomScale="100">${pane}</sheetView></sheetViews>` +
+      '<sheetFormatPr defaultRowHeight="16.5"/>' + cols + sd + mg + cf + dv +
+      '<printOptions horizontalCentered="1"/>' +
+      '<pageMargins left="0.3" right="0.3" top="0.4" bottom="0.4" header="0.2" footer="0.2"/>' +
+      `<pageSetup paperSize="${this.paper === 'A3' ? 8 : 9}" orientation="${this.land ? 'landscape' : 'portrait'}" fitToWidth="1" fitToHeight="1"/>` +
+      '</worksheet>';
+  }
+}
+async function xlsxPack(sheets, title, ST) {
+  const f = (name, str) => ({ name, data: te8.encode(str) });
+  const sheetXml = sheets.map(s => s.xml(ST));       /* 스타일 번호를 먼저 다 매긴 뒤 styles.xml 을 쓴다 */
+  const ct = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
+    '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/>' +
+    '<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>' +
+    sheets.map((s, i) => `<Override PartName="/xl/worksheets/sheet${i + 1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('') +
+    '<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>' +
+    '<Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/>' +
+    '<Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/></Types>';
+  const rels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+    '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>' +
+    '<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/>' +
+    '<Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" Target="docProps/app.xml"/></Relationships>';
+  const wb = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">' +
+    '<workbookPr/><bookViews><workbookView activeTab="0"/></bookViews><sheets>' +
+    sheets.map((s, i) => `<sheet name="${xesc(s.name)}" sheetId="${i + 1}" r:id="rId${i + 1}"/>`).join('') +
+    '</sheets><calcPr calcId="191029" fullCalcOnLoad="1"/></workbook>';
+  const wbRels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+    sheets.map((s, i) => `<Relationship Id="rId${i + 1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i + 1}.xml"/>`).join('') +
+    `<Relationship Id="rId${sheets.length + 1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`;
+  const now = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
+  const core = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">' +
+    `<dc:title>${xesc(title)}</dc:title><cp:lastModifiedBy>birth_checklist</cp:lastModifiedBy><dcterms:created xsi:type="dcterms:W3CDTF">${now}</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">${now}</dcterms:modified></cp:coreProperties>`;
+  const app = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"><Application>birth_checklist</Application></Properties>';
+  const files = [f('[Content_Types].xml', ct), f('_rels/.rels', rels), f('docProps/core.xml', core), f('docProps/app.xml', app),
+    f('xl/workbook.xml', wb), f('xl/_rels/workbook.xml.rels', wbRels)];
+  sheetXml.forEach((x, i) => files.push(f(`xl/worksheets/sheet${i + 1}.xml`, x)));
+  files.push(f('xl/styles.xml', ST.xml()));
+  return zipFiles(files, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+}
+
+/* ════════════════════════════════════════════════════════════
+   저장 — PDF(A4 두 단) · 그림(휴대폰용 한 단) · 엑셀 · 글 · 링크
+   · 쪽 그림은 {W,H,ops} 하나로 만들어 PDF 와 그림이 같은 배치를 쓴다(pt, 위가 0)
+   · 그림 문자는 쓰지 않는다 — 기기 글꼴 윤곽선을 따서 PDF 에 넣기 때문에 색 그림 문자는 덩어리가 된다
+   ════════════════════════════════════════════════════════════ */
+const TAG_COL = { prov: '#0f766e', nat: '#2563eb', cs: '#7c3aed', old: '#b45309', opt: '#94a3b8', my: '#a855f7' };
+const ACC = '#b5245f';
+const won = n => Math.round(n).toLocaleString('ko-KR') + '원';
+
+/* 저장할 줄 — scope 'left' 면 안 챙긴 것만 */
+function exportData(scope) {
+  const P = S.P;
+  const secs = [];
+  for (const [sk, , sname] of SECTIONS) {
+    const groups = [];
+    for (const [c, s, , name] of CATS) {
+      if (s !== sk) continue;
+      const items = S.items.filter(x => x.c === c);
+      if (!items.length) continue;
+      const done = items.filter(x => S.chk[x.id]).length;
+      const rows = items.filter(x => scope !== 'left' || !S.chk[x.id]).map(x => ({
+        n: x.n, q: qtyText(x, true), tag: tagOf(x), on: !!S.chk[x.id], note: x.note, price: S.price[x.id] || 0
+      }));
+      if (rows.length) groups.push({ name, done, all: items.length, rows });
+    }
+    if (groups.length) secs.push({ key: sk, name: sname, groups });
+  }
+  const todos = S.todos.filter(x => scope !== 'left' || !S.todoChk[x.id]).map(x => ({ n: x.t, d: kd(x.d), dd: todoWhen(x, P), on: !!S.todoChk[x.id], note: x.x }));
+  return { P, secs, todos };
+}
+/* 꼬리표 하나 — 저장물에는 가장 중요한 것만 */
+function tagOf(x) { return x.my ? 'my' : x.tag ? x.tag : x.opt ? 'opt' : ''; }
+function todoWhen(x, P) {
+  if (x.a != null) return (P.born != null ? '생후 ' : '출산 후 ') + x.a + '일';
+  return x.w ? x.w + '주' : ddayTxt(P.due - x.d);
+}
+function factLine(P) {
+  const a = [];
+  if (P.born == null) a.push('임신 ' + gaTxt(P.ga) + ' · ' + ddayTxt(P.due - P.today));
+  a.push('출산가방 36주 ' + kd(weekDay(P.due, 36)) + '까지');
+  if (P.born == null) a.push('산후도우미 신청 ' + kd(P.due - 40) + '부터');
+  else a.push('출생신고 ' + kd(P.born + 30) + '까지');
+  a.push('첫만남이용권 ' + (P.second ? '300만 원' : '200만 원'));
+  return a.join('  ·  ');
+}
+function priceSum() {
+  let all = 0, got = 0;
+  for (const x of S.items) { const v = S.price[x.id] || 0; all += v; if (S.chk[x.id]) got += v; }
+  return { all, got };
+}
+
+/* 배치 — mode 'pdf': A4 두 단 여러 쪽 / 'img': 폭 540pt 한 단 한 장 */
+function layoutPages(mode, scope) {
+  const X = exportData(scope), P = X.P;
+  const pdf = mode === 'pdf';
+  const W = pdf ? 595.28 : 540, PH = pdf ? 841.89 : 0, M = pdf ? 34 : 26;
+  const cols = pdf ? 2 : 1, gap = 18;
+  const cw = (W - M * 2 - gap * (cols - 1)) / cols;
+  const z = pdf ? 9.4 : 12, rh = pdf ? 15.2 : 21, hh = pdf ? 21 : 27, sh = pdf ? 22 : 28;
+  const pages = [];
+  let page, col, y, top, bottom;
+  const total = S.items.length, doneN = S.items.filter(x => S.chk[x.id]).length;
+  const ps = priceSum();
+  const newPage = () => {
+    page = { W, H: PH || 100, ops: [] };
+    pages.push(page);
+    col = 0;
+    let yy = M;
+    if (pages.length === 1) {
+      const tz = pdf ? 18 : 22;
+      page.ops.push({ o: 't', x: M, y: yy + tz, s: '출산 준비물 체크리스트', z: tz, b: 1, c: '#1f1320' });
+      const pr = '챙김 ' + doneN + ' / ' + total;
+      const pz = pdf ? 10.5 : 13;
+      page.ops.push({ o: 't', x: W - M - textW(pr, pz, 1), y: yy + tz, s: pr, z: pz, b: 1, c: ACC });
+      yy += tz + (pdf ? 9 : 11);
+      const sub = planTitle(P) + '  ·  ' + planWho(P) + (scope === 'left' ? '  ·  안 챙긴 것만' : '');
+      const sz = pdf ? 10 : 12.5;
+      const f1 = fitText(sub, W - M * 2, sz, 1);
+      page.ops.push({ o: 't', x: M, y: yy + sz, s: f1.s, z: f1.z, b: 1, c: '#3f3340' });
+      yy += sz + (pdf ? 6 : 8);
+      const fz = pdf ? 8.4 : 10.5;
+      const fl2 = factLine(P) + (ps.all ? '  ·  적어 둔 비용 ' + won(ps.all) : '');
+      const f2 = fitText(fl2, W - M * 2, fz, 0);
+      page.ops.push({ o: 't', x: M, y: yy + fz, s: f2.s, z: f2.z, b: 0, c: '#6b5f68' }); yy += fz + (pdf ? 6 : 8);
+      page.ops.push({ o: 'r', x: M, y: yy, w: W - M * 2, h: pdf ? 3 : 4, f: '#eee3e8', rr: 1.5 });
+      if (total) page.ops.push({ o: 'r', x: M, y: yy, w: (W - M * 2) * doneN / total, h: pdf ? 3 : 4, f: ACC, rr: 1.5 });
+      yy += pdf ? 12 : 16;
+    } else {
+      const s = '출산 준비물 체크리스트 — ' + planTitle(P) + ' (이어서)';
+      page.ops.push({ o: 't', x: M, y: yy + 9, s, z: 9, b: 1, c: '#6b5f68' });
+      yy += 20;
+    }
+    top = yy; y = yy;
+    bottom = pdf ? PH - M - 14 : 1e9;
+  };
+  const colX = () => M + col * (cw + gap);
+  const room = need => {
+    if (y + need <= bottom) return;
+    if (col < cols - 1) { col++; y = top; return; }
+    newPage();
+  };
+  /* 가방 머리 — 진한 띠 */
+  const secHead = name => {
+    room(sh + hh + rh);                /* 머리만 남고 줄이 다음 단으로 넘어가지 않게 */
+    const x = colX(), hz = pdf ? 10.5 : 13;
+    page.ops.push({ o: 'r', x, y: y + 2, w: cw, h: sh - 5, f: ACC, rr: 3 });
+    page.ops.push({ o: 't', x: x + 7, y: y + 2 + (sh - 5) / 2 + hz * 0.36, s: name, z: hz, b: 1, c: '#ffffff' });
+    y += sh;
+  };
+  const head = (name, cnt) => {
+    room(hh + rh);
+    const x = colX();
+    page.ops.push({ o: 'r', x, y: y + 2, w: cw, h: hh - 6, f: '#f8e8ef', rr: 3 });
+    const hz = pdf ? 9.6 : 12;
+    page.ops.push({ o: 't', x: x + 7, y: y + 2 + (hh - 6) / 2 + hz * 0.36, s: name, z: hz, b: 1, c: '#7a1d45' });
+    if (cnt) { const cz = pdf ? 8.5 : 10.5; page.ops.push({ o: 't', x: x + cw - 7 - textW(cnt, cz, 1), y: y + 2 + (hh - 6) / 2 + cz * 0.36, s: cnt, z: cz, b: 1, c: ACC }); }
+    y += hh;
+  };
+  const row = (r, pre) => {
+    room(rh);
+    const x = colX(), bs = pdf ? 9 : 12, by = y + (rh - bs) / 2 - 0.5;
+    if (r.on) {
+      page.ops.push({ o: 'r', x: x + 2, y: by, w: bs, h: bs, f: ACC, rr: 2 });
+      page.ops.push({ o: 'l', x1: x + 2 + bs * 0.22, y1: by + bs * 0.52, x2: x + 2 + bs * 0.43, y2: by + bs * 0.74, w: bs * 0.14, c: '#ffffff' });
+      page.ops.push({ o: 'l', x1: x + 2 + bs * 0.43, y1: by + bs * 0.74, x2: x + 2 + bs * 0.8, y2: by + bs * 0.26, w: bs * 0.14, c: '#ffffff' });
+    } else page.ops.push({ o: 'r', x: x + 2, y: by, w: bs, h: bs, s: '#a8949f', lw: 0.8, rr: 2 });
+    let tx = x + bs + 8;
+    const base = y + rh / 2 + z * 0.36;
+    if (pre) { const pz = z * 0.86; page.ops.push({ o: 't', x: tx, y: base, s: pre, z: pz, b: 1, c: r.on ? '#a8949f' : ACC }); tx += textW(pre, pz, 1) + 6; }
+    const qz = z * 0.9, qs = [r.q || '', r.price ? won(r.price) : ''].filter(Boolean).join(' · ');
+    const qw = qs ? textW(qs, qz, 1) : 0;
+    const tg = r.tag ? TAGS[r.tag][0] : '';
+    const tz = z * 0.74, tw = tg ? textW(tg, tz, 1) + 6 : 0;
+    const f = fitText(r.n, x + cw - tx - qw - tw - (qs ? 8 : 2) - (tg ? 5 : 0), z, 0, z * 0.8);
+    page.ops.push({ o: 't', x: tx, y: base, s: f.s, z: f.z, b: 0, c: r.on ? '#a8949f' : '#1f1320' });
+    if (r.on) { const lw = textW(f.s, f.z, 0); page.ops.push({ o: 'l', x1: tx, y1: base - f.z * 0.32, x2: tx + lw, y2: base - f.z * 0.32, w: 0.7, c: '#a8949f' }); }
+    if (tg) {
+      const gx = tx + textW(f.s, f.z, 0) + 5, col2 = TAG_COL[r.tag] || '#94a3b8';
+      page.ops.push({ o: 'r', x: gx, y: base - tz * 1.02, w: tw, h: tz * 1.38, s: col2, lw: 0.6, rr: 2 });
+      page.ops.push({ o: 't', x: gx + 3, y: base - tz * 0.04, s: tg, z: tz, b: 1, c: col2 });
+    }
+    if (qs) page.ops.push({ o: 't', x: x + cw - qw, y: base, s: qs, z: qz, b: 1, c: r.on ? '#a8949f' : '#3f3340' });
+    page.ops.push({ o: 'l', x1: x, y1: y + rh, x2: x + cw, y2: y + rh, w: 0.4, c: '#efe4ea' });
+    y += rh;
+  };
+  newPage();
+  for (const sc of X.secs) {
+    secHead(sc.name);
+    for (const g of sc.groups) {
+      head(g.name, g.done + ' / ' + g.all);
+      for (const r of g.rows) row(r);
+      y += pdf ? 5 : 7;
+    }
+    y += pdf ? 4 : 6;
+  }
+  if (X.todos.length) {
+    secHead(P.born != null ? '할 일 (출생신고·지원금·접종)' : '할 일 (주차별 준비·출산 후)');
+    for (const t of X.todos) row({ n: t.n, on: t.on }, t.d);
+  }
+  if (!X.secs.length && !X.todos.length) {
+    page.ops.push({ o: 't', x: M, y: y + 20, s: '모두 챙겼습니다. 순산을 응원해요!', z: 13, b: 1, c: ACC });
+    y += 30;
+  }
+  if (!pdf) page.H = Math.ceil(y + M + 18);
+  const foot = '출산 준비물 체크리스트 · hwj-hub.github.io/birth_checklist · 2026년 11월 기준 · 병원·조리원 안내를 먼저 따르세요';
+  pages.forEach((p, i) => {
+    const fz = pdf ? 7.2 : 9;
+    const f = fitText(foot, W - M * 2 - 40, fz, 0);
+    p.ops.push({ o: 'l', x1: M, y1: p.H - M + 2, x2: W - M, y2: p.H - M + 2, w: 0.5, c: '#eee3e8' });
+    p.ops.push({ o: 't', x: M, y: p.H - M + 2 + fz + 5, s: f.s, z: f.z, b: 0, c: '#a8949f' });
+    if (pages.length > 1) { const pn = (i + 1) + ' / ' + pages.length; p.ops.push({ o: 't', x: W - M - textW(pn, fz, 0), y: p.H - M + 2 + fz + 5, s: pn, z: fz, b: 0, c: '#a8949f' }); }
+  });
+  return pages;
+}
+
+/* ── 엑셀 — 챙김(✔ 고르기)·가방·분류·준비물·수량·금액·메모 / 할 일 시트 ── */
+async function buildXlsx(scope) {
+  const X = exportData(scope), P = X.P;
+  const ST = new XStyles();
+  const C = { acc: xlHex(ACC), head: xlHex('#f8e8ef'), line: 'FFE2D3DB', gray: 'FFA8949F', done: 'FFF6F1F4', mute: 'FF6B5F68' };
+  const bd = { l: ['thin', C.line], r: ['thin', C.line], t: ['thin', C.line], b: ['thin', C.line] };
+  const sh = new XSheet('출산 준비물');
+  sh.land = false;
+  sh.colW = [7, 13, 14, 32, 11, 12, 46];
+  sh.put(0, 0, '출산 준비물 체크리스트 — ' + planTitle(P), { b: 1, sz: 16, c: C.acc }); sh.merge(0, 0, 0, 6); sh.rowH[0] = 28;
+  sh.put(1, 0, planWho(P) + (scope === 'left' ? ' · 안 챙긴 것만' : ''), { b: 1, sz: 10, c: C.mute }); sh.merge(1, 0, 1, 6);
+  sh.put(2, 0, factLine(P), { sz: 9, c: C.mute, wrap: 1 }); sh.merge(2, 0, 2, 6); sh.rowH[2] = 30;
+  const r0 = 5;
+  let r = r0;
+  const rows = [];
+  for (const sc of X.secs) for (const g of sc.groups) for (const x of g.rows) rows.push([sc.name, g.name, x]);
+  const last = Math.max(r0, r0 + rows.length - 1);
+  const rng = c => COLN(c) + (r0 + 1) + ':' + COLN(c) + (last + 1);
+  const doneN = rows.filter(v => v[2].on).length;
+  const allP = rows.reduce((a, v) => a + v[2].price, 0), gotP = rows.reduce((a, v) => a + (v[2].on ? v[2].price : 0), 0);
+  sh.put(3, 0, '챙김', { b: 1, sz: 11, h: 'center' });
+  sh.put(3, 1, doneN, { b: 1, sz: 13, c: C.acc, h: 'center', fmt: '0"개"' }, `COUNTIF(${rng(0)},"✔")`);
+  sh.put(3, 2, '/ ' + rows.length + '개', { b: 1, sz: 11, c: C.mute }, `"/ "&COUNTA(${rng(3)})&"개"`);
+  sh.put(3, 3, '금액 합계 · 산 것', { b: 1, sz: 10, c: C.mute, h: 'right' });
+  sh.put(3, 4, allP, { b: 1, sz: 11, c: C.acc, h: 'center', fmt: '#,##0' }, `SUM(${rng(5)})`);
+  sh.put(3, 5, gotP, { b: 1, sz: 11, c: C.acc, h: 'center', fmt: '#,##0' }, `SUMIF(${rng(0)},"✔",${rng(5)})`);
+  sh.put(3, 6, '← 챙김 칸에서 ✔ 를 고르면 개수·산 것 금액이 저절로 바뀝니다', { sz: 9, c: C.mute });
+  sh.rowH[3] = 22;
+  ['챙김', '가방', '분류', '준비물', '수량', '금액(원)', '메모'].forEach((h, c) => sh.put(4, c, h, { b: 1, sz: 10, fill: C.head, h: 'center', bd }));
+  sh.rowH[4] = 22;
+  for (const [sec, cat, x] of rows) {
+    sh.put(r, 0, x.on ? '✔' : '', { sz: 12, b: 1, c: C.acc, h: 'center', bd });
+    sh.put(r, 1, sec.replace('집에 미리 준비할 신생아 용품', '집 준비'), { sz: 9, c: C.mute, bd, shrink: 1 });
+    sh.put(r, 2, cat, { sz: 9.5, c: C.mute, bd, shrink: 1 });
+    sh.put(r, 3, x.n + (x.tag ? ' (' + TAGS[x.tag][0] + ')' : ''), { sz: 10.5, bd, wrap: 1 });
+    sh.put(r, 4, x.q || '', { sz: 10, h: 'center', bd, shrink: 1 });
+    sh.put(r, 5, x.price || '', { sz: 10, h: 'right', bd, fmt: '#,##0' });
+    sh.put(r, 6, x.note || '', { sz: 9, c: C.mute, bd, wrap: 1 });
+    sh.rowH[r] = (x.note && x.note.length > 30) || x.n.length > 18 ? 30 : 19;
+    r++;
+  }
+  if (rows.length) {
+    sh.dv.push({ sq: rng(0), list: ['✔'] });
+    sh.cf.push({ sq: 'A' + (r0 + 1) + ':G' + (last + 1), rules: [{ expr: '$A' + (r0 + 1) + '="✔"', fg: C.gray, bg: C.done, strike: 1 }] });
+  }
+  sh.fy = r0;
+  const sheets = [sh];
+  if (X.todos.length) {
+    const s2 = new XSheet('할 일');
+    s2.land = false;
+    s2.colW = [7, 13, 11, 34, 64];
+    s2.put(0, 0, '할 일 — ' + planTitle(P), { b: 1, sz: 14, c: C.acc }); s2.merge(0, 0, 0, 4); s2.rowH[0] = 26;
+    s2.put(1, 0, P.born != null ? '출산 뒤 날짜는 태어난 날(' + kdl(P.born) + ') 기준' : '출산 뒤 날짜는 예정일로 어림한 것 · 아기가 태어나면 태어난 날로 다시 셉니다', { sz: 9, c: C.mute }); s2.merge(1, 0, 1, 4);
+    ['완료', '날짜', '때', '할 일', '설명'].forEach((h, c) => s2.put(2, c, h, { b: 1, sz: 10, fill: C.head, h: 'center', bd }));
+    let rr = 3;
+    for (const t of X.todos) {
+      s2.put(rr, 0, t.on ? '✔' : '', { sz: 12, b: 1, c: C.acc, h: 'center', bd });
+      s2.put(rr, 1, t.d, { sz: 10, h: 'center', bd });
+      s2.put(rr, 2, t.dd, { sz: 9.5, h: 'center', c: C.mute, bd, shrink: 1 });
+      s2.put(rr, 3, t.n, { sz: 10.5, b: 1, bd, wrap: 1 });
+      s2.put(rr, 4, t.note || '', { sz: 9, c: C.mute, bd, wrap: 1 });
+      s2.rowH[rr] = 32;
+      rr++;
+    }
+    s2.dv.push({ sq: 'A4:A' + rr, list: ['✔'] });
+    s2.cf.push({ sq: 'A4:E' + rr, rules: [{ expr: '$A4="✔"', fg: C.gray, bg: C.done, strike: 1 }] });
+    s2.fy = 3;
+    sheets.push(s2);
+  }
+  return xlsxPack(sheets, '출산 준비물 체크리스트 — ' + planTitle(P), ST);
+}
+
+/* ── 글 — 메신저·메모장에 붙여 넣기 ── */
+function listText(scope) {
+  const X = exportData(scope), P = X.P;
+  const doneN = S.items.filter(x => S.chk[x.id]).length;
+  const out = ['🍼 출산 준비물 — ' + planTitle(P), planWho(P), '챙김 ' + doneN + ' / ' + S.items.length + (scope === 'left' ? ' (안 챙긴 것만)' : ''), ''];
+  out.push('※ ' + factLine(P), '');
+  for (const sc of X.secs) {
+    out.push('■ ' + sc.name);
+    for (const g of sc.groups) {
+      out.push('[' + g.name + ']');
+      for (const r of g.rows) out.push((r.on ? '☑ ' : '☐ ') + r.n + (r.q ? ' ' + r.q : '') + (r.price ? ' · ' + won(r.price) : '') + (r.tag && r.tag !== 'opt' ? ' (' + TAGS[r.tag][0] + ')' : ''));
+    }
+    out.push('');
+  }
+  if (X.todos.length) {
+    out.push('■ 할 일');
+    for (const t of X.todos) out.push((t.on ? '☑ ' : '☐ ') + t.d + ' ' + t.n);
+    out.push('');
+  }
+  const ps = priceSum();
+  if (ps.all) out.push('적어 둔 비용 ' + won(ps.all) + ' (산 것 ' + won(ps.got) + ')', '');
+  out.push('hwj-hub.github.io/birth_checklist');
+  return out.join('\n');
+}
+
+/* ── 링크 — 설정·체크·고친 것을 주소 # 뒤에 담는다(서버 없음). 받은 사람이 열면 같은 목록이 뜬다 ── */
+const b64u = u8 => { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); };
+const unb64u = s => { const b = atob(s.replace(/-/g, '+').replace(/_/g, '/')); const u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; };
+function shareObj() {
+  const o = { v: 1 };
+  for (const k of SHARE_KEYS) o[k] = S[k];
+  o.chk = Object.keys(S.chk); o.del = Object.keys(S.del); o.todoChk = Object.keys(S.todoChk);
+  return o;
+}
+async function shareUrl() {
+  const raw = te.encode(JSON.stringify(shareObj()));
+  const z = await deflateRaw(raw);
+  const tok = z && z.length < raw.length ? 'z' + b64u(z) : 'j' + b64u(raw);
+  return location.origin + location.pathname + '#s=' + tok;
+}
+async function readShare(tok) {
+  let u = unb64u(tok.slice(1));
+  if (tok[0] === 'z') {
+    const ds = new DecompressionStream('deflate-raw');
+    u = new Uint8Array(await new Response(new Blob([u]).stream().pipeThrough(ds)).arrayBuffer());
+  }
+  return JSON.parse(new TextDecoder().decode(u));
+}
+
+/* ════════════════════════════════════════════════════════════
+   인앱 브라우저 (네이버·카카오톡 앱 안에서 열었을 때)
+
+   앱 안 화면은 OS 가 주는 WebView 인데 내려받기 기능이 없다. blob: 주소를 넘기면
+   아무 일도 일어나지 않고 끝난다(카카오 공식 안내: a[download] 는 안드로이드만,
+   iOS 는 data: 주소 방식). 서버가 없는 도구라 응답 헤더로 내려줄 수도 없다.
+     ① 저장은 blob: 대신 data: 주소로 시도한다
+     ② 시작하기 전에 창을 띄워 브라우저를 옮기게 한다 — 다 쓰고 나서 옮기면
+        내용을 다시 써야 한다(내용은 그 탭에만 보관)
+     ③ 아이폰은 사파리를 강제로 열 수 없어 주소 복사 + 메뉴 안내로 간다
+   ════════════════════════════════════════════════════════════ */
+const UA = navigator.userAgent || '';
+const IA = {
+  naver: /NAVER\(inapp/i.test(UA),
+  kakao: /KAKAOTALK/i.test(UA),
+  line: /\bLine\//i.test(UA),
+  ios: /iPhone|iPad|iPod/i.test(UA),
+  android: /Android/i.test(UA)
+};
+IA.on = IA.naver || IA.kakao || IA.line ||
+  /Instagram|FBAN|FBAV|FB_IAB|DaumApps|everytimeApp|band\/|KAKAOSTORY/i.test(UA) ||
+  (IA.android && /;\s*wv\)/i.test(UA));   /* 안드로이드 WebView 표시 */
+
+/* 다른 브라우저로 넘기기. 앱마다 길이 달라 순서대로 고른다 */
+function externalUrl() {
+  const url = location.href;
+  if (IA.kakao) return 'kakaotalk://web/openExternal?url=' + encodeURIComponent(url);
+  if (IA.line) return url + (url.indexOf('?') >= 0 ? '&' : '?') + 'openExternalBrowser=1';
+  /* 안드로이드는 크롬을 직접 연다. 크롬이 없으면 fallback 주소로 되돌아온다 */
+  if (IA.android) return 'intent://' + url.replace(/^https?:\/\//i, '') +
+    '#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=' + encodeURIComponent(url) + ';end';
+  return '';          /* 아이폰은 사파리를 강제로 열 수 없다 */
+}
+function copyAddr(guide) {
+  const url = location.href;
+  const done = () => toast(guide ? '주소를 복사했습니다. 사파리를 열고 붙여 넣거나, 오른쪽 아래 메뉴에서 「다른 브라우저로 열기」를 누르세요.' : '주소를 복사했습니다.', 5200);
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(url).then(done, () => fallbackCopy(url, done)); return; }
+  } catch (e) { /* 아래로 */ }
+  fallbackCopy(url, done);
+}
+function fallbackCopy(text, done) {
+  const t = document.createElement('textarea');
+  t.value = text; t.setAttribute('readonly', ''); t.style.cssText = 'position:fixed;left:-9999px;top:0';
+  document.body.appendChild(t); t.select(); t.setSelectionRange(0, text.length);
+  try { document.execCommand('copy'); done(); } catch (e) { toast('주소를 길게 눌러 복사해 주세요.', 4200); }
+  t.remove();
+}
+/* 앱 안에서는 blob: 이 통하지 않아 data: 주소로 바꿔 넘긴다.
+   data: 는 문자열이라 너무 크면 앱이 통째로 거부한다 — 큰 엑셀은 수십 MB 가 될 수 있어 상한을 둔다 */
+function downloadInApp(blob, name) {
+  const how = () => '위쪽 「' + $('iaGo').textContent + '」를 눌러 주세요.';
+  if (blob.size > 10 * 1024 * 1024) { toast('앱 안에서는 10MB가 넘는 파일을 저장할 수 없습니다. ' + how(), 5600); return; }
+  const go = href => {
+    const a = document.createElement('a');
+    a.href = href; a.download = name; a.rel = 'noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+  };
+  const fr = new FileReader();
+  fr.onload = () => { try { go(fr.result); } catch (e) { /* 안내로 넘어간다 */ } };
+  fr.onerror = () => toast('앱 안에서는 저장이 막혀 있습니다. ' + how(), 5200);
+  fr.readAsDataURL(blob);
+}
+/* 앱 안에서 열렸으면 작성을 막고 창을 띄운다.
+   띠만 띄워 두면 다 채운 뒤에야 저장이 안 되는 걸 알게 되는데,
+   입력은 그 탭에만 있어서 브라우저를 옮기는 순간 처음부터 다시 써야 한다 */
+function initInApp() {
+  if (!IA.on) return;
+  const app = IA.naver ? '네이버 앱' : IA.kakao ? '카카오톡' : IA.line ? '라인' : '앱';
+  const copyOnly = IA.ios && !IA.kakao && !IA.line;   /* 아이폰은 사파리를 강제로 열 수 없다 */
+  /* 카카오·라인은 앱의 자체 통로(kakaotalk:// · openExternalBrowser)로 기본 브라우저가 열린다.
+     크롬을 콕 집어 여는 것은 안드로이드 intent:// 뿐이라 단추 문구와 순서를 나눈다 */
+  const chromeIntent = IA.android && !IA.kakao && !IA.line;
+
+  document.body.classList.add('inapp');
+  $('iaMsg').textContent = app + ' 안에서는 PDF·그림·엑셀 저장이 안 될 수 있어요.';
+  $('doneInapp').classList.remove('hide');
+
+  $('iaDesc').innerHTML = '<b>' + app + '</b> 안에서 열렸습니다. 이 화면에서는 ' +
+    '<b>PDF·그림·엑셀 파일이 저장되지 않을 수 있습니다.</b> 체크는 되지만, 체크한 내용은 이 앱 안에만 남으니 ' +
+    '<b>체크를 시작하기 전에</b> 브라우저를 옮기는 것이 좋습니다.';
+  const steps = copyOnly
+    ? ['아래 <b>주소 복사</b>를 누르세요.',
+       '오른쪽 아래 <b>메뉴</b>에서 「다른 브라우저로 열기」를 누르거나, <b>사파리</b> 주소창에 붙여 넣으세요.']
+    : chromeIntent
+      ? ['아래 <b>크롬에서 열기</b>를 누르세요.',
+         '크롬이 없으면 오른쪽 위 <b>메뉴</b>에서 「다른 브라우저로 열기」를 누르세요.']
+      : ['아래 <b>다른 브라우저로 열기</b>를 누르세요.',
+         '열리지 않으면 ' + (IA.ios ? '화면의' : '오른쪽 위') + ' <b>메뉴</b>에서 「다른 브라우저로 열기」를 누르세요.'];
+  $('iaSteps').innerHTML = steps.map(s => '<li>' + s + '</li>').join('');
+  const label = copyOnly ? '주소 복사' : chromeIntent ? '크롬에서 열기' : '다른 브라우저로 열기';
+  $('iaGo').textContent = label;
+  $('iaGo2').textContent = label;
+  $('doneGo').textContent = label;
+  $('iaSub').textContent = copyOnly
+    ? '사파리에 붙여 넣거나, 오른쪽 아래 메뉴에서 「다른 브라우저로 열기」를 누르세요.'
+    : '체크한 내용은 이 앱 안에만 남아요. 저장하려면 브라우저를 옮겨 주세요.';
+
+  /* 윗머리 띠를 ✕ 로 닫았으면 새로 고쳐도 띠는 다시 띄우지 않는다(막는 창은 열 때마다 뜬다) */
+  let hidden = false;
+  try { hidden = sessionStorage.getItem('birth_checklist.iahide') === '1'; } catch (e) { /* 무시 */ }
+  if (hidden) document.body.classList.remove('inapp');
+  /* 체크는 앱 안에서도 된다 — 막는 창은 띄우지 않고, 파일 저장만 data: 주소로 돌려 받는다(downloadInApp) */
+}
+/* 창이 떠 있는 동안에는 뒤쪽 입력칸을 아예 만지지 못하게 한다 */
+function lockInApp(on) {
+  document.body.classList.toggle('ia-lock', on);
+  const w = document.querySelector('.wrap');
+  if (on) w.setAttribute('inert', ''); else w.removeAttribute('inert');
+  if (!on) $('iaModal').blur();
+}
+/* 아이폰에서 주소를 복사했으면 창 안에서 바로 알려 준다 — 토스트는 창 위에 잠깐 떴다 사라진다 */
+function iaCopied() {
+  $('iaDesc').innerHTML = '주소를 <b>복사했습니다.</b> 이제 <b>사파리</b>를 열고 주소창에 붙여 넣으세요.';
+  $('iaSteps').innerHTML = '<li>홈 화면에서 <b>사파리</b>를 엽니다.</li>' +
+    '<li>주소창을 길게 눌러 <b>붙여넣기</b> 하세요.</li>' +
+    '<li>또는 이 화면 오른쪽 아래 <b>메뉴</b> → 「다른 브라우저로 열기」.</li>';
+}
+
+/* ════════════════════════════════════════════════════════════
+   광고 (카카오 애드핏) — 자리는 여기 한 곳에서만 만든다
+   · 한 화면 3곳 (애드핏 운영정책: 한 페이지 4개 초과 게재 금지 · 본문 320×100 은 뺐다)
+     모바일 ① 맨 위 320×50 ② 저장 완료 카드 300×250 ③ 하단 오버형 320×50
+     PC     ① 맨 위 320×50 ② 옆 칸 맨 위 320×50 ③ 저장 완료 카드 300×250
+   · ins 는 자리마다 미리 만들어 두고 ba.min.js 는 맨 끝에 한 번만 부른다 —
+     애드핏 로더는 자기가 뜰 때 있는 ins 만 읽어서, 뒤늦게 넣은 ins 는 빈 채로 남는다
+   · 입력·체크리스트·할 일·판정기·저장 카드가 화면에 있는 동안에는 오버형을 내려 둔다(핵심 행동 중 광고 노출 금지 · 단추 옆 오클릭 방지)
+   · 저장 완료 광고는 창으로 덮지 않고 본문에 카드로 펼친다(「콘텐츠를 덮거나 가리는 영역에 광고 배치 금지」)
+   · 앱 안에서 막는 창이 떠 있으면 광고를 부르지 않는다
+   ※ 단위 ID 는 애드핏에서 크기별로 따로 발급받아 아래 units 에만 적으면 된다.
+     DAN-XXXX… 로 남아 있는 자리는 점선 자리표시자만 그리고 요청은 보내지 않는다.
+     같은 ID 를 한 화면에 함께 뜨는 두 자리에 쓰면 두 번 노출되어 정책 위반이다. */
+const AD = {
+  /* 애드핏 배너 크기는 160×600 · 250×250 · 300×250 · 320×100 · 320×50 · 728×90 뿐인데,
+     이 도구는 그중 휴대폰에서도 들어가는 320×50 · 300×250 만 쓴다 */
+  units: {
+    top:     { id: 'DAN-XXXXXXXXXXXXXXXX', w: 320, h: 50 },   /* 맨 위 · 모바일과 PC 크기가 같아 하나로 겸한다 */
+    side_pc: { id: 'DAN-XXXXXXXXXXXXXXXX', w: 320, h: 50 },   /* PC 옆 칸 맨 위(결과 카드 위) */
+    done:    { id: 'DAN-XXXXXXXXXXXXXXXX', w: 300, h: 250 },  /* 저장 완료 카드 */
+    anchor:  { id: 'DAN-XXXXXXXXXXXXXXXX', w: 320, h: 50 }    /* 모바일 하단 오버형 */
+  },
+  iframeOk: true,   /* iframe 안에서도 띄운다(다른 도구들과 같게). 끄려면 false */
+  popup: true,      /* 저장 완료 카드 */
+  overlay: true,    /* 하단 오버형 */
+  init() {
+    if (this.started) return;
+    this.started = true;
+    this.off = window.top !== window.self && !this.iframeOk;
+    this.pc = window.matchMedia('(min-width:980px)').matches;
+    if (this.off) { document.body.classList.add('no-ad'); return; }  /* 빈 자리가 남지 않게 접는다 */
+    this.put($('ad-top'), 'top');
+    if (this.pc) this.put($('ad-side'), 'side_pc');
+    /* 숨어 있는 자리(하단 오버형·저장 완료 카드)는 화면에 나온 다음에 부른다 —
+       안 보이는 동안 부르면 보는 사람 없이 노출만 잡히고, 애드핏도 「노출수를 인위적으로 늘리는 수단」을 금지한다 */
+    this.load();
+  },
+  /* 자리에 ins 를 만들어 둔다. 단위 ID 를 아직 안 넣었으면 점선 자리만 그리고 요청은 보내지 않는다.
+     높이는 min-height 로 — 내려온 광고가 적어 놓은 높이보다 길어도 잘리지 않게 */
+  put(box, key, preload) {
+    const u = this.units[key];
+    if (!box || !u || box.dataset.ad) return;
+    if (document.querySelectorAll('ins.kakao_ad_area').length >= 4) return;
+    box.dataset.ad = key;
+    box.style.width = u.w + 'px';
+    if (/XXXX/.test(u.id)) { box.style.height = u.h + 'px'; box.innerHTML = '<div class="ad-ph">광고 ' + u.w + ' × ' + u.h + '</div>'; return; }
+    box.style.minHeight = u.h + 'px';
+    /* 광고가 안 내려오면 빈 칸이 남는다 — 공식 콜백으로 접는다. 단위가 여럿이면 이름이 서로 달라야 한다 */
+    const fail = 'adNone_' + key;
+    window[fail] = () => {
+      box.classList.add('ad-none');
+      if (key === 'anchor') { this.closed = true; this.sync(); }
+      if (key === 'done') { const w = $('doneAd'); if (w) w.classList.add('ad-none'); }
+    };
+    const ins = document.createElement('ins');
+    ins.className = 'kakao_ad_area'; ins.style.display = 'none';
+    ins.setAttribute('data-ad-unit', u.id);
+    ins.setAttribute('data-ad-width', String(u.w));
+    ins.setAttribute('data-ad-height', String(u.h));
+    ins.setAttribute('data-ad-onfail', fail);
+    /* preload 를 켜면 애드핏이 「보이는 자리인가」 검사를 건너뛰고 0.7초마다 도는
+       preload 차례에 그려 넣는다 — 방금 펼친 자리를 바로 채우려고 쓴다 */
+    if (preload) ins.setAttribute('data-ad-preload', 'Y');
+    box.appendChild(ins);
+    this.need = true;
+  },
+  /* 숨어 있던 자리를 화면에 내놓은 뒤에 부른다. 기다리지 않게 render 도 한 번 찔러 준다 */
+  show(box, key) {
+    if (this.off || !this.started || !box || box.dataset.ad) return;
+    this.put(box, key, true);
+    this.load();
+    try {
+      const ins = box.querySelector('ins');
+      if (ins && window.adfit && typeof window.adfit.render === 'function') window.adfit.render(ins);
+    } catch (e) { /* 안 되면 0.7초 뒤 preload 차례가 채운다 */ }
+  },
+  load() {
+    if (!this.need || this.loaded) return;
+    this.loaded = true;
+    const s = document.createElement('script');
+    s.type = 'text/javascript'; s.async = true;
+    s.src = 'https://t1.kakaocdn.net/kas/static/ba.min.js';
+    document.body.appendChild(s);
+  },
+  onScreen(el) {
+    if (!el || el.classList.contains('hide')) return false;
+    const r = el.getBoundingClientRect();
+    return r.height > 0 && r.bottom > 0 && r.top < window.innerHeight;
+  },
+  /* 하단 오버형 — 아래쪽 안내 글(쓰는 법·자주 묻는 것·주의)을 읽는 구간에서만 올라온다.
+     입력 카드·결과·수식·완료 카드 가운데 하나라도 화면에 보이면 내린다 */
+  sync(barOn) {
+    if (this.off || this.pc || !this.overlay || !this.started) return;
+    const modal = document.body.classList.contains('ia-lock');
+    const ae = document.activeElement;
+    const typing = !!(ae && ae.closest && (ae.closest('#form') || ae.closest('#side')) &&
+      (/^(SELECT|TEXTAREA)$/.test(ae.tagName) || (ae.tagName === 'INPUT' && !/^(checkbox|radio|button|file|range|color)$/.test(ae.type))));
+    const working = WORK_CARDS.some(id => this.onScreen($(id)));
+    const show = !this.closed && !barOn && !modal && !typing && !working && window.scrollY > 320;
+    const was = document.body.classList.contains('anch');
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+    $('anchor').classList.toggle('on', show);
+    document.body.classList.toggle('anch', show);
+    /* 이미 맨 아래였으면 늘어난 여백만큼 다시 내려 마지막 줄이 바에 가리지 않게 */
+    if (show && !was && atBottom) window.scrollTo(0, document.documentElement.scrollHeight);
+    if (show) this.show($('ad-anchor'), 'anchor');
+  },
+  /* 저장이 끝나면 미리보기 밑(PC 는 옆 칸)에 결과 카드를 펼치고 그쪽을 보여 준다 — 창으로 덮지 않는다 */
+  done(msg, steps) {
+    if (!this.popup) { toast(msg, 3200); return; }
+    $('doneMsg').textContent = msg;
+    $('doneSteps').innerHTML = (steps || []).map(x => '<li>' + x + '</li>').join('');
+    $('doneCard').classList.remove('hide');
+    if (!this.off) this.show($('ad-done'), 'done');
+    clearTimeout(this.goT);
+    this.goT = setTimeout(() => {
+      $('doneCard').scrollIntoView({ behavior: 'smooth', block: this.pc ? 'nearest' : 'center' });
+      updateMbar();
+    }, 250);
+  },
+  hideDone() { $('doneCard').classList.add('hide'); updateMbar(); }
+};
+/* 휴대폰 아래 막대 — 체크리스트를 내려가며 체크하는 동안, 요약(저장) 카드가 화면 위로 지나갔을 때만
+   「챙긴 것 n / m」과 저장 카드로 돌아가는 단추를 띄운다. 글자를 쓰는 중에는 자판을 가리지 않게 내린다 */
+function updateMbar() {
+  const pv = $('pvCard').getBoundingClientRect(), ls = $('cList').getBoundingClientRect();
+  const ae = document.activeElement;
+  const typing = !!(ae && (ae.tagName === 'INPUT' && !/^(checkbox|radio|button)$/.test(ae.type) || ae.tagName === 'SELECT' || ae.tagName === 'TEXTAREA'));
+  const on = pv.bottom < 0 && ls.top < window.innerHeight - 80 && ls.bottom > 120 && !typing && !!S.R;
+  $('mbar').classList.toggle('on', on);
+  AD.sync(on);
+}
+
+/* ════════════════════════════════════════════════════════════
+   화면 — 예정일 · 방식 → 요약 · 체크리스트 · 할 일 · 분유량 · 저장 · 링크
+   ════════════════════════════════════════════════════════════ */
+const WORK_CARDS = ['cDue', 'cHow', 'pvCard', 'doneCard', 'cList', 'cTodo', 'cMilk'];
+const LS_KEY = 'birth_checklist.v1';
+/* 링크로 보내는 설정 — 체크·지운 것·할 일 체크는 따로 id 목록으로 */
+const SHARE_KEYS = ['due', 'born', 'birth', 'care', 'feed', 'season', 'twins', 'second', 'qty', 'price', 'cus'];
+const S = {
+  due: '', born: '', birth: 'nat', care: 'center', feed: 'breast', season: 'auto', twins: false, second: false,
+  flt: 'all', scope: 'all', milkAge: 'w1', milkKg: '3.5', milkAuto: true,
+  chk: {}, del: {}, qty: {}, price: {}, cus: [], todoChk: {}, fold: {},
+  P: null, items: [], todos: [], R: true
+};
+const num = s => { const v = parseFloat(String(s == null ? '' : s).replace(/[^\d.]/g, '')); return isFinite(v) ? v : 0; };
+const comma = n => n ? Math.round(n).toLocaleString('ko-KR') : '';
+const ENUM = { birth: BIRTH, care: CARE, feed: FEED, season: { auto: 1, sum: 1, mid: 1, win: 1 } };
+
+/* 저장본·받은 링크를 S 에 옮긴다 — 값마다 모양을 확인한다 */
+function applyState(o, full) {
+  if (!o || typeof o !== 'object') return;
+  for (const k of ['due', 'born']) if (typeof o[k] === 'string' && (o[k] === '' || dnum(o[k]) != null)) S[k] = o[k];
+  for (const k of ['birth', 'care', 'feed', 'season']) if (typeof o[k] === 'string' && ENUM[k][o[k]]) S[k] = o[k];
+  for (const k of ['twins', 'second']) if (typeof o[k] === 'boolean') S[k] = o[k];
+  const numMap = v => { const r = {}; if (v && typeof v === 'object') for (const [a, b] of Object.entries(v)) if (typeof b === 'number' && isFinite(b) && b >= 0) r[String(a).slice(0, 40)] = Math.round(b); return r; };
+  if (o.qty) S.qty = numMap(o.qty);
+  if (o.price) S.price = numMap(o.price);
+  if (Array.isArray(o.cus)) S.cus = o.cus.filter(x => x && typeof x.id === 'string' && typeof x.n === 'string' && CAT_NAME[x.c]).map(x => ({ id: x.id.slice(0, 40), n: x.n.slice(0, 40), c: x.c })).slice(0, 200);
+  const idMap = v => { const r = {}; if (Array.isArray(v)) v.forEach(id => { if (typeof id === 'string') r[id.slice(0, 40)] = 1; }); else if (v && typeof v === 'object') Object.keys(v).forEach(id => { r[id.slice(0, 40)] = 1; }); return r; };
+  for (const k of ['chk', 'del', 'todoChk']) if (o[k]) S[k] = idMap(o[k]);
+  if (full) {
+    for (const k of ['flt', 'scope']) if (o[k] === 'all' || o[k] === 'left') S[k] = o[k];
+    if (typeof o.milkAge === 'string' && MILK.some(x => x.k === o.milkAge)) S.milkAge = o.milkAge;
+    if (typeof o.milkKg === 'string') S.milkKg = o.milkKg.slice(0, 6);
+    if (typeof o.milkAuto === 'boolean') S.milkAuto = o.milkAuto;
+    if (o.fold && typeof o.fold === 'object') S.fold = o.fold;
+  }
+}
+function loadState() {
+  let had = false;
+  try {
+    const raw = localStorage.getItem(LS_KEY);
+    if (raw) { had = true; applyState(JSON.parse(raw), true); }
+  } catch (e) { /* 사생활 보호 창 등 */ }
+  if (dnum(S.due) == null) S.due = dstr(todayN() + 90);
+  return had;
+}
+let saveT = 0;
+function saveState() {
+  clearTimeout(saveT);
+  saveT = setTimeout(() => {
+    const o = {};
+    for (const k of SHARE_KEYS.concat(['flt', 'scope', 'chk', 'del', 'todoChk', 'fold', 'milkAge', 'milkKg', 'milkAuto'])) o[k] = S[k];
+    try { localStorage.setItem(LS_KEY, JSON.stringify(o)); } catch (e) { /* 무시 */ }
+  }, 120);
+}
+
+/* 개수 글 — plain: 저장용(작은 글씨 없이) */
+function qtyText(x, plain) {
+  if (S.qty[x.id] != null) return S.qty[x.id] + (x.u || '개');
+  if (!x.q) return '';
+  const tot = x.q * (x.m || 1);
+  if (x.m > 1) return plain ? tot + x.u + '(한 아기 ' + x.q + ')' : tot + x.u + '<small>한 아기 ' + x.q + '</small>';
+  return x.q + x.u;
+}
+const qtyVal = x => S.qty[x.id] != null ? S.qty[x.id] : x.q ? x.q * (x.m || 1) : 0;
+
+/* ══ 다시 만들기 ══ */
+function rebuild() {
+  const P = planOf(S);
+  S.P = P;
+  const gen = buildItems(P).filter(x => !S.del[x.id]);
+  const cus = S.cus.map(x => ({ c: x.c, id: x.id, n: x.n, q: 0, u: '개', m: 1, note: '', tag: '', opt: 0, my: 1 }));
+  S.items = gen.concat(cus);
+  /* 아기가 태어났으면 출산 전 할 일은 내린다 */
+  S.todos = buildTodos(P).filter(x => P.born == null || x.a != null);
+}
+function refresh() { rebuild(); render(); saveState(); }
+
+function setSeg(name, v) {
+  document.querySelectorAll('[data-seg="' + name + '"] button').forEach(b => b.classList.toggle('on', b.dataset.v === v));
+}
+function renderForm() {
+  const P = S.P;
+  $('inpDue').value = dstr(P.due);
+  $('inpBorn').value = P.born != null ? dstr(P.born) : '';
+  $('inpBorn').max = dstr(P.today);
+  if (P.born != null) {
+    $('dueInfo').textContent = '생후 ' + (P.today - P.born + 1) + '일';
+    $('gaNote').textContent = '아기가 ' + kdl(P.born) + '에 태어났어요. 출생신고·지원금·접종 날짜를 태어난 날 기준으로 잡았습니다.';
+  } else {
+    const g = P.ga;
+    $('dueInfo').textContent = g.g >= 0 && g.g <= 300 ? '임신 ' + gaTxt(g) : '';
+    $('gaNote').textContent = g.g < 0 ? '예정일이 아직 많이 남았어요. 임신 확인 뒤 병원에서 들은 예정일을 넣으세요.'
+      : '오늘 임신 ' + gaTxt(g) + ' · 예정일 ' + ddayTxt(P.due - P.today) + ' · 36주(출산가방 싸기)는 ' + kd(weekDay(P.due, 36)) + '입니다.';
+  }
+  setSeg('birth', S.birth); setSeg('care', S.care); setSeg('feed', S.feed); setSeg('season', S.season);
+  $('seasonAuto').textContent = P.month + '월 ' + SEASON[P.auto];
+  $('howInfo').textContent = BIRTH[S.birth].replace(' 미정', '') + ' · ' + CARE[S.care];
+  $('optTwins').checked = S.twins; $('optSecond').checked = S.second;
+}
+function renderSummary() {
+  const P = S.P;
+  $('resTitle').textContent = planTitle(P);
+  $('resDday').textContent = P.born != null ? '생후 ' + (P.today - P.born + 1) + '일' : P.ga.g >= 0 ? gaTxt(P.ga) + ' · ' + ddayTxt(P.due - P.today) : ddayTxt(P.due - P.today);
+  $('resSub').textContent = planWho(P);
+  $('facts').innerHTML = buildFacts(P).map(f => '<li class="' + f.lv + '">' + f.t + '</li>').join('');
+  setSeg('scope', S.scope);
+  renderProgress();
+}
+function renderCost() {
+  const ps = priceSum();
+  $('costLine').innerHTML = ps.all
+    ? '🧾 적어 둔 비용 <b>' + won(ps.all) + '</b> · 산 것 <b>' + won(ps.got) + '</b> · 남은 것 ' + won(ps.all - ps.got)
+    : '🧾 「✏️ 개수·금액·지우기」에서 값을 적으면 출산 준비물 비용을 더해 드려요.';
+}
+function renderProgress() {
+  const all = S.items.length, done = S.items.filter(x => S.chk[x.id]).length;
+  $('progNum').textContent = done;
+  $('progAll').textContent = '/ ' + all;
+  $('progSub').textContent = all && done === all ? '다 챙겼어요!' : '챙김 · 남은 것 ' + (all - done);
+  $('progBar').style.width = (all ? done / all * 100 : 0) + '%';
+  $('listInfo').textContent = done + ' / ' + all;
+  $('mbarTxt').textContent = done + ' / ' + all + (all && done === all ? ' · 다 챙겼어요' : ' · 남은 것 ' + (all - done));
+  for (const el of document.querySelectorAll('#cats .cat')) {
+    const items = S.items.filter(x => x.c === el.dataset.c);
+    const d = items.filter(x => S.chk[x.id]).length;
+    const cc = el.querySelector('.cc');
+    cc.textContent = d + ' / ' + items.length;
+    cc.classList.toggle('full', d === items.length);
+    el.classList.toggle('done', d === items.length);
+  }
+  for (const el of document.querySelectorAll('#cats .sec')) {
+    const items = S.items.filter(x => CAT_SEC[x.c] === el.dataset.s);
+    const d = items.filter(x => S.chk[x.id]).length;
+    el.querySelector('.sc').textContent = d + ' / ' + items.length;
+    el.classList.toggle('done', d === items.length);
+  }
+  const td = S.todos.filter(x => S.todoChk[x.id]).length;
+  $('todoInfo').textContent = td + ' / ' + S.todos.length;
+  renderCost();
+}
+function itemHtml(x) {
+  const on = !!S.chk[x.id];
+  const span = k => '<span class="tg ' + k + '" title="' + esc(TAGS[k][1]) + '">' + TAGS[k][0] + '</span>';
+  const tg = (x.tag ? span(x.tag) : '') + (x.my ? span('my') : '');
+  const op = x.opt ? span('opt') : '';
+  const q = qtyText(x);
+  const qv = qtyVal(x);
+  const pr = S.price[x.id];
+  return '<li class="it' + (on ? ' on' : '') + '" data-id="' + esc(x.id) + '"><label><input type="checkbox"' + (on ? ' checked' : '') + '>' +
+    '<span class="tx"><span class="nm">' + esc(x.n) + '</span>' + (q ? '<span class="q">' + q + '</span>' : '') + tg + op +
+    (pr ? '<span class="pr">' + won(pr) + '</span>' : '') +
+    (x.note ? '<span class="nt">' + esc(x.note) + '</span>' : '') + '</span></label>' +
+    '<span class="ed"><span class="unit pin"><input type="text" inputmode="numeric" class="pri" value="' + (pr ? comma(pr) : '') + '" placeholder="금액" aria-label="' + esc(x.n) + ' 금액" autocomplete="off"><span>원</span></span>' +
+    '<button type="button" data-act="qm" aria-label="' + esc(x.n) + ' 하나 빼기">−</button><span class="qv">' + (qv || '-') + '</span>' +
+    '<button type="button" data-act="qp" aria-label="' + esc(x.n) + ' 하나 더">+</button><button type="button" class="del" data-act="del" aria-label="' + esc(x.n) + ' 지우기">✕</button></span></li>';
+}
+function renderList() {
+  const box = $('cats');
+  let h = '';
+  for (const [sk, sic, sname, shint] of SECTIONS) {
+    let inner = '';
+    for (const [c, s, ic, name] of CATS) {
+      if (s !== sk) continue;
+      const items = S.items.filter(x => x.c === c);
+      if (!items.length) continue;
+      inner += '<div class="cat' + (S.fold[c] ? ' fold' : '') + '" data-c="' + c + '"><button type="button" class="cat-h" aria-expanded="' + !S.fold[c] + '">' +
+        '<span class="ci">' + ic + '</span><span class="cn">' + name + '</span><span class="cc"></span></button><ul class="items">' + items.map(itemHtml).join('') + '</ul></div>';
+    }
+    if (!inner) continue;
+    h += '<div class="sec" data-s="' + sk + '"><div class="sec-h"><span class="si">' + sic + '</span><span class="sn">' + sname +
+      (shint ? '<small>' + shint + '</small>' : '') + '</span><span class="sc"></span></div><div class="secb">' + inner + '</div></div>';
+  }
+  box.innerHTML = h || '<p class="empty">목록이 비었습니다. 「지운 항목 되살리기」를 눌러 보세요.</p>';
+  box.classList.toggle('left', S.flt === 'left');
+  setSeg('flt', S.flt);
+  const delN = Object.keys(S.del).length;
+  $('btnRestore').classList.toggle('hide', !delN);
+  $('btnRestore').textContent = '지운 항목 되살리기 (' + delN + ')';
+  const used = new Set(S.items.map(tagOf));
+  $('legend').innerHTML = ['prov', 'nat', 'cs', 'old'].filter(k => used.has(k)).map(k => '<span class="tg ' + k + '">' + TAGS[k][0] + '</span> ' + esc(TAGS[k][1].split('.')[0])).join(' · ');
+  const sel = $('addCat'), cur = sel.value;
+  sel.innerHTML = CATS.filter(c => c[0] === 'my' || S.items.some(x => x.c === c[0])).map(c => '<option value="' + c[0] + '">' + (c[0] === 'my' ? '' : SEC_NAME[c[1]].replace(/ .*$/, '') + ' · ') + c[3] + '</option>').join('');
+  if ([...sel.options].some(o => o.value === cur)) sel.value = cur; else sel.value = 'my';
+}
+function renderTodos() {
+  const P = S.P;
+  $('todoList').innerHTML = S.todos.map(x => {
+    const on = !!S.todoChk[x.id];
+    const late = !on && x.d < P.today;
+    return '<li class="' + (on ? 'on' : '') + '" data-id="' + x.id + '"><label><input type="checkbox"' + (on ? ' checked' : '') + '>' +
+      '<span class="dt' + (late ? ' late' : '') + '">' + kd(x.d) + '<small>' + (late ? '지났어요' : todoWhen(x, P)) + '</small></span>' +
+      '<span class="tt">' + esc(x.t) + '<small>' + esc(x.x) + '</small></span></label></li>';
+  }).join('');
+  $('todoNote').classList.toggle('hide', P.born != null);
+}
+
+function render() { renderForm(); renderList(); renderTodos(); renderSummary(); updateMbar(); }
+
+/* ══ 분유량 ══ */
+function bandOfAge(days) { return days < 7 ? 'w0' : days < 30 ? 'w1' : days < 61 ? 'm1' : days < 122 ? 'm2' : 'm4'; }
+function renderMilk() {
+  const P = S.P;
+  if (P.born != null && S.milkAuto) S.milkAge = bandOfAge(P.today - P.born);
+  setSeg('milkAge', S.milkAge);
+  $('milkAgeHint').textContent = P.born != null ? (S.milkAuto ? '생후 ' + (P.today - P.born + 1) + '일 → 저절로 골랐어요' : '직접 골랐어요') : '태어난 날을 넣으면 저절로 고릅니다';
+  const kg = num($('milkKg').value);
+  const r = milkCalc(S.milkAge, kg);
+  const B = r.B;
+  let h;
+  if (!B.wt) {
+    h = '<div class="mkn">한 번에 ' + B.lo + '~' + B.hi + 'mL<small>' + B.gap + '마다 · 하루 ' + B.f[0] + '~' + B.f[1] + '번</small></div>';
+  } else if (!(kg > 0)) {
+    h = '<p class="fine">아기 체중(kg)을 넣으세요. 예: 3.5</p>';
+  } else if (kg < 1.5 || kg > 12) {
+    h = '<p class="fine">체중을 다시 확인하세요(1.5~12kg). 이른둥이·저체중 아기는 병원에서 정해 준 양을 따르세요.</p>';
+  } else {
+    const per = r.per.slice().sort((a, b) => a - b);
+    const perTxt = per[0] === per[1] ? per[0] + 'mL' : per[0] + '~' + per[1] + 'mL';
+    h = '<div class="mkn">하루 약 ' + (r.dayLo === r.dayHi ? comma(r.dayLo) : comma(r.dayLo) + '~' + comma(r.dayHi)) + 'mL<small>체중 ' + kg + 'kg × 150~165mL' + (r.capped ? ' · 960mL 에서 멈춤' : '') + '</small></div>' +
+      '<div class="mkper">한 번에 약 <b>' + perTxt + '</b> × 하루 <b>' + B.f[0] + '~' + B.f[1] + '번</b> <span>(' + B.gap + ' 간격)</span></div>';
+  }
+  $('milkOut').innerHTML = h + '<p class="rinfo info mknote">' + esc(B.n) + ' — ' + esc(B.note) + '</p>';
+}
+
+/* ══ 저장 ══ */
+function download(blob, name) {
+  if (IA.on) { downloadInApp(blob, name); return; }
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = name; a.rel = 'noopener';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
+const fileBase = () => { const d = dObj(S.P.due); return '출산준비물_예정일' + d.getUTCFullYear() + String(d.getUTCMonth() + 1).padStart(2, '0') + String(d.getUTCDate()).padStart(2, '0') + (S.scope === 'left' ? '_남은것' : ''); };
+let busy = false;
+async function doSave(kind) {
+  if (busy) return;
+  busy = true;
+  const btn = $({ pdf: 'btnPdf', img: 'btnImg', xlsx: 'btnXlsx' }[kind]);
+  const old = btn.textContent;
+  btn.disabled = true; btn.textContent = '만드는 중…';
+  try {
+    await yieldUI();
+    let blob, name;
+    if (kind === 'pdf') { blob = await makePDF(layoutPages('pdf', S.scope), '출산 준비물 체크리스트 — ' + planTitle(S.P)); name = fileBase() + '.pdf'; }
+    else if (kind === 'img') { const pg = layoutPages('img', S.scope)[0]; blob = await canvasBlob(pageCanvas(pg, 2, false), 'image/png'); name = fileBase() + '.png'; }
+    else { blob = await buildXlsx(S.scope); name = fileBase() + '.xlsx'; }
+    download(blob, name);
+    AD.done('「' + name + '」을 저장했습니다.', {
+      pdf: ['A4에 두 단으로 들어갑니다. 인쇄해서 가방 쌀 때 펜으로 체크해도 좋아요.', '맨 아래에 주차별 할 일과 출생신고·지원금 날짜가 함께 들어 있습니다.'],
+      img: ['휴대폰 사진첩에 두고 장 보거나 가방 쌀 때 넘겨 보세요.', '남편·가족에게 메신저로 보내기 좋은 크기입니다.'],
+      xlsx: ['챙김 칸에서 ✔ 를 고르면 그 줄이 회색으로 바뀌고 맨 위 개수와 「산 것」 금액이 저절로 바뀝니다.', '금액 칸에 값을 적으면 출산 준비물 비용 합계가 나옵니다. 둘째 시트에 할 일이 날짜와 함께 있어요.']
+    }[kind]);
+  } catch (e) {
+    toast('파일을 만들지 못했습니다. 다른 브라우저에서 다시 해 보세요.', 4200);
+  } finally {
+    btn.disabled = false; btn.textContent = old; busy = false;
+  }
+}
+function copyText(text, ok) {
+  if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(ok, () => fallbackCopy(text, ok));
+  else fallbackCopy(text, ok);
+}
+function doCopy() { copyText(listText(S.scope), () => toast('목록을 글로 복사했습니다. 메신저나 메모장에 붙여 넣으세요.', 3200)); }
+async function doShare() {
+  let url;
+  try { url = await shareUrl(); } catch (e) { toast('링크를 만들지 못했습니다. 「글로 복사」를 써 보세요.', 3600); return; }
+  const P = S.P, done = S.items.filter(x => S.chk[x.id]).length;
+  const text = '출산 준비물 체크리스트 — ' + planTitle(P) + ' · 챙김 ' + done + '/' + S.items.length;
+  const coarse = window.matchMedia && window.matchMedia('(pointer:coarse)').matches;
+  if (navigator.share && coarse && !IA.on) {
+    try { await navigator.share({ title: '출산 준비물 체크리스트', text, url }); return; } catch (e) { if (e && e.name === 'AbortError') return; }
+  }
+  copyText(url, () => toast('링크를 복사했습니다. 카톡·문자에 붙여 넣어 보내세요. 받은 사람이 열면 같은 목록이 떠요.', 4200));
+}
+
+/* 받은 링크 — 이 기기에 저장된 목록이 없으면 바로, 있으면 물어보고 */
+async function checkShare(had) {
+  const m = /^#s=([jz][A-Za-z0-9_-]+)$/.exec(location.hash || '');
+  if (!m) return;
+  let o = null;
+  try { o = await readShare(m[1]); } catch (e) { o = null; }
+  const clear = () => { try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { /* 무시 */ } };
+  if (!o || o.v !== 1) { clear(); toast('받은 링크를 읽지 못했습니다. 주소가 잘렸는지 확인하세요.', 4000); return; }
+  const take = () => {
+    S.chk = {}; S.del = {}; S.todoChk = {}; S.qty = {}; S.price = {}; S.cus = []; S.born = '';
+    applyState(o, false);
+    clear(); $('rcvBar').classList.add('hide');
+    refresh(); renderMilk();
+    toast('받은 목록을 불러왔습니다 · ' + planTitle(S.P), 3200);
+  };
+  if (!had) { take(); return; }
+  const n = Array.isArray(o.chk) ? o.chk.length : 0;
+  $('rcvSub').textContent = '예정일 ' + (dnum(o.due) != null ? kdl(dnum(o.due)) : '-') + ' · 체크 ' + n + '개. 불러오면 이 기기에서 체크한 내용이 받은 목록으로 바뀝니다.';
+  $('rcvBar').classList.remove('hide');
+  $('rcvYes').onclick = take;
+  $('rcvNo').onclick = () => { clear(); $('rcvBar').classList.add('hide'); toast('내 목록을 그대로 둡니다.'); };
+}
+
+/* ══ 예시 ══ */
+function example(k) {
+  const t = todayN();
+  const base = { born: '', season: 'auto', twins: false, second: false };
+  if (k === 'first') Object.assign(S, base, { due: dstr(t + 70), birth: 'nat', care: 'center', feed: 'breast' });
+  if (k === 'twins') Object.assign(S, base, { due: dstr(t + 56), birth: 'cs', care: 'center', feed: 'mix', twins: true });
+  if (k === 'second') Object.assign(S, base, { due: dstr(t + 42), birth: 'nat', care: 'home', feed: 'formula', second: true });
+  refresh(); renderMilk();
+  toast({ first: '첫째 · 자연분만 · 조리원 · 모유', twins: '쌍둥이 · 제왕절개 · 조리원 · 혼합 수유', second: '둘째 · 자연분만 · 집에서 조리 · 분유' }[k], 2800);
+}
+
+/* ══ 이벤트 ══ */
+function init() {
+  const had = loadState();
+  $('milkAges').innerHTML = MILK.map(b => '<button type="button" data-v="' + b.k + '">' + b.n + '</button>').join('');
+  $('milkKg').value = S.milkKg;
+  $('benTable').innerHTML = '<thead><tr><th>지원</th><th>얼마</th><th>언제 신청</th></tr></thead><tbody>' +
+    BENEFITS.map(b => '<tr><td class="k">' + esc(b[0]) + '</td><td><b>' + esc(b[1]) + '</b><small class="bsub">' + esc(b[2]) + '</small></td><td>' + esc(b[3]) + '</td></tr>').join('') + '</tbody>';
+
+  document.addEventListener('click', e => {
+    const t = e.target.closest('button');
+    if (!t) return;
+    if (t.dataset.ex) { example(t.dataset.ex); return; }
+    if (t.dataset.kg) { $('milkKg').value = t.dataset.kg; S.milkKg = t.dataset.kg; renderMilk(); saveState(); return; }
+    if (t.classList.contains('cat-h')) {
+      const c = t.parentNode.dataset.c;
+      S.fold[c] = !S.fold[c]; if (!S.fold[c]) delete S.fold[c];
+      t.parentNode.classList.toggle('fold', !!S.fold[c]); t.setAttribute('aria-expanded', String(!S.fold[c]));
+      saveState(); updateMbar(); return;
+    }
+    if (t.dataset.act) {
+      const li = t.closest('.it'), id = li.dataset.id, x = S.items.find(v => v.id === id);
+      if (!x) return;
+      if (t.dataset.act === 'del') {
+        if (x.my) S.cus = S.cus.filter(v => v.id !== id); else S.del[id] = 1;
+        delete S.chk[id]; delete S.qty[id]; delete S.price[id];
+        refresh(); return;
+      }
+      const v = Math.max(0, qtyVal(x) + (t.dataset.act === 'qp' ? 1 : -1));
+      S.qty[id] = v;
+      if (!x.u) x.u = '개';
+      li.outerHTML = itemHtml(x);
+      saveState(); return;
+    }
+    const seg = t.closest('[data-seg]');
+    if (seg && t.dataset.v !== undefined) {
+      const k = seg.dataset.seg;
+      S[k] = t.dataset.v;
+      if (k === 'flt') { setSeg('flt', S.flt); $('cats').classList.toggle('left', S.flt === 'left'); saveState(); updateMbar(); return; }
+      if (k === 'scope') { setSeg('scope', S.scope); saveState(); return; }
+      if (k === 'milkAge') { S.milkAuto = false; renderMilk(); saveState(); return; }
+      refresh();
+    }
+  });
+  /* 체크 — 목록 전체를 다시 그리지 않고 그 줄과 개수만 바꾼다(스크롤이 튀지 않게) */
+  $('cats').addEventListener('change', e => {
+    const cb = e.target; if (cb.type !== 'checkbox') return;
+    const li = cb.closest('.it'), id = li.dataset.id;
+    if (cb.checked) S.chk[id] = 1; else delete S.chk[id];
+    li.classList.toggle('on', cb.checked);
+    renderProgress(); saveState();
+  });
+  /* 금액 — 쓰는 동안에는 합계만 바꾸고, 칸을 떠날 때 줄을 다시 그린다 */
+  $('cats').addEventListener('input', e => {
+    const inp = e.target; if (!inp.classList.contains('pri')) return;
+    const id = inp.closest('.it').dataset.id, v = Math.min(99999999, Math.round(num(inp.value)));
+    if (v > 0) S.price[id] = v; else delete S.price[id];
+    renderCost(); saveState();
+  });
+  /* 칸을 떠나면 그 줄의 금액 표시만 고친다(줄을 통째로 다시 그리면 바로 누른 단추가 사라진다) */
+  $('cats').addEventListener('focusout', e => {
+    const inp = e.target; if (!inp.classList || !inp.classList.contains('pri')) return;
+    const li = inp.closest('.it'), v = S.price[li.dataset.id] || 0;
+    inp.value = v ? comma(v) : '';
+    let sp = li.querySelector('.tx .pr');
+    if (v) {
+      if (!sp) { sp = document.createElement('span'); sp.className = 'pr'; const nt = li.querySelector('.tx .nt'); li.querySelector('.tx').insertBefore(sp, nt); }
+      sp.textContent = won(v);
+    } else if (sp) sp.remove();
+  });
+  $('cats').addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.classList.contains('pri') && !e.isComposing) e.target.blur(); });
+  $('todoList').addEventListener('change', e => {
+    const cb = e.target; if (cb.type !== 'checkbox') return;
+    const li = cb.closest('li'), id = li.dataset.id;
+    if (cb.checked) S.todoChk[id] = 1; else delete S.todoChk[id];
+    renderTodos(); renderProgress(); saveState();
+  });
+  $('inpDue').addEventListener('change', e => { const v = dnum(e.target.value); if (v == null) return; S.due = dstr(v); refresh(); renderMilk(); });
+  $('inpBorn').addEventListener('change', e => {
+    const v = dnum(e.target.value);
+    S.born = v != null && v <= todayN() ? dstr(v) : '';
+    if (S.born) S.milkAuto = true;
+    refresh(); renderMilk();
+    if (S.born) toast('출생을 축하드려요! 출생신고·지원금 날짜를 태어난 날 기준으로 바꿨습니다.', 3600);
+  });
+  $('optTwins').addEventListener('change', e => { S.twins = e.target.checked; refresh(); });
+  $('optSecond').addEventListener('change', e => { S.second = e.target.checked; refresh(); });
+  $('milkKg').addEventListener('input', () => { S.milkKg = $('milkKg').value.slice(0, 6); renderMilk(); saveState(); });
+  /* 더하기 */
+  const addItem = () => {
+    const n = $('addName').value.trim().slice(0, 40);
+    if (!n) { $('addName').focus(); toast('챙길 것의 이름을 쓰세요.'); return; }
+    const c = $('addCat').value || 'my';
+    const id = 'u' + Date.now().toString(36) + Math.floor(Math.random() * 1296).toString(36);
+    S.cus.push({ id, c, n });
+    delete S.fold[c];
+    $('addName').value = '';
+    refresh();
+    const li = document.querySelector('.it[data-id="' + id + '"]');
+    if (li) li.scrollIntoView({ block: 'nearest' });
+    toast('「' + n + '」을 ' + CAT_NAME[c] + '에 더했습니다.');
+  };
+  $('addBtn').addEventListener('click', addItem);
+  $('addName').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.isComposing) { e.preventDefault(); addItem(); } });
+  $('btnEdit').addEventListener('click', () => {
+    const on = !$('cList').classList.contains('editing');
+    $('cList').classList.toggle('editing', on);
+    $('btnEdit').setAttribute('aria-pressed', String(on));
+    $('btnEdit').textContent = on ? '✔ 고치기 끝' : '✏️ 개수·금액·지우기';
+  });
+  $('btnFold').addEventListener('click', () => {
+    const cats = [...new Set(S.items.map(x => x.c))];
+    const allFold = cats.every(c => S.fold[c]);
+    S.fold = {};
+    if (!allFold) cats.forEach(c => { S.fold[c] = 1; });
+    $('btnFold').textContent = allFold ? '모두 접기' : '모두 펴기';
+    renderList(); renderProgress(); saveState(); updateMbar();
+  });
+  $('btnRestore').addEventListener('click', () => { const n = Object.keys(S.del).length; S.del = {}; refresh(); toast('지운 항목 ' + n + '개를 되살렸습니다.'); });
+  /* 체크 지우기는 두 번 눌러야 — 잘못 눌러 다 날아가지 않게 */
+  let armT = 0;
+  $('btnReset').addEventListener('click', () => {
+    const b = $('btnReset');
+    if (!b.classList.contains('armed')) { b.classList.add('armed'); b.textContent = '한 번 더 누르면 지워집니다'; clearTimeout(armT); armT = setTimeout(() => { b.classList.remove('armed'); b.textContent = '체크 모두 지우기'; }, 3500); return; }
+    clearTimeout(armT); b.classList.remove('armed'); b.textContent = '체크 모두 지우기';
+    S.chk = {}; S.todoChk = {};
+    refresh(); toast('체크를 모두 지웠습니다.');
+  });
+  $('btnPdf').addEventListener('click', () => doSave('pdf'));
+  $('btnImg').addEventListener('click', () => doSave('img'));
+  $('btnXlsx').addEventListener('click', () => doSave('xlsx'));
+  $('btnCopy').addEventListener('click', doCopy);
+  $('btnShare').addEventListener('click', doShare);
+  $('doneHide').addEventListener('click', () => AD.hideDone());
+  $('mbarGo').addEventListener('click', () => { $('pvCard').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+
+  /* 앱 안 브라우저 */
+  initInApp();
+  const goOut = () => { const u = externalUrl(); if (u) { location.href = u; return; } copyAddr(true); iaCopied(); };
+  $('iaGo').addEventListener('click', goOut);
+  $('iaGo2').addEventListener('click', goOut);
+  $('doneGo').addEventListener('click', goOut);
+  $('iaX').addEventListener('click', () => {
+    document.body.classList.remove('inapp');
+    try { sessionStorage.setItem('birth_checklist.iahide', '1'); } catch (er) { /* 무시 */ }
+  });
+  $('iaStay').addEventListener('click', () => { lockInApp(false); updateMbar(); });
+
+  const sync = () => updateMbar();
+  window.addEventListener('scroll', sync, { passive: true });
+  window.addEventListener('resize', sync);
+  document.addEventListener('focusin', sync);
+  document.addEventListener('focusout', () => setTimeout(sync, 60));
+  $('anchorX').addEventListener('click', () => { AD.closed = true; AD.sync(true); });
+
+  refresh();
+  renderMilk();
+  sync();
+  AD.init();
+  checkShare(had).finally(() => { document.body.dataset.ready = '1'; });
+}
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
